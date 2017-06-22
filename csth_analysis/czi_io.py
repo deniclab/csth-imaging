@@ -28,7 +28,7 @@ def load_single_czi(path):
     im_array = czi_file.asarray()  # extract image array from test_czi
     im_array = np.squeeze(im_array)  # eliminate single-dimensional axes
     # get channels
-    channels = [np.rint(float(child.text)) for child in
+    channels = [int(np.rint(float(child.text))) for child in
                 czi_file.metadata.iter('ExcitationWavelength')]
     # if there was only one channel, this will get rid of the C dimension.
     # add back if so.
@@ -63,7 +63,7 @@ def load_multi_czi(path):
     elif len(im_array.shape) == 9:
         im_array = np.squeeze(im_array)  # eliminate single-dimensional axes
         # get channels
-        channels = [np.rint(float(child.text)) for child in
+        channels = [int(np.rint(float(child.text))) for child in
                     czi_file.metadata.iter('ExcitationWavelength')]
         # if there was only one channel, this will get rid of the C dimension.
         # add back if so.

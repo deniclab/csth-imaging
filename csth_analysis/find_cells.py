@@ -6,7 +6,7 @@ import czifile
 import numpy as np
 from warnings import warn
 from skimage import io, measure
-import czi_io
+from csth_analysis.analysis_scripts import czi_io
 from scipy import stats
 from scipy.ndimage import filters
 
@@ -59,11 +59,11 @@ class MultiFinder:
         else:
             self.bg_origin = 'slice'  # slice of a multi-czi
         if '.tif' in self.filenames[0]:
-            self.cell_im = io.imread(self.filename)
+            self.cell_im = io.imread(self.filenames[0])
             # TODO: implement adding dimensions for multi-img/channels both
             # here and a method to add them later
-        elif '.czi' in self.filename:
-            cell_czi = czi_io.load_multi_czi(self.filename)
+        elif '.czi' in self.filenames[0]:
+            cell_czi = czi_io.load_multi_czi(self.filenames[0])
             self.cell_im = cell_czi[0]
             # if cell_im has shape C-Z-X-Y, not IMG-C-Z-X-Y, add axis for img
             if len(self.cell_im.shape) == 4:
@@ -78,7 +78,7 @@ class MultiFinder:
                 # here and a method to add them later
             elif '.czi' in self.bg_filename:
                 bg_czi = czi_io.load_single_czi(self.bg_filename)
-                self.bg_im = bg_czi[0]
+                self.bg_im = np.expand_dims(bg_czi[0], axis=0)
                 self.bg_channels = bg_czi[1]
         else:
             self.bg_im = self.cell_im[bg_index, :, :, :, :]
@@ -108,27 +108,36 @@ class MultiFinder:
             self.cell_im.shape[0], self.cell_im.shape[0] + new_czi.shape[0])
         self.cell_im = np.concatenate(self.cell_im, new_czi)
 
-    def find_cells(self, channel, return_all=False):
+    def find_cells(self, channel, return_all=False, verbose=True):
         """Find cells within all images in the indicated channel."""
         # get channel images first
         im_arrs = self.get_channel_arrays(channel)
         # transform into log space, as bg is roughly log-normal
-        log_f_im = np.log10(im_arrs[0])
-        log_bg_im = np.log10(im_arrs[1])
+        # this requires adding 1 to each value to avoid NaN log-xform
+        if verbose:
+            print('log-transforming arrays...')
+        log_f_im = np.log10(im_arrs[0] + 1)
+        log_bg_im = np.log10(im_arrs[1] + 1)
+        if verbose:
+            print('applying gaussian filter...')
         log_gaussian_f = filters.gaussian_filter(log_f_im,
-                                                 sigma=[0, 0, 0, 2, 2])
+                                                 sigma=[0, 0, 3, 3])
         log_gaussian_bg = filters.gaussian_filter(log_bg_im,
-                                                  sigma=[0, 0, 0, 2, 2])
+                                                  sigma=[0, 0, 3, 3])
         bg_mean = np.mean(log_gaussian_bg)
         bg_sd = np.std(log_gaussian_bg)
         # get p-val that px intensity could be brighter than the value in each
         # array position in the "positive" im, which will indicate where
         # fluorescence is.
+        if verbose:
+            print('computing p-value transformation...')
         f_pvals = 1-stats.norm.cdf(log_gaussian_f, bg_mean, bg_sd)
         # convert to binary using empirically tested cutoffs (p<0.5/65535)
         f_pvals = f_pvals*65535
         f_pvals = f_pvals.astype('uint16')
         f_pvals_binary = np.copy(f_pvals)
+        if verbose:
+            print('converting to binary...')
         f_pvals_binary[f_pvals > 0] = 0
         f_pvals_binary[f_pvals == 0] = 1
         # eliminate too-small regions that don't correspond to cells
@@ -136,21 +145,40 @@ class MultiFinder:
         if return_all:
             raw_labs_list = []
             labs_list = []
+        if verbose:
+            print('')
+            print('generating cell masks...')
+            print('')
         for im in range(0, im_arrs[0].shape[0]):
-            curr_im = np.squeeze(f_pvals_binary[im, :, :, :, :], axis=(0, 1))
+            if verbose:
+                print('generating mask #' + str(im + 1))
+            curr_im = f_pvals_binary[im, :, :, :]
+            if verbose:
+                print('labeling contiguous objects...')
             r_labs = measure.label(curr_im, connectivity=2,
                                    background=0)
             # next command eliminates objects w vol < 100,000 px and
             # generates binary array indicating where cells are for output
+            if verbose:
+                print('eliminating objects w/volume < 100,000 px...')
+            # don't count zeros in next line to avoid including background
+            objs_w_cts = np.unique(r_labs[r_labs != 0], return_counts=True)
             cell_mask = np.reshape(np.in1d(
-                r_labs, np.unique(r_labs)[np.unique(
-                    r_labs, return_counts=True)[1] > 100000]), r_labs)
+                r_labs, objs_w_cts[0][objs_w_cts[1] > 100000]),
+                                   r_labs.shape)
+            if verbose:
+                print('pruning labels...')
             trim_labs = np.copy(r_labs)
             trim_labs[np.invert(cell_mask)] = 0  # eliminate small obj labels
+            if verbose:
+                print('appending outputs...')
             cell_masks.append(cell_mask)
             if return_all:
                 raw_labs_list.append(r_labs)
                 labs_list.append(trim_labs)
+            if verbose:
+                print('mask #' + str(im + 1) + ' complete.')
+                print()
         if return_all:
             return({'input_ims': im_arrs[0],
                     'input_bg': im_arrs[1],
@@ -171,14 +199,14 @@ class MultiFinder:
         # return tuple of (fluorescence_array, bg_array) for the channel
         if fluorescence:
             if mode == 'multi':
-                return_vals.append(self.cell_im[:, np.argwhere(
-                    self.cell_channels == channel), :, :, :])
+                return_vals.append(self.cell_im[
+                    :, self.cell_channels.index(channel), :, :, :])
             elif mode == 'single':
-                return_vals.append(self.cell_im[ind, np.argwhere(
-                    self.cell_channels == channel), :, :, :])
+                return_vals.append(self.cell_im[
+                    ind, self.cell_channels.index(channel), :, :, :])
         if bg:
-            return_vals.append(self.bg_im[:, np.argwhere(
-                self.bg_channels == channel), :, :, :])
+            return_vals.append(self.bg_im[
+                :, self.bg_channels.index(channel), :, :, :])
         return tuple(return_vals)
 
 
@@ -249,9 +277,9 @@ class CellFinder:
         return_vals = []
         # return tuple of (fluorescence_array, bg_array) for the channel
         if fluorescence:
-            return_vals.append(self.cell_im[np.argwhere(
-                self.cell_channels == channel), :, :, :])
+            return_vals.append(self.cell_im[
+                self.cell_channels.index(channel), :, :, :])
         if bg:
-            return_vals.append(self.bg_im[np.argwhere(
-                self.bg_channels == channel), :, :, :])
+            return_vals.append(self.bg_im[
+                self.bg_channels.index(channel), :, :, :])
         return tuple(return_vals)
