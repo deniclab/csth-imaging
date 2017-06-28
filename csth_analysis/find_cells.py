@@ -6,14 +6,16 @@ import czifile
 import numpy as np
 from warnings import warn
 from skimage import io, measure
-from csth_analysis.analysis_scripts import czi_io
+from csth_analysis import czi_io
 from scipy import stats
 from scipy.ndimage import filters
+from warnings import warn
 
 
 class CellMask:
     """Container for cell mask and intermediates."""
 
+    # NOTE: I DON'T USE THIS FOR ANYTHING RIGHT NOW!
     def __init__(self, raw_im, raw_bg, gaussian_im,
                  pvals_im, cell_labs, cell_mask):
         """Create an instance of a cell mask.
@@ -53,7 +55,7 @@ class MultiFinder:
         self.filenames = [filename.split('/')[-1]]  # use only fname, not path
         if bg_index == -1:
             if bg_filename == '':
-                raise ValueError('No background image provided.')
+                warn('No background image provided during initialization.')
             self.bg_origin = 'separate'  # separate czi or tiff file
             self.bg_filename = bg_filename
         else:
@@ -80,7 +82,7 @@ class MultiFinder:
                 bg_czi = czi_io.load_single_czi(self.bg_filename)
                 self.bg_im = np.expand_dims(bg_czi[0], axis=0)
                 self.bg_channels = bg_czi[1]
-        else:
+        elif self.bg_index != -1:
             self.bg_im = self.cell_im[bg_index, :, :, :, :]
             # remove parts of cell_im that correspond to bg
             bg_mask = np.ones(shape=self.cell_im.shape, dtype=bool)
@@ -131,7 +133,12 @@ class MultiFinder:
         # fluorescence is.
         if verbose:
             print('computing p-value transformation...')
-        f_pvals = 1-stats.norm.cdf(log_gaussian_f, bg_mean, bg_sd)
+        f_pvals = np.empty_like(log_gaussian_f)
+        for s in range(0, f_pvals.shape[0]):
+            print(' computing p-val xform for slice ' + str(s + 1) +
+                  ' out of ' + str(f_pvals.shape[0]))
+            f_pvals[s, :, :, :] = 1-stats.norm.cdf(
+                log_gaussian_f[s, :, :, :], bg_mean, bg_sd)
         # convert to binary using empirically tested cutoffs (p<0.5/65535)
         f_pvals = f_pvals*65535
         f_pvals = f_pvals.astype('uint16')
@@ -207,7 +214,10 @@ class MultiFinder:
         if bg:
             return_vals.append(self.bg_im[
                 :, self.bg_channels.index(channel), :, :, :])
-        return tuple(return_vals)
+        if len(return_vals) == 1:
+            return return_vals[0]
+        else:
+            return tuple(return_vals)
 
 
 class CellFinder:
