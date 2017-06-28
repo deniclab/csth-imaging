@@ -15,6 +15,8 @@ import argparse
 from skimage import io
 import sys
 sys.path.append('/n/denic_lab/Users/nweir/python_packages/')
+sys.path.append(
+    '/n/denic_lab/Users/nweir/python_packages/csth-imaging/dependencies/')
 from csth_analysis import czi_io, find_cells, segment_cells, foci
 
 parser = argparse.ArgumentParser(description='Process LC3/WIPI stain imgs.')
