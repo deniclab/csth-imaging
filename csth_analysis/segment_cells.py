@@ -3,8 +3,8 @@
 """Classes and methods for watershed segmentation of cells using nuclei."""
 
 import numpy as np
-import czi_io
-import find_cells
+from csth_analysis import czi_io
+from csth_analysis import find_cells
 from pyto_segmenter.PexSegment import PexSegmenter
 from scipy.ndimage.morphology import distance_transform_edt
 from scipy.ndimage.filters import gaussian_filter
