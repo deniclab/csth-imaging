@@ -27,10 +27,11 @@ parser.add_argument('-a', '--array_no', required=True,
 parser.add_argument('-o', '--output_dir', required=True,
                     help='dir for CSV-formatted output')
 args = parser.parse_args()
+ref_csv = args.ref_csv
 array_no = args.array_no
 output_dir = args.output_dir
 # read .czi file path from csv reference table
-ref_df = pd.read_csv('/path/to/lc3_wipi_ref.csv')  # TODO: UPDATE THIS!!
+ref_df = pd.read_csv(ref_csv)
 czi_path = ref_df['files'].iloc[array_no]
 # load .czi file into MultiFinder instance
 finder = find_cells.MultiFinder(czi_path)
