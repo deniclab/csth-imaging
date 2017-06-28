@@ -29,7 +29,7 @@ array_no = args.array_no
 output_dir = args.output_dir
 # read .czi file path from csv reference table
 ref_df = pd.read_csv('/path/to/lc3_wipi_ref.csv')  # TODO: UPDATE THIS!!
-czi_path = ref_df['files'].iloc(array_no)
+czi_path = ref_df['files'].iloc[array_no]
 # load .czi file into MultiFinder instance
 finder = find_cells.MultiFinder(czi_path)
 # load bg file from multi-image .czi and add to finder
@@ -47,10 +47,14 @@ foci_obj = foci.Foci(splitter)
 foci_obj.segment()  # segment foci using PexSegmenter
 foci_obj.count_foci()  # count foci
 foci_obj.measure_overlap()  # measure # of overlapping foci
+if not os.path.isdir(output_dir):
+    os.mkdir(output_dir)
 foci_obj.pandas_output(output_dir + '/' + str(array_no) + '.csv')
 # output images to check quality of segmentation later
-im_output_dir = output_dir + '/' + foci_obj.filenames[:-4]
-os.mkdir(im_output_dir)
+im_fname = foci_obj.filenames.split('/')[-1]
+im_output_dir = output_dir + '/' + im_fname[:-4]
+if not os.path.isdir(im_output_dir):
+    os.mkdir(im_output_dir)
 os.chdir(im_output_dir)
 for i in range(0, len(foci_obj.segmented_nuclei)):
     io.imsave(str(i)+'_nuclei.tif', foci_obj.segmented_nuclei[i])
