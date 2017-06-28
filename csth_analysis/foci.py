@@ -16,7 +16,7 @@ class Foci:
             print('initializing attributes...')
         self.filenames = CellSplitter.filenames
         if len(self.filenames) == 1:
-            self.filenames = self.filenames[0]
+            self.filenames = self.filenames[0].split('/')[-1]
         self.segmented_nuclei = CellSplitter.segmented_nuclei
         self.segmented_cells = CellSplitter.segmented_cells
         self.cell_masks = CellSplitter.cell_masks

@@ -52,6 +52,7 @@ class MultiFinder:
                 background image is contained within a multi-image file
                 provided by filename.
         """
+        self.filenames = [filename]  # use only fname, not path
         if bg_index == -1:
             if bg_filename == '':
                 warn('No background image provided during initialization.')
@@ -88,7 +89,6 @@ class MultiFinder:
             bg_mask[bg_index, :, :, :, :] = False
             self.cell_im = self.cell_im[bg_mask]
             self.bg_channels = self.cell_channels
-        self.filenames = [filename.split('/')[-1]]  # use only fname, not path
 
     def add_czi(self, filename):
         """Add an additional czi file containing additional image(s).
