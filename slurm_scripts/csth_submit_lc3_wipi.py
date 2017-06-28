@@ -35,10 +35,11 @@ output_dir = args.output_dir
 # read .czi file path from csv reference table
 ref_df = pd.read_csv(ref_csv)
 czi_path = ref_df['files'].iloc[array_no]
+print('czi path: ' + czi_path)
 # load .czi file into MultiFinder instance
 finder = find_cells.MultiFinder(czi_path)
 # load bg file from multi-image .czi and add to finder
-bg_im_path = '/Volumes/denic_lab/Lab/TH_Imaging/6.8.17 TH69 LSM Airyscan 880/HEK LC3 WIPI for Nick/LC3-WIPI_HEK_dSQSTM1_NoTreat_ClumpandEmptyandSingles_Airyscan Processing.czi'
+bg_im_path = '/n/denic_lab/Lab/TH_Imaging/6.8.17 TH69 LSM Airyscan 880/HEK LC3 WIPI for Nick/LC3-WIPI_HEK_dSQSTM1_NoTreat_ClumpandEmptyandSingles_Airyscan Processing.czi'
 bg_czi = czi_io.load_multi_czi(bg_im_path)
 bg_czi_im = np.expand_dims(bg_czi[0][4, :, :, :, :], axis=0)
 finder.bg_im = bg_czi_im
