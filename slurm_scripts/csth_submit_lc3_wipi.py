@@ -54,13 +54,13 @@ foci_obj.segment()  # segment foci using PexSegmenter
 foci_obj.count_foci()  # count foci
 foci_obj.measure_overlap()  # measure # of overlapping foci
 if not os.path.isdir(output_dir):
-    os.mkdir(output_dir)
+    os.makedirs(output_dir)
 foci_obj.pandas_output(output_dir + '/' + str(array_no) + '.csv')
 # output images to check quality of segmentation later
 im_fname = foci_obj.filenames.split('/')[-1]
 im_output_dir = output_dir + '/' + im_fname[:-4]
 if not os.path.isdir(im_output_dir):
-    os.mkdir(im_output_dir)
+    os.makedirs(im_output_dir)
 os.chdir(im_output_dir)
 for i in range(0, len(foci_obj.segmented_nuclei)):
     io.imsave(str(i)+'_nuclei.tif', foci_obj.segmented_nuclei[i])
