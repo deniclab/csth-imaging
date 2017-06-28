@@ -82,7 +82,7 @@ class MultiFinder:
                 bg_czi = czi_io.load_single_czi(self.bg_filename)
                 self.bg_im = np.expand_dims(bg_czi[0], axis=0)
                 self.bg_channels = bg_czi[1]
-        elif self.bg_index != -1:
+        elif bg_index != -1:
             self.bg_im = self.cell_im[bg_index, :, :, :, :]
             # remove parts of cell_im that correspond to bg
             bg_mask = np.ones(shape=self.cell_im.shape, dtype=bool)
