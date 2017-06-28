@@ -30,7 +30,7 @@ args = parser.parse_args()
 print('args:')
 print(args)
 ref_csv = args.ref_csv
-array_no = args.array_no[0]
+array_no = int(args.array_no)
 output_dir = args.output_dir
 # read .czi file path from csv reference table
 ref_df = pd.read_csv(ref_csv)
