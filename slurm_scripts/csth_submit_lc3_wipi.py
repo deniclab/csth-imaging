@@ -27,8 +27,10 @@ parser.add_argument('-a', '--array_no', required=True,
 parser.add_argument('-o', '--output_dir', required=True,
                     help='dir for CSV-formatted output')
 args = parser.parse_args()
+print('args:')
+print(args)
 ref_csv = args.ref_csv
-array_no = args.array_no
+array_no = args.array_no[0]
 output_dir = args.output_dir
 # read .czi file path from csv reference table
 ref_df = pd.read_csv(ref_csv)
