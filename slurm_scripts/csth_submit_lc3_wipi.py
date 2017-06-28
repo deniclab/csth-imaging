@@ -46,16 +46,17 @@ finder.bg_im = bg_czi_im
 finder.bg_channels = bg_czi[1]
 # initialize a CellSplitter from finder
 splitter = segment_cells.CellSplitter(finder)
-splitter.segment_nuclei()  # segment nuclei
-splitter.segment_cells(488)  # segment cells using the 488 wl
+splitter.segment_nuclei(verbose=True)  # segment nuclei
+splitter.segment_cells(488, verbose=True)  # segment cells using the 488 wl
 # initialize a Foci instance from splitter
-foci_obj = foci.Foci(splitter)
-foci_obj.segment()  # segment foci using PexSegmenter
-foci_obj.count_foci()  # count foci
-foci_obj.measure_overlap()  # measure # of overlapping foci
+foci_obj = foci.Foci(splitter, verbose=True)
+foci_obj.segment(verbose=True)  # segment foci using PexSegmenter
+foci_obj.count_foci(verbose=True)  # count foci
+foci_obj.measure_overlap(verbose=True)  # measure # of overlapping foci
 if not os.path.isdir(output_dir):
     os.makedirs(output_dir)
-foci_obj.pandas_output(output_dir + '/' + str(array_no) + '.csv')
+foci_obj.pandas_output(output_dir + '/' + str(array_no) + '.csv',
+                       verbose=True)
 # output images to check quality of segmentation later
 im_fname = foci_obj.filenames.split('/')[-1]
 im_output_dir = output_dir + '/' + im_fname[:-4]
