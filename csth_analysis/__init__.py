@@ -1,1 +1,1 @@
-__all__ = ['analysis_scripts']
+"""A package for segmenting foci and measuring overlap."""
