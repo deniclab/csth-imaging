@@ -78,11 +78,11 @@ if not os.path.isdir(im_output_dir):
     os.makedirs(im_output_dir)
 os.chdir(im_output_dir)
 for i in range(0, len(foci_obj.segmented_nuclei)):
-    io.imsave(str(i)+'_nuclei.tif', foci_obj.segmented_nuclei[i])
-    io.imsave(str(i)+'_cells.tif', foci_obj.segmented_cells[i])
+    io.imsave(str(i)+'_nuclei.tif', foci_obj.segmented_nuclei[i].astype('uint16'))
+    io.imsave(str(i)+'_cells.tif', foci_obj.segmented_cells[i].astype('uint16'))
     for c in foci_obj.foci.keys():  # keys are channel ints
-        io.imsave(str(i)+'_'+str(c)+'_foci.tif', foci_obj.foci[c][i])
+        io.imsave(str(i)+'_'+str(c)+'_foci.tif', foci_obj.foci[c][i].astype('uint16'))
 for c in finder.cell_channels:
     ch_ims = finder.get_channel_arrays(c, bg=False)
     for i in range(0, ch_ims.shape[0]):
-        io.imsave(str(i)+'_'+str(c)+'_raw.tif', ch_ims[i, :, :, :])
+        io.imsave(str(i)+'_'+str(c)+'_raw.tif', ch_ims[i, :, :, :].astype('uint16'))

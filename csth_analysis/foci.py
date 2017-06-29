@@ -58,6 +58,9 @@ class Foci:
                 if verbose:
                     print('eliminating dim foci...')
                 objs, vols = np.unique(c_foci, return_counts=True)
+                if verbose:
+                    print('before eliminating dim foci: ' +
+                          str(len(objs) - 1) + ' foci in image')
                 vols = dict(zip(objs, vols))
                 # get mean intensity for each focus
                 mean_intensity = {}
@@ -71,11 +74,16 @@ class Foci:
                     if k < cell_mean + 3*cell_sd:  # if mean intensity too low
                         c_foci[c_foci == rev_dict[k]] = 0  # eliminate focus
                 if verbose:
+                    print('after eliminating dim foci: ' +
+                          str(len(np.unique(c_foci))-1) + ' foci in image')
+                if verbose:
                     print('eliminating foci that reside outside of cells...')
                 c_foci[self.cell_masks[i] == 0] = 0
                 if verbose:
                     print('eliminating intranuclear foci...')
                 c_foci[self.segmented_nuclei[i] != 0] = 0
+                if verbose:
+                    print(str(len(np.unique(c_foci))-1) + ' final foci')
                 channel_foci.append(c_foci)
                 if verbose:
                     print('foci segmented from position ' + str(i + 1))

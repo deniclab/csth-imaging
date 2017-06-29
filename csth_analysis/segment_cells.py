@@ -14,7 +14,7 @@ from skimage.morphology import watershed
 class CellSplitter:
     """Class and methods for segmenting cells using watershedding from DAPI."""
 
-    def __init__(self, multi_finder, threshold=4000):
+    def __init__(self, multi_finder, threshold=2500):
         """Create a Nuclei object for segmentation."""
         self.filenames = multi_finder.filenames
         self.multi_finder = multi_finder
@@ -106,7 +106,7 @@ class CellSplitter:
             print('generating cell masks...')
         self.cell_masks = self.multi_finder.find_cells(channel, verbose=True)
         # convert segmented nuclei to an inverted mask for distance xform
-        nuclei_masks = self.segmented_nuclei
+        nuclei_masks = np.copy(self.segmented_nuclei)
         if verbose:
             print('converting nuclei to binary masks for distance xform...')
         for i in range(0, len(nuclei_masks)):
