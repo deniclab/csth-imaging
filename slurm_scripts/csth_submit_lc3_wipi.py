@@ -38,26 +38,40 @@ czi_path = ref_df['files'].iloc[array_no]
 print('czi path: ' + czi_path)
 # load .czi file into MultiFinder instance
 finder = find_cells.MultiFinder(czi_path)
+print('MultiFinder created.')
 # load bg file from multi-image .czi and add to finder
-bg_im_path = '/n/denic_lab/Lab/TH_Imaging/6.8.17 TH69 LSM Airyscan 880/HEK LC3 WIPI for Nick/LC3-WIPI_HEK_dSQSTM1_NoTreat_ClumpandEmptyandSingles_Airyscan Processing.czi'
-bg_czi = czi_io.load_multi_czi(bg_im_path)
-bg_czi_im = np.expand_dims(bg_czi[0][4, :, :, :, :], axis=0)
-finder.bg_im = bg_czi_im
-finder.bg_channels = bg_czi[1]
+bg_tif_im = io.imread('/n/denic_lab/Lab/TH_Imaging/WIPI_empty_control.tif')
+bg_tif_im = np.moveaxis(bg_tif_im, -1, 0)  # move C axis to 1st position
+bg_tif_im = np.expand_dims(bg_tif_im, axis=0)
+finder.bg_im = bg_tif_im
+finder.bg_channels = [488, 561, 405]
+print('background image added to MultiFinder.')
 # initialize a CellSplitter from finder
 splitter = segment_cells.CellSplitter(finder)
+print('CellSplitter instance created.')
 splitter.segment_nuclei(verbose=True)  # segment nuclei
+print('Nuclei segmented.')
 splitter.segment_cells(488, verbose=True)  # segment cells using the 488 wl
+print('Cells segmented.')
 # initialize a Foci instance from splitter
 foci_obj = foci.Foci(splitter, verbose=True)
+print('Foci instance created.')
 foci_obj.segment(verbose=True)  # segment foci using PexSegmenter
+print('Foci segmented.')
 foci_obj.count_foci(verbose=True)  # count foci
+print('Foci counted.')
+print('n foci:')
+print(foci_obj.foci_cts['488'])
+print(foci_obj.foci_cts['561'])
 foci_obj.measure_overlap(verbose=True)  # measure # of overlapping foci
+print('overlap between channels measured.')
 if not os.path.isdir(output_dir):
     os.makedirs(output_dir)
+print('outputting to csv...')
 foci_obj.pandas_output(output_dir + '/' + str(array_no) + '.csv',
                        verbose=True)
 # output images to check quality of segmentation later
+print('outputting images...')
 im_fname = foci_obj.filenames.split('/')[-1]
 im_output_dir = output_dir + '/' + im_fname[:-4]
 if not os.path.isdir(im_output_dir):

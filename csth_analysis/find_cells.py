@@ -135,7 +135,7 @@ class MultiFinder:
             print('computing p-value transformation...')
         f_pvals = np.empty_like(log_gaussian_f)
         for s in range(0, f_pvals.shape[0]):
-            print(' computing p-val xform for slice ' + str(s + 1) +
+            print(' computing p-val xform for image ' + str(s + 1) +
                   ' out of ' + str(f_pvals.shape[0]))
             f_pvals[s, :, :, :] = 1-stats.norm.cdf(
                 log_gaussian_f[s, :, :, :], bg_mean, bg_sd)
