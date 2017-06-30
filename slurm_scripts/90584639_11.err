@@ -1,0 +1,30 @@
+discarding /n/home15/nweir/envs/PYTO_SEG_ENV/bin from PATH
+prepending /n/home15/nweir/envs/PYTO_SEG_ENV/bin to PATH
+/n/denic_lab/Users/nweir/python_packages/csth-imaging/dependencies/tifffile.py:313: UserWarning: ImportError: No module named '_tifffile'. Loading of some compressed images will be very slow. Tifffile.c can be obtained at http://www.lfd.uci.edu/~gohlke/
+  "ImportError: No module named '_tifffile'. "
+/n/denic_lab/Users/nweir/python_packages/csth-imaging/dependencies/czifile.py:130: UserWarning: failed to import the optional _czifile C extension module.
+Decoding of JXR and JPEG encoded images will not be available.
+Czifile.pyx can be obtained at http://www.lfd.uci.edu/~gohlke/
+  "failed to import the optional _czifile C extension module.\n"
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+/n/denic_lab/Users/nweir/python_packages/csth_analysis/find_cells.py:58: UserWarning: No background image provided during initialization.
+  warn('No background image provided during initialization.')
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 0_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+Traceback (most recent call last):
+  File "/n/denic_lab/Users/nweir/python_packages/csth-imaging/slurm_scripts/csth_submit_lc3_wipi.py", line 81, in <module>
+    io.imsave(str(i)+'_nuclei.tif', foci_obj.segmented_nuclei[i])
+  File "/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py", line 133, in imsave
+    return call_plugin('imsave', fname, arr, plugin=plugin, **plugin_args)
+  File "/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/manage_plugins.py", line 211, in call_plugin
+    return func(*args, **kwargs)
+  File "/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/external/tifffile/tifffile.py", line 205, in imsave
+    tif.save(data, **kwargs)
+  File "/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/external/tifffile/tifffile.py", line 527, in save
+    {'u': 1, 'i': 2, 'f': 3, 'c': 6}[data.dtype.kind])
+KeyError: 'b'

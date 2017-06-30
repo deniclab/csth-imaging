@@ -1,0 +1,4 @@
+discarding /n/home15/nweir/envs/PYTO_SEG_ENV/bin from PATH
+prepending /n/home15/nweir/envs/PYTO_SEG_ENV/bin to PATH
+/var/slurmd/spool/slurmd/job90585306/slurm_script: line 18: 22242 Killed                  python3 /n/denic_lab/Users/nweir/python_packages/csth-imaging/slurm_scripts/csth_submit_lc3_wipi.py -r $r_csv -a $SLURM_ARRAY_TASK_ID -o $out_dir
+slurmstepd: error: Exceeded step memory limit at some point.
