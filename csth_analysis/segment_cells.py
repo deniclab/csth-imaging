@@ -19,7 +19,7 @@ class CellSplitter:
         self.filenames = multi_finder.filenames
         self.multi_finder = multi_finder
         self.threshold = threshold
-        self.raw_nuclei_n = []
+        self.n_raw_nuclei = []
         self.segmented_nuclei = []
         self.nuclei_centers = []
         if 405 not in multi_finder.cell_channels:
