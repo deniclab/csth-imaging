@@ -19,6 +19,7 @@ class CellSplitter:
         self.filenames = multi_finder.filenames
         self.multi_finder = multi_finder
         self.threshold = threshold
+        self.raw_nuclei_n = []
         self.segmented_nuclei = []
         self.nuclei_centers = []
         if 405 not in multi_finder.cell_channels:
@@ -71,6 +72,7 @@ class CellSplitter:
                     print()
                 self.nuclei_centers.append(seg_output.maxima)
                 self.segmented_nuclei.append(seg_output.peroxisomes)
+                self.n_raw_nuclei.append( seg_output.npexs)
         # remove perinuclear foci that are smaller than a true nucleus
         if verbose:
             print('removing small perinuclear foci...')

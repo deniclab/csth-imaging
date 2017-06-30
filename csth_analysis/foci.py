@@ -19,6 +19,7 @@ class Foci:
             self.filenames = self.filenames[0].split('/')[-1]
         self.segmented_nuclei = CellSplitter.segmented_nuclei
         self.segmented_cells = CellSplitter.segmented_cells
+        self.n_raw_nuclei = CellSplitter.n_raw_nuclei
         self.cell_masks = CellSplitter.cell_masks
         self.n_cells = CellSplitter.n_cells
         if verbose:
@@ -194,6 +195,8 @@ class Foci:
         tot_foci_2 = np.array([])
         overlap_foci = np.array([])
         cell_nums = np.array([])
+        raw_cells = np.array([])
+        total_cells = np.array([])
         im_nums = np.array([])
         if verbose:
             print('populating output arrays...')
@@ -209,11 +212,17 @@ class Foci:
                 (cell_nums, np.arange(1, n_cells + 1)))
             im_nums = np.concatenate(
                 (im_nums, np.repeat(i+1, n_cells)))
+            raw_cells = np.concatenate(
+                raw_cells, np.repeat(self.n_raw_nuclei[i], n_cells))
+            total_cells = np.concatenate(
+                total_cells, np.repeat(n_cells, n_cells))
         non_olap_1 = tot_foci_1 - overlap_foci
         non_olap_2 = tot_foci_2 - overlap_foci
         output_df = pd.DataFrame({'filename': self.filenames,
                                   'image': im_nums,
                                   'cell': cell_nums,
+                                  'im_n_cells': total_cells,
+                                  'im_raw_cells': raw_cells,
                                   str(channels[0]) + '_total_foci': tot_foci_1,
                                   str(channels[1]) + '_total_foci': tot_foci_2,
                                   str(channels[0]) + '_only_foci': non_olap_1,
