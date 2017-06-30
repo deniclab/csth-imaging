@@ -72,7 +72,7 @@ class CellSplitter:
                     print()
                 self.nuclei_centers.append(seg_output.maxima)
                 self.segmented_nuclei.append(seg_output.peroxisomes)
-                self.n_raw_nuclei.append( seg_output.npexs)
+                self.n_raw_nuclei.append(seg_output.npexs)
         # remove perinuclear foci that are smaller than a true nucleus
         if verbose:
             print('removing small perinuclear foci...')

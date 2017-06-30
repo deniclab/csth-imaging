@@ -213,9 +213,9 @@ class Foci:
             im_nums = np.concatenate(
                 (im_nums, np.repeat(i+1, n_cells)))
             raw_cells = np.concatenate(
-                raw_cells, np.repeat(self.n_raw_nuclei[i], n_cells))
+                (raw_cells, np.repeat(self.n_raw_nuclei[i], n_cells)))
             total_cells = np.concatenate(
-                total_cells, np.repeat(n_cells, n_cells))
+                (total_cells, np.repeat(n_cells, n_cells)))
         non_olap_1 = tot_foci_1 - overlap_foci
         non_olap_2 = tot_foci_2 - overlap_foci
         output_df = pd.DataFrame({'filename': self.filenames,
