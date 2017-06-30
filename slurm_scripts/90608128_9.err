@@ -1,0 +1,545 @@
+discarding /n/home15/nweir/envs/PYTO_SEG_ENV/bin from PATH
+prepending /n/home15/nweir/envs/PYTO_SEG_ENV/bin to PATH
+/n/denic_lab/Users/nweir/python_packages/csth-imaging/dependencies/tifffile.py:313: UserWarning: ImportError: No module named '_tifffile'. Loading of some compressed images will be very slow. Tifffile.c can be obtained at http://www.lfd.uci.edu/~gohlke/
+  "ImportError: No module named '_tifffile'. "
+/n/denic_lab/Users/nweir/python_packages/csth-imaging/dependencies/czifile.py:130: UserWarning: failed to import the optional _czifile C extension module.
+Decoding of JXR and JPEG encoded images will not be available.
+Czifile.pyx can be obtained at http://www.lfd.uci.edu/~gohlke/
+  "failed to import the optional _czifile C extension module.\n"
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+/n/denic_lab/Users/nweir/python_packages/csth_analysis/find_cells.py:58: UserWarning: No background image provided during initialization.
+  warn('No background image provided during initialization.')
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/numpy/core/_methods.py:59: RuntimeWarning: Mean of empty slice.
+  warnings.warn("Mean of empty slice.", RuntimeWarning)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/numpy/core/_methods.py:82: RuntimeWarning: Degrees of freedom <= 0 for slice
+  warnings.warn("Degrees of freedom <= 0 for slice", RuntimeWarning)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 0_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 0_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 0_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 0_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 1_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 1_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 1_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 1_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 2_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 2_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 2_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 2_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 3_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 3_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 3_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 3_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 4_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 4_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 4_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 4_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 5_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 5_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 5_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 5_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 6_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 6_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 6_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 6_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 7_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 7_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 7_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 7_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 8_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 8_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 8_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 8_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 9_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 9_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 9_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 9_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 10_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 10_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 10_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 10_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 11_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 11_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 11_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 11_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 12_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 12_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 12_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 12_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 13_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 13_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 13_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 13_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 14_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 14_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 14_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 14_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 15_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 15_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 15_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 15_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 16_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 16_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 16_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 16_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 17_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 17_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 17_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 17_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 18_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 18_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 18_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 18_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 19_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 19_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 19_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 19_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 20_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 20_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 20_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 20_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 21_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 21_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 21_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 21_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 22_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 22_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 22_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 22_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 23_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 23_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 23_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 23_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 24_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 24_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 24_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 24_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 25_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 25_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 25_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 25_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 26_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 26_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 26_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 26_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 27_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 27_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 27_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 27_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 28_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 28_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 28_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 28_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 29_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 29_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 29_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 29_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 30_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 30_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 30_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 30_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 31_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 31_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 31_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 31_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 32_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 32_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 32_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 32_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 33_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 33_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 33_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 33_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 34_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 34_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 34_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 34_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 35_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 35_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 35_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 35_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 36_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 36_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 36_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 36_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 37_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 37_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 37_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 37_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 38_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 38_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 38_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 38_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 39_nuclei.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 39_cells.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 39_488_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 39_561_foci.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 0_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 2_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 3_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 5_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 6_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 7_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 8_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 9_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 12_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 15_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 16_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 17_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 18_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 19_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 20_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 22_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 23_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 24_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 25_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 26_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 27_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 28_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 31_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 32_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 33_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 34_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 35_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 36_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 37_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 38_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 39_488_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 0_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 1_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 2_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 3_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 4_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 5_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 6_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 7_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 8_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 9_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 10_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 11_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 12_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 13_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 14_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 15_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 16_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 17_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 18_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 19_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 20_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 21_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 22_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 23_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 24_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 25_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 26_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 27_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 28_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 29_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 30_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 31_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 32_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 33_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 34_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 35_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 36_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 37_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 38_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 39_561_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 0_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 2_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 3_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 4_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 5_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 6_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 7_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 8_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 9_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 10_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 11_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 12_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 13_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 14_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 15_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 16_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 17_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 18_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 19_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 22_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 23_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 25_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 26_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 27_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 28_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 29_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 31_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 34_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 36_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 37_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/skimage/io/_io.py:132: UserWarning: 38_405_raw.tif is a low contrast image
+  warn('%s is a low contrast image' % fname)
+slurmstepd: error: Exceeded step memory limit at some point.

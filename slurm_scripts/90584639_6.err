@@ -1,0 +1,24 @@
+discarding /n/home15/nweir/envs/PYTO_SEG_ENV/bin from PATH
+prepending /n/home15/nweir/envs/PYTO_SEG_ENV/bin to PATH
+/n/denic_lab/Users/nweir/python_packages/csth-imaging/dependencies/tifffile.py:313: UserWarning: ImportError: No module named '_tifffile'. Loading of some compressed images will be very slow. Tifffile.c can be obtained at http://www.lfd.uci.edu/~gohlke/
+  "ImportError: No module named '_tifffile'. "
+/n/denic_lab/Users/nweir/python_packages/csth-imaging/dependencies/czifile.py:130: UserWarning: failed to import the optional _czifile C extension module.
+Decoding of JXR and JPEG encoded images will not be available.
+Czifile.pyx can be obtained at http://www.lfd.uci.edu/~gohlke/
+  "failed to import the optional _czifile C extension module.\n"
+/n/home15/nweir/envs/PYTO_SEG_ENV/lib/python3.4/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+/n/denic_lab/Users/nweir/python_packages/csth_analysis/find_cells.py:58: UserWarning: No background image provided during initialization.
+  warn('No background image provided during initialization.')
+Traceback (most recent call last):
+  File "/n/denic_lab/Users/nweir/python_packages/csth-imaging/slurm_scripts/csth_submit_lc3_wipi.py", line 50, in <module>
+    splitter = segment_cells.CellSplitter(finder)
+  File "/n/denic_lab/Users/nweir/python_packages/csth_analysis/segment_cells.py", line 28, in __init__
+    self.seg_input = self.multi_finder.get_channel_arrays(405)[0]
+  File "/n/denic_lab/Users/nweir/python_packages/csth_analysis/find_cells.py", line 210, in get_channel_arrays
+    :, self.cell_channels.index(channel), :, :, :])
+IndexError: too many indices for array
