@@ -5,6 +5,7 @@
 from pyto_segmenter.PexSegment import PexSegmenter
 import numpy as np
 import pandas as pd
+from scipy.ndimage.morphology import binary_erosion
 
 
 class Foci:
@@ -36,6 +37,43 @@ class Foci:
         self.foci = {}
         if verbose:
             print('beginning segmentation.')
+        self.thresholds = {488: 12500, 561: 6000}  # diff thresh for 488/561
+        self.erosion_struct = np.array(  # the strel for erosion of nuclei
+            [[[False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, True,  False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False]],
+             [[False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, True,  False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False]],
+             [[False, False, False,  True, False, False, False],
+              [False, False,  True,  True,  True, False, False],
+              [False,  True,  True,  True,  True,  True, False],
+              [True,   True,  True,  True,  True,  True,  True],
+              [False,  True,  True,  True,  True,  True, False],
+              [False, False,  True,  True,  True, False, False],
+              [False, False, False,  True, False, False, False]],
+             [[False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, True,  False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False]],
+             [[False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, True,  False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False],
+              [False, False, False, False, False, False, False]]])
         for c in self.channels:
             if c == 405:
                 continue  # don't segment foci from DAPI channel
@@ -44,6 +82,8 @@ class Foci:
                 print('------------------------------------------------------')
                 print('segmenting foci from channel ' + str(c))
                 print('------------------------------------------------------')
+                print('canny threshold for channel ' + str(c) + ': ' +
+                      self.thresholds[c])
             for i in range(0, self.n_pos):  # for each stage position
                 # segment foci from this channel
                 if verbose:
@@ -51,7 +91,8 @@ class Foci:
                           ' out of ' + str(self.n_pos))
                 curr_segmenter = PexSegmenter(
                     src_data=self.imgs[c][i, :, :, :], seg_method='canny',
-                    high_threshold=12500, low_threshold=6250)
+                    high_threshold=self.thresholds[c],
+                    low_threshold=self.thresholds[c]/2)
                 curr_seg = curr_segmenter.segment()
                 c_foci = curr_seg.peroxisomes
                 raw_img = curr_seg.raw_img
@@ -82,7 +123,10 @@ class Foci:
                 c_foci[self.cell_masks[i] == 0] = 0
                 if verbose:
                     print('eliminating intranuclear foci...')
-                c_foci[self.segmented_nuclei[i] != 0] = 0
+                eroded_nuclei = np.copy(self.segmented_nuclei[i])
+                eroded_nuclei = binary_erosion(eroded_nuclei,
+                                               structure=self.erosion_struct)
+                c_foci[eroded_nuclei != 0] = 0
                 if verbose:
                     print(str(len(np.unique(c_foci))-1) + ' final foci')
                 channel_foci.append(c_foci)
