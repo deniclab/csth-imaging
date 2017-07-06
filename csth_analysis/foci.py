@@ -83,7 +83,7 @@ class Foci:
                 print('segmenting foci from channel ' + str(c))
                 print('------------------------------------------------------')
                 print('canny threshold for channel ' + str(c) + ': ' +
-                      self.thresholds[c])
+                      str(self.thresholds[c]))
             for i in range(0, self.n_pos):  # for each stage position
                 # segment foci from this channel
                 if verbose:
