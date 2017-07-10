@@ -57,5 +57,6 @@ for i in np.unique(czi_vector):
         hist, bin_edges = np.histogram(
             curr_slice.flatten(), bins=50, range=(0, 65536))
         grad_arr[:, ind] = hist
+        ind = ind + 1
 np.save('/n/denic_lab/Users/Lab/csth-output/svm_train_1/svm_training_set.npy',
         grad_arr)
