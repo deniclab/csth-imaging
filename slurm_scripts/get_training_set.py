@@ -6,6 +6,8 @@ from skimage import io
 import sys
 import scipy.ndimage as nd
 sys.path.append('/n/denic_lab/Users/nweir/python_packages/')
+sys.path.append(
+    '/n/denic_lab/Users/nweir/python_packages/csth-imaging/dependencies/')
 from csth_analysis import czi_io
 
 # steps to this script:
