@@ -26,7 +26,7 @@ ref_df = pd.read_csv(ref_csv)
 czi_path = ref_df['files'].iloc[array_no]
 print('czi path: ' + czi_path)
 finder = find_cells.MultiFinder(czi_path)
-nuclei_ims = finder.get_channel_arrays(405, bg=False)[0]
+nuclei_ims = finder.get_channel_arrays(405, bg=False)
 del finder  # save memory
 cm = plt.cm.get_cmap('RdYlBu_r')  # colormap for plotting
 for i in range(0, nuclei_ims.shape[0]):
