@@ -4,7 +4,7 @@ import pandas as pd
 import argparse
 import sys
 import matplotlib
-matplotlib.use('Agg')
+matplotlib.use('PDF')
 import matplotlib.pyplot as plt
 sys.path.append('/n/denic_lab/Users/nweir/python_packages/')
 sys.path.append(
@@ -27,6 +27,8 @@ czi_path = ref_df['files'].iloc[array_no]
 print('czi path: ' + czi_path)
 finder = find_cells.MultiFinder(czi_path)
 nuclei_ims = finder.get_channel_arrays(405, bg=False)
+print('nuclei_ims shape:')
+print(nuclei_ims.shape)
 del finder  # save memory
 cm = plt.cm.get_cmap('RdYlBu_r')  # colormap for plotting
 for i in range(0, nuclei_ims.shape[0]):
@@ -41,5 +43,5 @@ for i in range(0, nuclei_ims.shape[0]):
     plt.bar(bins[:-1], n, color=cm(colors_1), width=bins[1]-bins[0])
     plt.yscale('log', nonposy='clip')
     fname = czi_path.split('/')[-1]
-    fname = fname[:-4] + '_' + str(i) + '.png'
+    fname = fname[:-4] + '_' + str(i) + '.pdf'
     plt.savefig('/n/denic_lab/Lab/csth-output/nuclei_kmeans_test/' + fname)
