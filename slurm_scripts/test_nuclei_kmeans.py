@@ -45,3 +45,4 @@ for i in range(0, nuclei_ims.shape[0]):
     fname = czi_path.split('/')[-1]
     fname = fname[:-4] + '_' + str(i) + '.pdf'
     plt.savefig('/n/denic_lab/Lab/csth-output/nuclei_kmeans_test/' + fname)
+    plt.close()
