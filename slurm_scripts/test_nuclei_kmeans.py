@@ -34,7 +34,9 @@ cm = plt.cm.get_cmap('RdYlBu_r')  # colormap for plotting
 for i in range(0, nuclei_ims.shape[0]):
     c_im = nuclei_ims[i, :, :, :].astype('uint16')
     kmeans_subset = np.random.choice(c_im.flatten(), 1000000)
-    cluster_out = KMeans(n_clusters=2).fit(kmeans_subset.reshape(-1, 1))
+    cluster_out = KMeans(
+        n_clusters=2, algorithm='full', n_init=50).fit(
+            kmeans_subset.reshape(-1, 1))
     n, bins = np.histogram(kmeans_subset, bins=100)
     colors_1 = np.zeros(shape=bins.shape)
     colors_1[bins > np.amin(
