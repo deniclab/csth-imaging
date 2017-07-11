@@ -39,6 +39,7 @@ for i in range(0, nuclei_ims.shape[0]):
         kmeans_subset.reshape(-1, 1)[cluster_out.labels_ == 1])] = 1
     colors_1 = colors_1[:-1]
     plt.bar(bins[:-1], n, color=cm(colors_1), width=bins[1]-bins[0])
+    plt.yscale('log', nonposy='clip')
     fname = czi_path.split('/')[-1]
     fname = fname[:-4] + '_' + str(i) + '.png'
     plt.savefig('/n/denic_lab/Lab/csth-output/nuclei_kmeans_test/' + fname)
