@@ -73,7 +73,7 @@ class MultiFinder:
                 try:
                     os.makedirs(self.log_path)
                 except FileExistsError:
-                    continue
+                    pass
             self.oof_svm = oof_svm
         else:
             self.bg_origin = 'slice'  # slice of a multi-czi
