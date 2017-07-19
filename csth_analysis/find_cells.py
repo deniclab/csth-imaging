@@ -70,7 +70,10 @@ class MultiFinder:
             self.bg_filename = bg_filename
             self.log_path = log_path
             if not os.path.isdir(self.log_path):
-                os.makedirs(self.log_path)
+                try:
+                    os.makedirs(self.log_path)
+                except FileExistsError:
+                    continue
             self.oof_svm = oof_svm
         else:
             self.bg_origin = 'slice'  # slice of a multi-czi
