@@ -12,6 +12,7 @@ from scipy.ndimage import filters
 import scipy.ndimage as nd
 from sklearn import svm
 import pickle
+import os
 
 
 class CellMask:
@@ -68,6 +69,8 @@ class MultiFinder:
             self.bg_origin = 'separate'  # separate czi or tiff file
             self.bg_filename = bg_filename
             self.log_path = log_path
+            if not os.path.isdir(self.log_path):
+                os.makedirs(self.log_path)
             self.oof_svm = oof_svm
         else:
             self.bg_origin = 'slice'  # slice of a multi-czi
