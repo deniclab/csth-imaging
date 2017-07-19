@@ -277,7 +277,15 @@ class MultiFinder:
         if verbose:
             print('raw focus labels:')
             print(labels)
-            print('correcting slice labels...')
+        # test if there are any in-focus slices detected:
+        if np.array_equal(np.unique(labels), np.array([0])):
+            if verbose:
+                print('Warning: no in-focus slices detected.')
+            self.flagged_oof_ims[slc_no] = 1
+            if log_path is not None:
+                io.imsave(log_path + '_' + str(slc_no) + '.tif', im)
+            return labels
+        print('correcting slice labels...')
         corrected_labels = self.fix_interc_blur(labels, dec_func)
         if not np.array_equal(corrected_labels, labels):
             self.flagged_oof_ims[slc_no] = 1
