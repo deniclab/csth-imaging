@@ -37,7 +37,8 @@ ref_df = pd.read_csv(ref_csv)
 czi_path = ref_df['files'].iloc[array_no]
 print('czi path: ' + czi_path)
 # load .czi file into MultiFinder instance
-finder = find_cells.MultiFinder(czi_path)
+finder = find_cells.MultiFinder(czi_path, log_path=output_dir + '/log',
+                                oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl')
 print('MultiFinder created.')
 # load bg file from multi-image .czi and add to finder
 bg_tif_im = io.imread('/n/denic_lab/Lab/TH_Imaging/WIPI_empty_control.tif')

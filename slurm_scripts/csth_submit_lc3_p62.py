@@ -39,7 +39,9 @@ bg_czi_path = ref_df['controls'].iloc[array_no]
 print('czi path: ' + czi_path)
 print('control czi path: ' + bg_czi_path)
 # load .czi file into MultiFinder instance
-finder = find_cells.MultiFinder(czi_path, bg_filename=bg_czi_path)
+finder = find_cells.MultiFinder(czi_path, bg_filename=bg_czi_path,
+                                log_path=output_dir + '/log',
+                                oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl')
 print('MultiFinder created.')
 # initialize a CellSplitter from finder
 splitter = segment_cells.CellSplitter(finder)
