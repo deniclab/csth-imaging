@@ -14,7 +14,7 @@ from skimage.morphology import watershed
 class CellSplitter:
     """Class and methods for segmenting cells using watershedding from DAPI."""
 
-    def __init__(self, multi_finder, threshold=2500):
+    def __init__(self, multi_finder, channel=488, threshold='auto'):
         """Create a Nuclei object for segmentation."""
         self.filenames = multi_finder.filenames
         self.multi_finder = multi_finder
@@ -22,6 +22,8 @@ class CellSplitter:
         self.n_raw_nuclei = []
         self.segmented_nuclei = []
         self.nuclei_centers = []
+        print('generating cell masks...')
+        self.cell_masks = self.multi_finder.find_cells(channel, verbose=True)
         if 405 not in multi_finder.cell_channels:
             raise ValueError(
                 'The MultiFinder object lacks nuclei fluorescence.'
@@ -42,12 +44,39 @@ class CellSplitter:
             if verbose:
                 print('input has 3 dimensions.')
                 print('segmenting nuclei using PexSegmenter...')
-            segmenter = PexSegmenter(
-                src_data=self.seg_input, threshold=self.threshold, g_xy=2,
-                g_z=1)
+            if self.threshold == 'auto':
+                # use slice-by-slice scaled cutoffs with hard floor to make
+                # thresholded image.
+                if verbose:
+                    print('Using thresholds set based on slice intensity')
+                gaussian_im = gaussian_filter(self.seg_input, sigma=(0, 4, 4))
+                thresh_floor = int(np.amax(gaussian_im.flatten())*0.2)
+                maxima = np.amax(gaussian_im, axis=0)  # slice-by-slice maxima
+                if verbose:
+                    print('thresholding floor set to ' + str(thresh_floor))
+                    print('slice-by-slice cutoffs:')
+                    print(maxima*0.5)
+                    print('generating threshold image...')
+                threshold_im = np.copy(gaussian_im)
+                threshold_im[self.cell_masks == 0] = 0
+                for z in range(0, threshold_im.shape[0]):
+                    if maxima[z]*0.5 < thresh_floor:
+                        threshold_im[z, :, :][
+                            threshold_im[z, :, :] < thresh_floor] = 0
+                    else:
+                        threshold_im[z, :, :][
+                            threshold_im[z, :, :] < int(maxima[z]*0.5)] = 0
+                threshold_im[threshold_im > 0] = 1
+                segmenter = PexSegmenter(
+                    src_data=threshold_im, seg_method='pre-thresholded')
+            else:
+                segmenter = PexSegmenter(
+                    src_data=self.seg_input, threshold=self.threshold, g_xy=4,
+                    g_z=0)
+            # use empirically determined segmentation parameters
             seg_output = segmenter.segment(fill_holes=True,
-                                           edt_sampling=(20, 1, 1),
-                                           edt_smooth=[3, 10, 10])  # empirical
+                                           edt_sampling=(10, 1, 1),
+                                           edt_smooth=[3, 50, 50])
             if verbose:
                 print('passing segmented objs and seeds to Nuclei instance...')
             self.segmented_nuclei.append(seg_output.peroxisomes)
@@ -60,9 +89,40 @@ class CellSplitter:
                 if verbose:
                     print('segmenting image #' + str(i+1) +
                           ' of ' + str(self.seg_input.shape[0]) + str('...'))
-                segmenter = PexSegmenter(
-                    src_data=self.seg_input[i, :, :, :], mode='threshold',
-                    threshold=self.threshold, g_xy=2, g_z=1)
+                if self.threshold == 'auto':
+                    # use slice-by-slice scaled cutoffs with hard floor to make
+                    # thresholded image.
+                    if verbose:
+                        print('Using thresholds set based on slice intensity')
+                    gaussian_im = gaussian_filter(
+                        self.seg_input[i, :, :, :], sigma=(0, 4, 4))
+                    thresh_floor = int(np.amax(gaussian_im.flatten())*0.2)
+                    # get slice-by-slice max
+                    maxima = np.amax(gaussian_im, axis=(1, 2))
+                    if verbose:
+                        print('thresholding floor set to ' + str(thresh_floor))
+                        print('slice-by-slice cutoffs:')
+                        print(maxima*0.5)
+                        print('generating threshold image...')
+                    threshold_im = np.copy(gaussian_im)
+                    threshold_im[self.cell_masks[i] == 0] = 0
+                    for z in range(0, threshold_im.shape[0]):
+                        if maxima[z]*0.5 < thresh_floor:
+                            threshold_im[z, :, :][
+                                threshold_im[z, :, :] < thresh_floor] = 0
+                        else:
+                            threshold_im[z, :, :][
+                                threshold_im[z, :, :] < int(maxima[z]*0.5)] = 0
+                    threshold_im[threshold_im > 0] = 1
+                    segmenter = PexSegmenter(
+                        src_data=threshold_im, seg_method='pre-thresholded')
+                else:
+                    if verbose:
+                        print('performing segmentation with a threshold of ' +
+                              str(self.threshold))
+                    segmenter = PexSegmenter(
+                        src_data=self.seg_input[i, :, :, :],
+                        threshold=self.threshold, g_xy=4, g_z=0)
                 seg_output = segmenter.segment(fill_holes=True,
                                                edt_sampling=(10, 1, 1),
                                                edt_smooth=[3, 50, 50])
@@ -81,14 +141,18 @@ class CellSplitter:
                                    return_counts=True)
             if verbose:
                 print(str(len(objs_w_cts[0]) - 1) + ' raw segmented DAPI foci')
-            objs_to_rm = objs_w_cts[0][objs_w_cts[1] < 1000]
-            print(str(len(objs_to_rm)) + ' foci volume < 1000 px, removing...')
+                print('object volumes in pixels:')
+                print(objs_w_cts[1][1:])
+            objs_to_rm = objs_w_cts[0][objs_w_cts[1] < 10000]
+            if verbose:
+                print('removing objects volume < 10000 px, #s:')
+                print(objs_to_rm)
             self.segmented_nuclei[i][np.reshape(
                 np.in1d(self.segmented_nuclei[i], objs_to_rm),
                 self.segmented_nuclei[i].shape)] = 0
             # remove corresponding nuclei_centers as well
             if verbose:
-                print('removing nuclei_centers corresponding to perinuclear' +
+                print('removing nuclei_centers corresponding to small' +
                       ' DAPI foci...')
             self.nuclei_centers[i][self.segmented_nuclei[i] == 0] = 0
 
@@ -104,9 +168,6 @@ class CellSplitter:
                 print('nuclei have not been segmented yet.')
                 print('segmenting nuclei...')
             self.segment_nuclei()
-        if verbose:
-            print('generating cell masks...')
-        self.cell_masks = self.multi_finder.find_cells(channel, verbose=True)
         # convert segmented nuclei to an inverted mask for distance xform
         nuclei_masks = np.copy(self.segmented_nuclei)
         if verbose:
