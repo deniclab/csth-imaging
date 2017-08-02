@@ -6,6 +6,7 @@ import numpy as np
 from csth_analysis import czi_io
 from csth_analysis import find_cells
 from pyto_segmenter.PexSegment import PexSegmenter
+import scipy.ndimage.morphology as morph
 from scipy.ndimage.morphology import distance_transform_edt
 from scipy.ndimage.filters import gaussian_filter
 from skimage.morphology import watershed
@@ -158,6 +159,15 @@ class CellSplitter:
 
     def segment_cells(self, channel, verbose=True, rm_edge_cells=True):
         """Segment cells, identified using find_cells, based on nuclei."""
+        strel = np.array([[[0,0,0],
+                           [0,0,0],
+                           [0,0,0]],
+                          [[0,1,0],
+                           [1,1,1],
+                           [0,1,0]],
+                          [[0,0,0],
+                           [0,0,0],
+                           [0,0,0]]])
         self.segmented_cells = []
         self.n_cells = []
         # test to make sure nuclei have already been segmented.
@@ -170,6 +180,50 @@ class CellSplitter:
             self.segment_nuclei()
         # convert segmented nuclei to an inverted mask for distance xform
         nuclei_masks = np.copy(self.segmented_nuclei)
+        channel_ims = self.multi_finder.get_channel_arrays(
+            channel, bg=False)
+        if verbose:
+            print('eroding cell edges...')
+        means = []
+        sds = []
+        for i in range(0, len(self.cell_masks)):
+            if verbose:
+                print('eroding mask ' + str(i) + '...')
+            for j in range(0, 10):
+                curr_mask = morph.binary_erosion(
+                    self.cell_masks[i], structure=strel, iterations=j)
+                means.append(
+                    np.mean(channel_ims[i, :, :, :][np.logical_and(
+                        curr_mask != 0, nuclei_masks[i] == 0)]))
+                sds.append(
+                    np.std(channel_ims[i, :, :, :][np.logical_and(
+                        curr_mask != 0, nuclei_masks[i] == 0)]))
+            means[0] = np.mean(channel_ims[i, :, :, :][np.logical_and(
+                self.cell_masks[i] != 0, nuclei_masks[i] == 0)])
+            if verbose:
+                print('cell mask means:')
+                print(means)
+            slopes = []
+            for j in range(0, len(means)-2):
+                slopes.append(np.divide(means[j+2]-means[j], 2))
+            if verbose:
+                print('slopes:')
+                print(slopes)
+            delta_slopes = []
+            iterations = np.arange(1.5, 8.5, 1)
+            for j in range(0, len(slopes)-1):
+                delta_slopes.append(np.absolute(slopes[j+1]-slopes[j]))
+            if verbose:
+                print('slope deltas:')
+                print(delta_slopes)
+            desired_erosions = int(
+                iterations[np.argmax(delta_slopes)] + 0.5)
+            print('desired erosions: ' + str(desired_erosions))
+            self.cell_masks[i] = morph.binary_erosion(
+                self.cell_masks[i], structure=strel,
+                iterations=desired_erosions)
+            if verbose:
+                print('erosion of mask #' + str(i) + ' complete.')
         if verbose:
             print('converting nuclei to binary masks for distance xform...')
         for i in range(0, len(nuclei_masks)):

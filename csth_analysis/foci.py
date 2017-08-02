@@ -6,6 +6,7 @@ from pyto_segmenter.PexSegment import PexSegmenter
 import numpy as np
 import pandas as pd
 from scipy.ndimage.morphology import binary_erosion
+from scipy.ndimage import filters
 
 
 class Foci:
@@ -94,10 +95,18 @@ class Foci:
                 if verbose:
                     print('segmenting foci for position ' + str(i + 1) +
                           ' out of ' + str(self.n_pos))
+                    print('generating normalized image for' +
+                          ' segmentation...')
+                norm_im = self.normalize_im(
+                    self.imgs[c][i, :, :, :],
+                    mask=np.logical_and(self.cell_masks[i] != 0,
+                                        self.segmented_nuclei[i] == 0))
+                if verbose:
+                    print('performing segmentation...')
                 curr_segmenter = PexSegmenter(
-                    src_data=self.imgs[c][i, :, :, :], seg_method='canny',
-                    high_threshold=self.thresholds[c],
-                    low_threshold=self.thresholds[c]/2)
+                    src_data=norm_im, seg_method='canny',
+                    high_threshold=self.thresholds[c][0],
+                    low_threshold=self.thresholds[c][1])
                 curr_seg = curr_segmenter.segment()
                 c_foci = curr_seg.peroxisomes
                 raw_img = curr_seg.raw_img
@@ -115,8 +124,15 @@ class Foci:
                     mean_intensity[obj] = np.sum(
                         raw_img[c_foci == obj]).astype('float')/vols[obj]
                 rev_dict = {v: k for k, v in mean_intensity.items()}
-                cell_mean = np.nanmean(raw_img[self.segmented_cells[i] != 0])
-                cell_sd = np.nanstd(raw_img[self.segmented_cells[i] != 0])
+                eroded_nuclei = np.copy(self.segmented_nuclei[i])
+                eroded_nuclei = binary_erosion(eroded_nuclei,
+                                               structure=self.erosion_struct)
+                cell_mean = np.nanmean(
+                    raw_img[np.logical_and(self.segmented_cells[i] != 0,
+                                           eroded_nuclei == 0)])
+                cell_sd = np.nanstd(
+                    raw_img[np.logical_and(self.segmented_cells[i] != 0,
+                                           eroded_nuclei == 0)])
                 if verbose:
                     print('cell mean: ' + str(cell_mean))
                     print('cell standard deviation: ' + str(cell_sd))
@@ -138,9 +154,6 @@ class Foci:
                 c_foci[self.cell_masks[i] == 0] = 0
                 if verbose:
                     print('eliminating intranuclear foci...')
-                eroded_nuclei = np.copy(self.segmented_nuclei[i])
-                eroded_nuclei = binary_erosion(eroded_nuclei,
-                                               structure=self.erosion_struct)
                 c_foci[eroded_nuclei != 0] = 0
                 if verbose:
                     print(str(len(np.unique(c_foci))-1) + ' final foci')
@@ -315,3 +328,22 @@ class Foci:
                                   'flagged_z': flagged_z
                                   })
         output_df.to_csv(path)
+
+    @staticmethod
+    def normalize_im(im, norm_mean=1000, mask=None, verbose=True):
+        """Normalize an image intensity values to a set mean."""
+        if len(im.shape) != 3:
+            raise IndexError('normalize_im can only work on 3D ims.')
+        if verbose:
+            print('blurring image...')
+        blurred_im = filters.gaussian_filter(im, sigma=(0, 3, 3))
+        if verbose:
+            print('calculating image mean...')
+        if mask is not None:
+            mean = np.mean(blurred_im[mask])
+        else:
+            mean = np.mean(blurred_im)
+        if verbose:
+            print('original cell mean: ' + str(mean))
+            print('normalizing image...')
+        return im/(mean/norm_mean)
