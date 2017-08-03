@@ -189,7 +189,7 @@ class CellSplitter:
         for i in range(0, len(self.cell_masks)):
             if verbose:
                 print('eroding mask ' + str(i) + '...')
-            for j in range(0, 20):
+            for j in range(0, 10):
                 curr_mask = morph.binary_erosion(
                     self.cell_masks[i], structure=strel, iterations=j)
                 means.append(
@@ -210,9 +210,10 @@ class CellSplitter:
                 print('slopes:')
                 print(slopes)
             delta_slopes = []
-            iterations = np.arange(1.5, 18.5, 1)
+            iterations = np.arange(1.5, 8.5, 1)
             for j in range(0, len(slopes)-1):
                 delta_slopes.append(np.absolute(slopes[j+1]-slopes[j]))
+            delta_slopes[np.isnan(delta_slopes)] = 0
             if verbose:
                 print('slope deltas:')
                 print(delta_slopes)
