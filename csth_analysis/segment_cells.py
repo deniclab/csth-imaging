@@ -209,10 +209,11 @@ class CellSplitter:
             if verbose:
                 print('slopes:')
                 print(slopes)
-            delta_slopes = []
+            delta_slopes = np.array([])
             iterations = np.arange(1.5, 8.5, 1)
             for j in range(0, len(slopes)-1):
-                delta_slopes.append(np.absolute(slopes[j+1]-slopes[j]))
+                delta_slopes = np.append(
+                    delta_slopes, np.absolute(slopes[j+1]-slopes[j]))
             delta_slopes[np.isnan(delta_slopes)] = 0
             if verbose:
                 print('slope deltas:')
