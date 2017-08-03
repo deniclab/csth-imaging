@@ -194,9 +194,6 @@ class CellSplitter:
                 means.append(
                     np.mean(channel_ims[i, :, :, :][np.logical_and(
                         curr_mask != 0, nuclei_masks[i] == 0)]))
-                sds.append(
-                    np.std(channel_ims[i, :, :, :][np.logical_and(
-                        curr_mask != 0, nuclei_masks[i] == 0)]))
             means[0] = np.mean(channel_ims[i, :, :, :][np.logical_and(
                 self.cell_masks[i] != 0, nuclei_masks[i] == 0)])
             if verbose:
