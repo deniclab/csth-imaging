@@ -184,11 +184,10 @@ class CellSplitter:
             channel, bg=False)
         if verbose:
             print('eroding cell edges...')
-        means = []
-        sds = []
         for i in range(0, len(self.cell_masks)):
             if verbose:
                 print('eroding mask ' + str(i) + '...')
+            means = []
             for j in range(0, 10):
                 curr_mask = morph.binary_erosion(
                     self.cell_masks[i], structure=strel, iterations=j)
