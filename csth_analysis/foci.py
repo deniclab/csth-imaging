@@ -106,7 +106,7 @@ class Foci:
                 curr_segmenter = PexSegmenter(
                     src_data=norm_im, seg_method='canny',
                     high_threshold=self.thresholds[c][0],
-                    low_threshold=self.thresholds[c][1])
+                    low_threshold=self.thresholds[c][1], g_z=0)
                 curr_seg = curr_segmenter.segment()
                 c_foci = curr_seg.peroxisomes
                 raw_img = curr_seg.raw_img
