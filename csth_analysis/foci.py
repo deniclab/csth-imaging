@@ -133,19 +133,34 @@ class Foci:
                 cell_sd = np.nanstd(
                     raw_img[np.logical_and(self.segmented_cells[i] != 0,
                                            eroded_nuclei == 0)])
-                if verbose:
-                    print('cell mean: ' + str(cell_mean))
-                    print('cell standard deviation: ' + str(cell_sd))
-                    print('intensity cutoff for removal: ' +
-                          str(cell_mean + 3*cell_sd))
-                    print('-----filtering foci-----')
-                for k in rev_dict.keys():
+                if c == 488:
                     if verbose:
-                        print('focus intensity: ' + str(k))
-                    if k < cell_mean + 3*cell_sd:  # if mean intensity too low
+                        print('cell mean: ' + str(cell_mean))
+                        print('cell standard deviation: ' + str(cell_sd))
+                        print('intensity cutoff for removal: ' +
+                              str(cell_mean + 4.5*cell_sd))
+                        print('-----filtering foci-----')
+                    for k in rev_dict.keys():
                         if verbose:
-                            print('removing focus')
-                        c_foci[c_foci == rev_dict[k]] = 0  # eliminate focus
+                            print('focus intensity: ' + str(k))
+                        if k < cell_mean + 4.5*cell_sd:  # if mean intensity too low
+                            if verbose:
+                                print('removing focus')
+                            c_foci[c_foci == rev_dict[k]] = 0  # eliminate focus
+                if c == 561:
+                    if verbose:
+                        print('cell mean: ' + str(cell_mean))
+                        print('cell standard deviation: ' + str(cell_sd))
+                        print('intensity cutoff for removal: ' +
+                              str(cell_mean + 3*cell_sd))
+                        print('-----filtering foci-----')
+                    for k in rev_dict.keys():
+                        if verbose:
+                            print('focus intensity: ' + str(k))
+                        if k < cell_mean + 3*cell_sd:  # if mean intensity too low
+                            if verbose:
+                                print('removing focus')
+                            c_foci[c_foci == rev_dict[k]] = 0  # eliminate focus
                 if verbose:
                     print('after eliminating dim foci: ' +
                           str(len(np.unique(c_foci))-1) + ' foci in image')
