@@ -97,10 +97,6 @@ class Foci:
             if c == 405:
                 continue  # don't segment foci from DAPI channel
             channel_foci = []
-            channel_foci_ids = []
-            channel_foci_intensities = []
-            channel_foci_vols = []
-            channel_parent_cells = []
             if verbose:
                 print('------------------------------------------------------')
                 print('segmenting foci from channel ' + str(c))
@@ -202,11 +198,13 @@ class Foci:
                         )
                     cell_cts = cell_cts[parent_cell != 0]  # rm bgrd
                     parent_cell = parent_cell[parent_cell != 0]  # rm bgrd
-                    if parent_cell.shape[0] != 1:  # if part of >1 cell
+                    if parent_cell.shape[0] > 1:  # if part of >1 cell
                         # assign to cell containing more of the focus's px
                         parent_cell = parent_cell[np.argmax(cell_cts)]
-                    else:
+                    elif parent_cell.shape[0] == 1:
                         parent_cell = parent_cell[0]  # extract value from arr
+                    else:
+                        parent_cell = np.nan
                     parent_cells[ids == x] = parent_cell
                     intensities[ids == x] = np.sum(
                         raw_img[c_foci == x])/vols[ids == x][0]

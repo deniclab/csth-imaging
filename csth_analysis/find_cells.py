@@ -38,7 +38,7 @@ class MultiFinder:
     """Distinguish cells from background in multi-position czi files."""
 
     def __init__(self, filename, bg_index=-1, bg_filename='', log_path=None,
-                 oof_svm=None):
+                 oof_svm=None, optim=False):
         """Create a MultiFinder object.
 
         Arguments:
@@ -61,6 +61,10 @@ class MultiFinder:
             oof_svm (str, optional): Path to a trained scikit-learn svm.SVC()
                 pickle to be used for eliminating out-of-focus planes of the
                 stack.
+            optim (bool, optional): Indicates whether or not this run is being
+                performed on a subset of the data for threshold optimization
+                purposes. Default is False (extract all images from the chosen
+                file); if True, will only pull out the first three images.
         """
         self.filenames = [filename]
         if bg_index == -1:
@@ -69,11 +73,12 @@ class MultiFinder:
             self.bg_origin = 'separate'  # separate czi or tiff file
             self.bg_filename = bg_filename
             self.log_path = log_path
-            if not os.path.isdir(self.log_path):
-                try:
-                    os.makedirs(self.log_path)
-                except FileExistsError:
-                    pass
+            if self.log_path is not None:
+                if not os.path.isdir(self.log_path):
+                    try:
+                        os.makedirs(self.log_path)
+                    except FileExistsError:
+                        pass
             self.oof_svm = oof_svm
         else:
             self.bg_origin = 'slice'  # slice of a multi-czi
@@ -87,6 +92,10 @@ class MultiFinder:
             # if cell_im has shape C-Z-X-Y, not IMG-C-Z-X-Y, add axis for img
             if len(self.cell_im.shape) == 4:
                 self.cell_im = np.expand_dims(self.cell_im, axis=0)
+            if optim:
+                print('Optimization mode: only using first three images.')
+                if self.cell_im.shape[0] > 2:
+                    self.cell_im = self.cell_im[0:3, :, :, :, :]
             # add filename:slice #s dict to indicate which imgs came from where
             self.f_to_s = {self.filenames[0]: range(0, self.cell_im.shape[0])}
             self.cell_channels = cell_czi[1]
@@ -204,9 +213,13 @@ class MultiFinder:
                 with open(self.oof_svm, 'rb') as r:
                     clf = pickle.load(r)
                 shrt_fname = self.filenames[0].split('/')[-1][:-4]
-                focus_slices = self.get_blur_slices(
-                    im=im_for_clf[im, :, :, :], clf=clf, slc_no=im,
-                    log_path=self.log_path+'/'+shrt_fname)
+                if self.log_path is not None:
+                    focus_slices = self.get_blur_slices(
+                        im=im_for_clf[im, :, :, :], clf=clf, slc_no=im,
+                        log_path=self.log_path+'/'+shrt_fname)
+                else:
+                    focus_slices = self.get_blur_slices(
+                        im=im_for_clf[im, :, :, :], clf=clf, slc_no=im)
                 if focus_slices[0] == 1 or focus_slices[-1] == 1:
                     self.flagged_z_ims[im] = 1
                     if verbose:
