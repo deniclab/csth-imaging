@@ -360,9 +360,9 @@ class Foci:
         if path.endswith('/'):
             path = path[:-1]
         self.foci_df.to_csv(
-            path + '/' + self.filename[:-4] + '_raw.csv')
+            path + '/' + self.filenames[:-4] + '_raw.csv')
         self.summary_df.to_csv(
-            path + '/' + self.filename[:-4] + '_summary.csv')
+            path + '/' + self.filenames[:-4] + '_summary.csv')
 
     def pandas_output(self, path, verbose=True):
         """**DEPRECATED! USE DETAILED_OUTPUT (AND RELEVANT DF METHODS)**.
