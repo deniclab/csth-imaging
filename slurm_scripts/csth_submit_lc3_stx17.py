@@ -35,18 +35,15 @@ output_dir = args.output_dir
 # read .czi file path from csv reference table
 ref_df = pd.read_csv(ref_csv)
 czi_path = ref_df['files'].iloc[array_no]
+bg_czi_path = ref_df['controls'].iloc[array_no]
 print('czi path: ' + czi_path)
+print('control czi path: ' + bg_czi_path)
 # load .czi file into MultiFinder instance
-finder = find_cells.MultiFinder(czi_path, log_path=output_dir + '/log',
-                                oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl')
+finder = find_cells.MultiFinder(
+    czi_path, bg_filename=bg_czi_path,
+    log_path=output_dir + '/log',
+    oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl')
 print('MultiFinder created.')
-# load bg file from multi-image .czi and add to finder
-bg_tif_im = io.imread('/n/denic_lab/Lab/TH_Imaging/WIPI_empty_control.tif')
-bg_tif_im = np.moveaxis(bg_tif_im, -1, 0)  # move C axis to 1st position
-bg_tif_im = np.expand_dims(bg_tif_im, axis=0)
-finder.bg_im = bg_tif_im
-finder.bg_channels = [488, 561, 405]
-print('background image added to MultiFinder.')
 # initialize a CellSplitter from finder
 splitter = segment_cells.CellSplitter(finder)
 print('CellSplitter instance created.')
@@ -57,7 +54,12 @@ print('Cells segmented.')
 # initialize a Foci instance from splitter
 foci_obj = foci.Foci(splitter, verbose=True)
 print('Foci instance created.')
-foci_obj.segment(verbose=True, thresholds={488: (10000, 8000), 561: (8000, 6000)})  # segment foci using PexSegmenter
+if 'dVPS37A' in czi_path:
+    foci_obj.segment(verbose=True, thresholds={488: (6000, 4500),
+                                               561: (6000, 4000)})
+else:
+    foci_obj.segment(verbose=True, thresholds={488: (6000, 4500),
+                                               561: (16000, 12000)})
 print('Foci segmented.')
 foci_obj.count_foci(verbose=True)  # count foci
 print('Foci counted.')
@@ -69,7 +71,8 @@ print('overlap between channels measured.')
 if not os.path.isdir(output_dir):
     os.makedirs(output_dir)
 print('outputting to csv...')
-foci_obj.detailed_output(output_dir, verbose=True)
+foci_obj.pandas_output(output_dir + '/' + str(array_no) + '.csv',
+                       verbose=True)
 # output images to check quality of segmentation later
 print('outputting images...')
 im_fname = foci_obj.filenames.split('/')[-1]
