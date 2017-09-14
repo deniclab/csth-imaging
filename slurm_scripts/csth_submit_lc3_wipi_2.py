@@ -57,18 +57,16 @@ print('Foci instance created.')
 foci_obj.segment(verbose=True, thresholds={488: (10000, 7500),
                                            561: (12000, 9000)})
 print('Foci segmented.')
-foci_obj.count_foci(verbose=True)  # count foci
-print('Foci counted.')
-print('n foci:')
-print(foci_obj.foci_cts['488'])
-print(foci_obj.foci_cts['561'])
-foci_obj.measure_overlap(verbose=True)  # measure # of overlapping foci
-print('overlap between channels measured.')
+print('Measuring overlap...')
+foci_obj.measure_overlap(verbose=True)
+print('Overlap measured.')
+print('Generating summary table...')
+foci_obj.summarize_data(verbose=True)
+print('Summary table made.')
 if not os.path.isdir(output_dir):
     os.makedirs(output_dir)
 print('outputting to csv...')
-foci_obj.pandas_output(output_dir + '/' + str(array_no) + '.csv',
-                       verbose=True)
+foci_obj.detailed_output(output_dir, verbose=True)
 # output images to check quality of segmentation later
 print('outputting images...')
 im_fname = foci_obj.filenames.split('/')[-1]

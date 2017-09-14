@@ -57,15 +57,16 @@ print('Cells segmented.')
 # initialize a Foci instance from splitter
 foci_obj = foci.Foci(splitter, verbose=True)
 print('Foci instance created.')
-foci_obj.segment(verbose=True, thresholds={488: (10000, 8000), 561: (8000, 6000)})  # segment foci using PexSegmenter
+# segment foci using PexSegmenter
+foci_obj.segment(verbose=True, thresholds={488: (10000, 8000),
+                                           561: (8000, 6000)})
 print('Foci segmented.')
-foci_obj.count_foci(verbose=True)  # count foci
-print('Foci counted.')
-print('n foci:')
-print(foci_obj.foci_cts['488'])
-print(foci_obj.foci_cts['561'])
-foci_obj.measure_overlap(verbose=True)  # measure # of overlapping foci
-print('overlap between channels measured.')
+print('Measuring overlap...')
+foci_obj.measure_overlap(verbose=True)
+print('Overlap measured.')
+print('Generating summary table...')
+foci_obj.summarize_data(verbose=True)
+print('Summary table made.')
 if not os.path.isdir(output_dir):
     os.makedirs(output_dir)
 print('outputting to csv...')

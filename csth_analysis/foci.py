@@ -365,7 +365,10 @@ class Foci:
             path + '/' + self.filename[:-4] + '_summary.csv')
 
     def pandas_output(self, path, verbose=True):
-        """Write # of foci and overlap data to a .csv file."""
+        """**DEPRECATED! USE DETAILED_OUTPUT (AND RELEVANT DF METHODS)**.
+
+        Write # of foci and overlap data to a .csv file.
+        """
         if not hasattr(self, 'foci_cts'):
             raise AttributeError('# of foci not yet counted.')
         if str(self.channels[0])+'_overlap' not in list(self.foci_cts.keys()):
