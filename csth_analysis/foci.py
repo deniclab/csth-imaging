@@ -38,10 +38,23 @@ class Foci:
     def segment(self, verbose=True, thresholds='auto'):
         """Identify foci in image."""
         self.foci = {}
+        self.foci_df = pd.DataFrame(
+                    {'id': [],
+                     'intensity': [],
+                     'volume': [],
+                     'parent_cell': [],
+                     'channel': [],
+                     'scaling_factor': [],
+                     'filename': [],
+                     'im_number': []
+                     }
+                    )
+
         if verbose:
             print('beginning segmentation.')
         if thresholds == 'auto':
-            self.thresholds = {488: 15000, 561: 8000}  # default 488/561 thresh
+            self.thresholds = {488: (15000, 7500),
+                               561: (8000, 4000)}  # default 488/561 thresh
         else:
             self.thresholds = thresholds
         self.erosion_struct = np.array(  # the strel for erosion of nuclei
@@ -84,6 +97,10 @@ class Foci:
             if c == 405:
                 continue  # don't segment foci from DAPI channel
             channel_foci = []
+            channel_foci_ids = []
+            channel_foci_intensities = []
+            channel_foci_vols = []
+            channel_parent_cells = []
             if verbose:
                 print('------------------------------------------------------')
                 print('segmenting foci from channel ' + str(c))
@@ -97,7 +114,7 @@ class Foci:
                           ' out of ' + str(self.n_pos))
                     print('generating normalized image for' +
                           ' segmentation...')
-                norm_im = self.normalize_im(
+                norm_im, scaling_factor = self.normalize_im(
                     self.imgs[c][i, :, :, :],
                     mask=np.logical_and(self.cell_masks[i] != 0,
                                         self.segmented_nuclei[i] == 0))
@@ -172,7 +189,41 @@ class Foci:
                 c_foci[eroded_nuclei != 0] = 0
                 if verbose:
                     print(str(len(np.unique(c_foci))-1) + ' final foci')
+                ids, vols = np.unique(c_foci, return_counts=True)
+                vols = vols[ids != 0]
+                ids = ids[ids != 0]
+                intensities = np.empty_like(ids)
+                parent_cells = np.empty_like(ids)
+                for x in np.nditer(ids):  # iterate over foci IDs
+                    # get parent cells
+                    parent_cell, cell_cts = np.unique(
+                        self.segmented_cells[i][c_foci == x],
+                        return_counts=True
+                        )
+                    cell_cts = cell_cts[parent_cell != 0]  # rm bgrd
+                    parent_cell = parent_cell[parent_cell != 0]  # rm bgrd
+                    if parent_cell.shape[0] != 1:  # if part of >1 cell
+                        # assign to cell containing more of the focus's px
+                        parent_cell = parent_cell[np.argmax(cell_cts)]
+                    else:
+                        parent_cell = parent_cell[0]  # extract value from arr
+                    parent_cells[ids == x] = parent_cell
+                    intensities[ids == x] = np.sum(
+                        raw_img[c_foci == x])/vols[ids == x][0]
                 channel_foci.append(c_foci)
+                # create a temp pd df containing data
+                temp_df = pd.DataFrame(
+                    {'id': pd.Series(ids, index=ids),
+                     'intensity': pd.Series(intensities, index=ids),
+                     'volume': pd.Series(vols, index=ids),
+                     'parent_cell': pd.Series(parent_cells, index=ids),
+                     'channel': c,
+                     'scaling_factor': scaling_factor,
+                     'filename': self.filenames,
+                     'im_number': i
+                     }
+                    )
+                self.foci_df = self.foci_df.append(temp_df, ignore_index=True)
                 if verbose:
                     print('foci segmented from position ' + str(i + 1))
                     print()
@@ -221,62 +272,97 @@ class Foci:
 
     def measure_overlap(self, verbose=True):
         """Determine how many foci overlap between two channels."""
-        if not hasattr(self, 'foci_cts'):
+        if not hasattr(self, 'foci'):
             if verbose:
-                print('foci have not been counted yet. calling count_foci().')
-            self.count_foci()
+                print('foci not yet segmented. calling segment().')
+            self.segment()
+        self.foci_df['overlap'] = 0  # will replace with 1s where appropriate
         if verbose:
             print('checking for overlap...')
         channels = list(self.foci.keys())
         n_ims = len(self.foci[channels[0]])
         overlap = {}
-        im_overlaps_ch0 = {}
-        im_overlaps_ch1 = {}
-        ch0_overlaps = []
-        ch1_overlaps = []
         for i in range(0, n_ims):
             if verbose:
-                print('finding overlap in image #' + str(i + 1) + 'out of ' +
+                print('finding overlap in image #' + str(i + 1) + ' out of ' +
                       str(n_ims))
             overlap = np.logical_and(self.foci[channels[0]][i] > 0,
                                      self.foci[channels[1]][i] > 0)
             if verbose:
                 print('getting IDs of overlapping foci...')
             overlap_IDs_ch0 = np.unique(self.foci[channels[0]][i][overlap])
-            overlap_foci_ch0 = np.copy(self.foci[channels[0]][i])
             overlap_IDs_ch1 = np.unique(self.foci[channels[1]][i][overlap])
-            overlap_foci_ch1 = np.copy(self.foci[channels[1]][i])
             if verbose:
-                print('creating image of overlapping foci...')
-            overlap_foci_ch0[np.reshape(
-                np.in1d(overlap_foci_ch0, overlap_IDs_ch0, invert=True),
-                overlap_foci_ch0.shape)] = 0
-            overlap_foci_ch1[np.reshape(
-                np.in1d(overlap_foci_ch1, overlap_IDs_ch1, invert=True),
-                overlap_foci_ch1.shape)] = 0
-            ch0_overlaps.append(overlap_foci_ch0)
-            ch1_overlaps.append(overlap_foci_ch1)
+                print('indicating overlap in foci_df...')
+            # add 1s to overlap column where there was overlap
+            self.foci_df.loc[(self.foci_df['channel'] == channels[0]) &
+                             (self.foci_df['im_number'] == i) &
+                             np.isin(self.foci_df['id'], overlap_IDs_ch0),
+                             'overlap'] = 1
+            self.foci_df.loc[(self.foci_df['channel'] == channels[1]) &
+                             (self.foci_df['im_number'] == i) &
+                             np.isin(self.foci_df['id'], overlap_IDs_ch1),
+                             'overlap'] = 1
+
+    def summarize_data(self, verbose=True):
+        """Generate summary data frame for output."""
+        if not hasattr(self, 'foci_df'):
             if verbose:
-                print('counting # of overlapping foci per cell...')
-            cell_overlap_n_ch0 = []
-            cell_overlap_n_ch1 = []
-            for c in np.unique(self.segmented_cells[i]):
-                if c == 0:
-                    continue  # skip background
-                cell_overlap_n_ch0.append(len(
-                    np.unique(
-                        overlap_foci_ch0[self.segmented_cells[i] == c])) - 1)
-                cell_overlap_n_ch1.append(len(
-                    np.unique(
-                        overlap_foci_ch1[self.segmented_cells[i] == c])) - 1)
-            im_overlaps_ch0[i] = np.asarray(cell_overlap_n_ch0)
-            im_overlaps_ch1[i] = np.asarray(cell_overlap_n_ch1)
+                print('foci data not yet calculated. calling measure_overlap.')
+                # measure_overlap will call segmentation
+            self.measure_overlap()
+        else:
+            if 'overlap' not in self.foci_df.columns:
+                if verbose:
+                    print('overlap not yet measured. calling measure_overlap.')
+                self.measure_overlap()
+        grouped = self.foci_df.groupby(['filename', 'im_number',
+                                       'channel', 'parent_cell'])
+        temp_vol_df = grouped['volume'].agg(['count', np.sum, np.mean, np.std])
+        temp_vol_df.columns = ['count', 'vol_total', 'vol_mean', 'vol_sd']
+        temp_intensity_df = grouped['intensity'].agg([np.mean, np.std])
+        temp_intensity_df.columns = ['intensity_mean', 'intensity_sd']
+        temp_overlap_df = grouped['overlap'].agg([np.sum])
+        temp_overlap_df.columns = ['overlap_count']
+        self.summary_df = pd.concat([temp_vol_df,
+                                     temp_intensity_df,
+                                     temp_overlap_df], axis=1)
+        self.summary_df.reset_index(inplace=True)  # convert to normal df
+        raw_cells_for_mapping = dict(
+            zip(list(range(0, len(self.segmented_cells))), self.n_raw_nuclei))
+        final_cells_for_mapping = {}
+        flagged_oof_map = dict(zip(list(range(0,
+                                              len(self.segmented_cells))),
+                                   self.flagged_oof_ims.tolist()))
+        flagged_z_map = dict(zip(list(range(0,
+                                      len(self.segmented_cells))),
+                                 self.flagged_z_ims.tolist()))
+        for i in range(0, len(self.segmented_cells)):
+            final_cells_for_mapping[i] = np.unique(
+                self.segmented_cells[i]).shape[0]-1  # num diff vals minus bg
+        self.summary_df['flagged_oof'] = self.summary_df['im_number'].map(
+            flagged_oof_map
+        )
+        self.summary_df['flagged_z'] = self.summary_df['im_number'].map(
+            flagged_z_map
+        )
+        self.summary_df['n_cells'] = self.summary_df['im_number'].map(
+            final_cells_for_mapping
+        )
+        self.summary_df['raw_cells'] = self.summary_df['im_number'].map(
+            raw_cells_for_mapping
+        )
+
+    def detailed_output(self, path, verbose=True):
+        """Write raw and summarized DataFrame formatted data to a .csv."""
         if verbose:
-            print('adding overlap counts to foci_cts attribute...')
-        self.foci_cts[str(channels[0])+'_overlap'] = im_overlaps_ch0
-        self.foci_cts[str(channels[1])+'_overlap'] = im_overlaps_ch1
-        self.overlapping_foci = {channels[0]: ch0_overlaps,
-                                 channels[1]: ch1_overlaps}
+            print('writing files...')
+        if path.endswith('/'):
+            path = path[:-1]
+        self.foci_df.to_csv(
+            path + '/' + self.filename[:-4] + '_raw.csv')
+        self.summary_df.to_csv(
+            path + '/' + self.filename[:-4] + '_summary.csv')
 
     def pandas_output(self, path, verbose=True):
         """Write # of foci and overlap data to a .csv file."""
@@ -361,4 +447,4 @@ class Foci:
         if verbose:
             print('original cell mean: ' + str(mean))
             print('normalizing image...')
-        return im/(mean/norm_mean)
+        return (im/(mean/norm_mean), mean/norm_mean)
