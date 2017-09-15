@@ -190,7 +190,7 @@ class Foci:
                 ids = ids[ids != 0]
                 intensities = np.empty_like(ids)
                 parent_cells = np.empty_like(ids)
-                if ids:  # if ids is not empty
+                if ids.shape != 0:  # if ids is not empty
                     for x in np.nditer(ids):  # iterate over foci IDs
                         # get parent cells
                         parent_cell, cell_cts = np.unique(
