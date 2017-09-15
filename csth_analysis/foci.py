@@ -190,38 +190,40 @@ class Foci:
                 ids = ids[ids != 0]
                 intensities = np.empty_like(ids)
                 parent_cells = np.empty_like(ids)
-                for x in np.nditer(ids):  # iterate over foci IDs
-                    # get parent cells
-                    parent_cell, cell_cts = np.unique(
-                        self.segmented_cells[i][c_foci == x],
-                        return_counts=True
+                if ids:  # if ids is not empty
+                    for x in np.nditer(ids):  # iterate over foci IDs
+                        # get parent cells
+                        parent_cell, cell_cts = np.unique(
+                            self.segmented_cells[i][c_foci == x],
+                            return_counts=True
+                            )
+                        cell_cts = cell_cts[parent_cell != 0]  # rm bgrd
+                        parent_cell = parent_cell[parent_cell != 0]  # rm bgrd
+                        if parent_cell.shape[0] > 1:  # if part of >1 cell
+                            # assign to cell containing more of the focus's px
+                            parent_cell = parent_cell[np.argmax(cell_cts)]
+                        elif parent_cell.shape[0] == 1:
+                            parent_cell = parent_cell[0]  # extract value from arr
+                        else:
+                            parent_cell = -1
+                        parent_cells[ids == x] = parent_cell
+                        intensities[ids == x] = np.sum(
+                            raw_img[c_foci == x])/vols[ids == x][0]
+                    channel_foci.append(c_foci)
+                    # create a temp pd df containing data
+                    temp_df = pd.DataFrame(
+                        {'id': pd.Series(ids, index=ids),
+                         'intensity': pd.Series(intensities, index=ids),
+                         'volume': pd.Series(vols, index=ids),
+                         'parent_cell': pd.Series(parent_cells, index=ids),
+                         'channel': c,
+                         'scaling_factor': scaling_factor,
+                         'filename': self.filenames,
+                         'im_number': i
+                         }
                         )
-                    cell_cts = cell_cts[parent_cell != 0]  # rm bgrd
-                    parent_cell = parent_cell[parent_cell != 0]  # rm bgrd
-                    if parent_cell.shape[0] > 1:  # if part of >1 cell
-                        # assign to cell containing more of the focus's px
-                        parent_cell = parent_cell[np.argmax(cell_cts)]
-                    elif parent_cell.shape[0] == 1:
-                        parent_cell = parent_cell[0]  # extract value from arr
-                    else:
-                        parent_cell = -1
-                    parent_cells[ids == x] = parent_cell
-                    intensities[ids == x] = np.sum(
-                        raw_img[c_foci == x])/vols[ids == x][0]
-                channel_foci.append(c_foci)
-                # create a temp pd df containing data
-                temp_df = pd.DataFrame(
-                    {'id': pd.Series(ids, index=ids),
-                     'intensity': pd.Series(intensities, index=ids),
-                     'volume': pd.Series(vols, index=ids),
-                     'parent_cell': pd.Series(parent_cells, index=ids),
-                     'channel': c,
-                     'scaling_factor': scaling_factor,
-                     'filename': self.filenames,
-                     'im_number': i
-                     }
-                    )
-                self.foci_df = self.foci_df.append(temp_df, ignore_index=True)
+                    self.foci_df = self.foci_df.append(temp_df,
+                                                       ignore_index=True)
                 if verbose:
                     print('foci segmented from position ' + str(i + 1))
                     print()
