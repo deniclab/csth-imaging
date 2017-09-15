@@ -204,7 +204,7 @@ class Foci:
                     elif parent_cell.shape[0] == 1:
                         parent_cell = parent_cell[0]  # extract value from arr
                     else:
-                        parent_cell = np.nan
+                        parent_cell = -1
                     parent_cells[ids == x] = parent_cell
                     intensities[ids == x] = np.sum(
                         raw_img[c_foci == x])/vols[ids == x][0]
