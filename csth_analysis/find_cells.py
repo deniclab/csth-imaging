@@ -227,9 +227,9 @@ class MultiFinder:
                             'Warning: cells cut off by top or bottom of stack:'
                             )
                         print(focus_slices)
-                    if self.log_path is not None:
-                        io.imsave(self.log_path + '/' + shrt_fname + '_' +
-                                  str(im) + '.tif', im_for_clf[im, :, :, :])
+                    #if self.log_path is not None:
+                    #    io.imsave(self.log_path + '/' + shrt_fname + '_' +
+                    #              str(im) + '.tif', im_for_clf[im, :, :, :])
                 cell_mask[np.where(focus_slices == 0)[0], :, :] = 0
             if verbose:
                 print('appending outputs...')
@@ -295,8 +295,8 @@ class MultiFinder:
             if verbose:
                 print('Warning: no in-focus slices detected.')
             self.flagged_oof_ims[slc_no] = 1
-            if log_path is not None:
-                io.imsave(log_path + '_' + str(slc_no) + '.tif', im)
+#            if log_path is not None:
+#                io.imsave(log_path + '_' + str(slc_no) + '.tif', im)
             return labels
         print('correcting slice labels...')
         corrected_labels = self.fix_interc_blur(labels, dec_func)
@@ -305,8 +305,8 @@ class MultiFinder:
             if verbose:
                 print('Warning: blur detection resulted in intercalation:')
                 print(corrected_labels)
-            if log_path is not None:
-                io.imsave(log_path + '_' + str(slc_no) + '.tif', im)
+#            if log_path is not None:
+#                io.imsave(log_path + '_' + str(slc_no) + '.tif', im)
         else:
             if verbose:
                 print('One continuous stretch defined as in focus.')
