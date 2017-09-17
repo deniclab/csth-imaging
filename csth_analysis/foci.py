@@ -184,12 +184,13 @@ class Foci:
                     print('eliminating intranuclear foci...')
                 c_foci[eroded_nuclei != 0] = 0
                 if verbose:
-                    print(str(len(np.unique(c_foci))-1) + ' final foci')
+                    print(str(np.unique(c_foci).size-1) + ' final foci')
                 ids, vols = np.unique(c_foci, return_counts=True)
                 vols = vols[ids != 0]
                 ids = ids[ids != 0]
                 intensities = np.empty_like(ids)
                 parent_cells = np.empty_like(ids)
+                channel_foci.append(c_foci)
                 if ids.size != 0:  # if ids is not empty
                     for x in np.nditer(ids):  # iterate over foci IDs
                         # get parent cells
@@ -209,7 +210,6 @@ class Foci:
                         parent_cells[ids == x] = parent_cell
                         intensities[ids == x] = np.sum(
                             raw_img[c_foci == x])/vols[ids == x][0]
-                    channel_foci.append(c_foci)
                     # create a temp pd df containing data
                     temp_df = pd.DataFrame(
                         {'id': pd.Series(ids, index=ids),
