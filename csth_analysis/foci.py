@@ -35,7 +35,8 @@ class Foci:
         self.flagged_oof_ims = CellSplitter.multi_finder.flagged_oof_ims
         self.flagged_z_ims = CellSplitter.multi_finder.flagged_z_ims
 
-    def segment(self, verbose=True, thresholds='auto'):
+    def segment(self, verbose=True, thresholds='auto',
+                seg_channels=(488, 561)):
         """Identify foci in image."""
         self.foci = {}
         self.foci_df = pd.DataFrame(
@@ -94,8 +95,10 @@ class Foci:
               [False, False, False, False, False, False, False],
               [False, False, False, False, False, False, False]]])
         for c in self.channels:
-            if c == 405:
-                continue  # don't segment foci from DAPI channel
+            if c not in seg_channels:
+                # don't segment foci from DAPI channel, also used
+                # to set specific channels for optimization runs
+                continue
             channel_foci = []
             if verbose:
                 print('------------------------------------------------------')
@@ -191,21 +194,41 @@ class Foci:
                 intensities = np.empty_like(ids)
                 parent_cells = np.empty_like(ids)
                 channel_foci.append(c_foci)
+                if verbose:
+                    print('--matching foci to parent cells--')
                 if ids.size != 0:  # if ids is not empty
                     for x in np.nditer(ids):  # iterate over foci IDs
                         # get parent cells
+                        if verbose:
+                            print('current ID: ' + str(x))
                         parent_cell, cell_cts = np.unique(
                             self.segmented_cells[i][c_foci == x],
                             return_counts=True
                             )
                         cell_cts = cell_cts[parent_cell != 0]  # rm bgrd
                         parent_cell = parent_cell[parent_cell != 0]  # rm bgrd
-                        if parent_cell.shape[0] > 1:  # if part of >1 cell
+                        if verbose:
+                            print('  overlapping parent cell(s): ')
+                            print(parent_cell)
+                            print('  # of pixels overlapping with parent(s):')
+                            print(cell_cts)
+                        if parent_cell.size > 1:  # if part of >1 cell
                             # assign to cell containing more of the focus's px
+                            if verbose:
+                                print('  more than one overlapping cell.')
+                                print('  determining which cell overlaps more.')
                             parent_cell = parent_cell[np.argmax(cell_cts)]
-                        elif parent_cell.shape[0] == 1:
+                            if verbose:
+                                print('  parent cell: ' + str(parent_cell))
+                        elif parent_cell.size == 1:
+                            if verbose:
+                                print('matched to one parent cell.')
                             parent_cell = parent_cell[0]  # extract value from arr
                         else:
+                            if verbose:
+                                print('warning: matched to no parent cells?')
+                                print(parent_cell)
+                                print(cell_cts)
                             parent_cell = -1
                         parent_cells[ids == x] = parent_cell
                         intensities[ids == x] = np.sum(
@@ -337,9 +360,23 @@ class Foci:
         flagged_z_map = dict(zip(list(range(0,
                                       len(self.segmented_cells))),
                                  self.flagged_z_ims.tolist()))
+        empty_cells = pd.DataFrame(columns=['filename', 'im_number', 'channel',
+                                            'parent_cell', 'count'])
         for i in range(0, len(self.segmented_cells)):
+            c_cells = np.unique(self.segmented_cells[i])
+            c_cells = c_cells[c_cells != 0]  # eliminate background
+            for cell in c_cells:
+                for channel in list(self.foci.keys()):
+                    if not ((self.summary_df['im_number'] == i) &
+                            (self.summary_df['parent_cell'] == cell) &
+                            (self.summary_df['channel'] == channel)).any():
+                        empty_cells.loc[len(empty_cells.index)] = [
+                            self.filenames, i, channel, cell, 0
+                        ]
             final_cells_for_mapping[i] = np.unique(
                 self.segmented_cells[i]).shape[0]-1  # num diff vals minus bg
+        self.summary_df = pd.concat([self.summary_df, empty_cells],
+                                    ignore_index=True)
         self.summary_df['flagged_oof'] = self.summary_df['im_number'].map(
             flagged_oof_map
         )
