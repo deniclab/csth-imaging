@@ -54,8 +54,12 @@ print('Cells segmented.')
 # initialize a Foci instance from splitter
 foci_obj = foci.Foci(splitter, verbose=True)
 print('Foci instance created.')
-foci_obj.segment(verbose=True, thresholds={488: (14000, 10500),
-                                           561: (20000, 15000)})
+if 'dVPS' in czi_path:
+    foci_obj.segment(verbose=True, thresholds={488: (14000, 10500),
+                                               561: (8000, 6000)})
+else:
+    foci_obj.segment(verbose=True, thresholds={488: (14000, 10500),
+                                               561: (20000, 15000)})
 print('Foci segmented.')
 print('Measuring overlap...')
 foci_obj.measure_overlap(verbose=True)
