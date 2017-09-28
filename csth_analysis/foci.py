@@ -182,7 +182,7 @@ class Foci:
                           str(len(np.unique(c_foci))-1) + ' foci in image')
                 if verbose:
                     print('eliminating foci that reside outside of cells...')
-                c_foci[self.cell_masks[i] == 0] = 0
+                c_foci[self.segmented_cells[i] == 0] = 0
                 if verbose:
                     print('eliminating intranuclear foci...')
                 c_foci[eroded_nuclei != 0] = 0
