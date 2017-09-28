@@ -59,7 +59,7 @@ if 'dVPS' in czi_path:
                                                561: (8000, 6000)})
 else:
     foci_obj.segment(verbose=True, thresholds={488: (14000, 10500),
-                                               561: (20000, 15000)})
+                                               561: (14000, 10500)})
 print('Foci segmented.')
 print('Measuring overlap...')
 foci_obj.measure_overlap(verbose=True)
