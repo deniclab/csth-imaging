@@ -139,7 +139,8 @@ class MultiFinder:
             self.cell_im.shape[0], self.cell_im.shape[0] + new_czi.shape[0])
         self.cell_im = np.concatenate(self.cell_im, new_czi)
 
-    def find_cells(self, channel, return_all=False, verbose=True):
+    def find_cells(self, channel, return_all=False, verbose=True,
+                   pval_threshold=0):
         """Find cells within all images in the indicated channel."""
         # get channel images first
         im_arrs = self.get_channel_arrays(channel)
@@ -169,13 +170,14 @@ class MultiFinder:
             f_pvals[s, :, :, :] = 1-stats.norm.cdf(
                 log_gaussian_f[s, :, :, :], bg_mean, bg_sd)
         # convert to binary using empirically tested cutoffs (p<0.5/65535)
+        # OR using a different set cutoff (defined in arguments)
         f_pvals = f_pvals*65535
         f_pvals = f_pvals.astype('uint16')
         f_pvals_binary = np.copy(f_pvals)
         if verbose:
             print('converting to binary...')
-        f_pvals_binary[f_pvals > 0] = 0
-        f_pvals_binary[f_pvals == 0] = 1
+        f_pvals_binary[f_pvals > pval_threshold] = 0
+        f_pvals_binary[f_pvals <= pval_threshold] = 1
         # eliminate too-small regions that don't correspond to cells
         cell_masks = []
         if return_all:
