@@ -15,7 +15,9 @@ from skimage.morphology import watershed
 class CellSplitter:
     """Class and methods for segmenting cells using watershedding from DAPI."""
 
-    def __init__(self, multi_finder, channel=488, threshold='auto'):
+    def __init__(self, multi_finder, channel=488, threshold='auto',
+                 pval_threshold=0, cellfinder_mode='pval',
+                 cellfinder_threshold=300):
         """Create a Nuclei object for segmentation."""
         self.filenames = multi_finder.filenames
         self.multi_finder = multi_finder
@@ -24,7 +26,9 @@ class CellSplitter:
         self.segmented_nuclei = []
         self.nuclei_centers = []
         print('generating cell masks...')
-        self.cell_masks = self.multi_finder.find_cells(channel, verbose=True)
+        self.cell_masks = self.multi_finder.find_cells(
+            channel, verbose=True, pval_threshold=pval_threshold,
+            mode=cellfinder_mode, threshold=cellfinder_threshold)
         if 405 not in multi_finder.cell_channels:
             raise ValueError(
                 'The MultiFinder object lacks nuclei fluorescence.'

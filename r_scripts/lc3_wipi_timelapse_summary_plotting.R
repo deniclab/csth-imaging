@@ -1,4 +1,4 @@
-# lc3_p62_timelapse_summary_plotting.R
+# lc3_wipi_timelapse_summary_plotting.R
 
 # import dependencies
 require(gridExtra)
@@ -7,7 +7,7 @@ require(reshape2)
 require(tidyverse)
 
 # load data
-input_df <- read_csv('~/Dropbox/code/csth-imaging/output_files/lc3_p62_timelapse_summary_analysis_output.csv')
+input_df <- read_csv('~/Dropbox/code/csth-imaging/output_files/lc3_wipi_timelapse_summary_analysis_output.csv')
 
 # remove cells that border on the edge of the image and defective parent cell assignment
 for_plt <- subset(input_df, parent_cell != 65535 & flagged_z != 1)
@@ -20,7 +20,7 @@ for_plt$overlap_count[for_plt$count == 0] <- 0
 # renaming and reordering variables for plotting
 for_plt$treatment[for_plt$treatment %in% c('3hrTort', '3hrTor')] <- 3
 for_plt$treatment[for_plt$treatment %in% c('1hrTort', '1hrTor')] <- 1
-for_plt$treatment[for_plt$treatment == 'NoTreat'] <- 0
+for_plt$treatment[for_plt$treatment == '0hrTor'] <- 0
 for_plt$treatment <- factor(for_plt$treatment)
 for_plt$cell_line[for_plt$cell_line == 'dVPS'] <- 'dVPS37A'
 for_plt$cell_line[for_plt$cell_line == 'dTMEM'] <- 'dTMEM41B'
@@ -38,7 +38,7 @@ for_plt <- for_plt %>% group_by(channel, treatment, cell_line) %>%
                   overlap_count < quantile(overlap_count, 0.25) - IQR(overlap_count)*1.5) %>% ungroup
 
 # plot treatment vs # of foci in each channel for each cell line
-ggplot(for_plt, aes(x=factor(treatment), y=count)) +
+ggplot(subset(for_plt, filename != "LC3-WIPI_HEK_dFIP200_3hrTor_9Pos_3_AiryscanProcessing.czi"), aes(x=factor(treatment), y=count)) +
   facet_grid(channel ~ cell_line) + 
   geom_boxplot(outlier.shape=NA) + geom_jitter(data=subset(for_plt, count_outlier==TRUE), width=0.2, height=0, size=1) +
   theme(panel.background = element_rect(fill = NA, color = 'black'),
@@ -50,10 +50,10 @@ ggplot(for_plt, aes(x=factor(treatment), y=count)) +
   labs(x='Torin treatment time (hr)',
        y='Number of foci per cell',
        title='Cell line')
-ggsave('~/Dropbox/code/csth-imaging/r_scripts/p62_timelapse_plots/lc3_p62_timelapse_totals_boxplot.pdf',
+ggsave('~/Dropbox/code/csth-imaging/r_scripts/wipi_timelapse_plots/lc3_wipi_timelapse_totals_boxplot.pdf',
        device=cairo_pdf(width=7.5, height=4), useDingbats=FALSE)
 
-ggplot(for_plt, aes(x=treatment, y=overlap_count)) +
+ggplot(subset(for_plt, filename != "LC3-WIPI_HEK_dFIP200_3hrTor_9Pos_3_AiryscanProcessing.czi"), aes(x=treatment, y=overlap_count)) +
   facet_grid(channel ~ cell_line) + geom_boxplot(outlier.shape = NA) +
   geom_jitter(data=subset(for_plt, overlap_outlier==TRUE), width=0.2, height=0, size=1) +
   theme(panel.background = element_rect(fill = NA, color = 'black'),
@@ -65,7 +65,7 @@ ggplot(for_plt, aes(x=treatment, y=overlap_count)) +
   labs(x='Torin treatment time (hr)',
        y='Number of foci per cell that overlap\nwith foci in the other channel',
        title='Cell line')
-ggsave('~/Dropbox/code/csth-imaging/r_scripts/p62_timelapse_plots/lc3_p62_timelapse_overlap_boxplot.pdf',
+ggsave('~/Dropbox/code/csth-imaging/r_scripts/wipi_timelapse_plots/lc3_wipi_timelapse_overlap_boxplot.pdf',
   device=cairo_pdf(width=7.5, height=4), useDingbats=FALSE)
 
 # add a column for non-overlapping foci

@@ -36,7 +36,8 @@ class Foci:
         self.flagged_z_ims = CellSplitter.multi_finder.flagged_z_ims
 
     def segment(self, verbose=True, thresholds='auto',
-                seg_channels=(488, 561)):
+                seg_channels=(488, 561), min_cutoff='auto',
+                cutoff_type='sd'):
         """Identify foci in image."""
         self.foci = {}
         self.foci_df = pd.DataFrame(
@@ -58,6 +59,17 @@ class Foci:
                                561: (8000, 4000)}  # default 488/561 thresh
         else:
             self.thresholds = thresholds
+        self.cutoff_type = cutoff_type
+        if min_cutoff == 'auto':
+            if self.cutoff_type == 'sd':
+                self.min_cutoff = {488: 4.5, 561: 3}  # use sd ratios
+            elif self.cutoff_type == 'absolute':
+                self.min_cutoff = {488: 5000, 561: 4000}  # use absolute cutoff
+            elif isinstance(self.cutoff_type, dict):
+                raise TypeError(
+                    "can't use auto min_cutoff with mixed cutoff_type.")
+        else:
+            self.min_cutoff = min_cutoff
         self.erosion_struct = np.array(  # the strel for erosion of nuclei
             [[[False, False, False, False, False, False, False],
               [False, False, False, False, False, False, False],
@@ -149,34 +161,46 @@ class Foci:
                 cell_sd = np.nanstd(
                     raw_img[np.logical_and(self.segmented_cells[i] != 0,
                                            eroded_nuclei == 0)])
-                if c == 488:
-                    if verbose:
+                if verbose:
+                    if self.cutoff_type == 'sd':
                         print('cell mean: ' + str(cell_mean))
                         print('cell standard deviation: ' + str(cell_sd))
                         print('intensity cutoff for removal: ' +
-                              str(cell_mean + 4.5*cell_sd))
-                        print('-----filtering foci-----')
-                    for k in rev_dict.keys():
-                        if verbose:
-                            print('focus intensity: ' + str(k))
-                        if k < cell_mean + 4.5*cell_sd:  # if mean intensity too low
-                            if verbose:
-                                print('removing focus')
-                            c_foci[c_foci == rev_dict[k]] = 0  # eliminate focus
-                if c == 561:
-                    if verbose:
+                              str(cell_mean + self.min_cutoff[c]*cell_sd))
+                    elif self.cutoff_type == 'absolute':
                         print('cell mean: ' + str(cell_mean))
                         print('cell standard deviation: ' + str(cell_sd))
-                        print('intensity cutoff for removal: ' +
-                              str(cell_mean + 3*cell_sd))
-                        print('-----filtering foci-----')
-                    for k in rev_dict.keys():
+                        print('using absolute cutoff threshold. threshold: ' +
+                              str(self.min_cutoff[c]))
+                    elif isinstance(self.cutoff_type, dict):
+                        if self.cutoff_type[c] == 'sd':
+                            print('cell mean: ' + str(cell_mean))
+                            print('cell standard deviation: ' + str(cell_sd))
+                            print('intensity cutoff for removal: ' +
+                                  str(cell_mean + self.min_cutoff[c]*cell_sd))
+                        elif self.cutoff_type[c] == 'absolute':
+                            print('cell mean: ' + str(cell_mean))
+                            print('cell standard deviation: ' + str(cell_sd))
+                            print('using absolute cutoff threshold. threshold: ' + str(self.min_cutoff[c]))
+                if self.cutoff_type == 'sd':
+                    cutoff = cell_mean + self.min_cutoff[c]*cell_sd
+                elif self.cutoff_type == 'absolute':
+                    cutoff = self.min_cutoff[c]
+                elif isinstance(self.cutoff_type, dict):
+                    if self.cutoff_type[c] == 'sd':
+                        cutoff = cell_mean + self.min_cutoff[c]*cell_sd
+                    elif self.cutoff_type[c] == 'absolute':
+                        cutoff = self.min_cutoff[c]
+                if verbose:
+                    print('-----filtering foci-----')
+                for k in rev_dict.keys():
+                    if verbose:
+                        print('focus intensity: ' + str(k))
+                    # if mean intensity below min_cutoff, remove
+                    if k < cutoff:
                         if verbose:
-                            print('focus intensity: ' + str(k))
-                        if k < cell_mean + 3*cell_sd:  # if mean intensity too low
-                            if verbose:
-                                print('removing focus')
-                            c_foci[c_foci == rev_dict[k]] = 0  # eliminate focus
+                            print('removing focus')
+                        c_foci[c_foci == rev_dict[k]] = 0  # eliminate focus
                 if verbose:
                     print('after eliminating dim foci: ' +
                           str(len(np.unique(c_foci))-1) + ' foci in image')
