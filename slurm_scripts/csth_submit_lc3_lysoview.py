@@ -45,7 +45,7 @@ finder = find_cells.MultiFinder(
     oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl')
 print('MultiFinder created.')
 # initialize a CellSplitter from finder
-splitter = segment_cells.CellSplitter(finder)
+splitter = segment_cells.CellSplitter(finder, cellfinder_mode='threshold')
 print('CellSplitter instance created.')
 splitter.segment_nuclei(verbose=True)  # segment nuclei
 print('Nuclei segmented.')
@@ -55,11 +55,11 @@ print('Cells segmented.')
 foci_obj = foci.Foci(splitter, verbose=True)
 print('Foci instance created.')
 if 'dVPS' in czi_path:
-    foci_obj.segment(verbose=True, thresholds={488: (14000, 10500),
-                                               561: (6000, 4000)})
+    foci_obj.segment(verbose=True, thresholds={488: (15000, 12000),
+                                               561: (7500, 6000)})
 else:
-    foci_obj.segment(verbose=True, thresholds={488: (14000, 10500),
-                                               561: (20000, 15000)})
+    foci_obj.segment(verbose=True, thresholds={488: (15000, 12000),
+                                               561: (15000, 11250)})
 print('Foci segmented.')
 print('Measuring overlap...')
 foci_obj.measure_overlap(verbose=True)
