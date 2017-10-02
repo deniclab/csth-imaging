@@ -140,44 +140,51 @@ class MultiFinder:
         self.cell_im = np.concatenate(self.cell_im, new_czi)
 
     def find_cells(self, channel, return_all=False, verbose=True,
-                   pval_threshold=0):
+                   pval_threshold=0, mode='pval', threshold=300):
         """Find cells within all images in the indicated channel."""
         # get channel images first
         im_arrs = self.get_channel_arrays(channel)
-        # transform into log space, as bg is roughly log-normal
-        # this requires adding 1 to each value to avoid NaN log-xform
-        if verbose:
-            print('log-transforming arrays...')
-        log_f_im = np.log10(im_arrs[0] + 1)
-        log_bg_im = np.log10(im_arrs[1] + 1)
-        if verbose:
-            print('applying gaussian filter...')
-        log_gaussian_f = filters.gaussian_filter(log_f_im,
-                                                 sigma=[0, 0, 3, 3])
-        log_gaussian_bg = filters.gaussian_filter(log_bg_im,
-                                                  sigma=[0, 0, 3, 3])
-        bg_mean = np.mean(log_gaussian_bg)
-        bg_sd = np.std(log_gaussian_bg)
-        # get p-val that px intensity could be brighter than the value in each
-        # array position in the "positive" im, which will indicate where
-        # fluorescence is.
-        if verbose:
-            print('computing p-value transformation...')
-        f_pvals = np.empty_like(log_gaussian_f)
-        for s in range(0, f_pvals.shape[0]):
-            print(' computing p-val xform for image ' + str(s + 1) +
-                  ' out of ' + str(f_pvals.shape[0]))
-            f_pvals[s, :, :, :] = 1-stats.norm.cdf(
-                log_gaussian_f[s, :, :, :], bg_mean, bg_sd)
-        # convert to binary using empirically tested cutoffs (p<0.5/65535)
-        # OR using a different set cutoff (defined in arguments)
-        f_pvals = f_pvals*65535
-        f_pvals = f_pvals.astype('uint16')
-        f_pvals_binary = np.copy(f_pvals)
-        if verbose:
-            print('converting to binary...')
-        f_pvals_binary[f_pvals > pval_threshold] = 0
-        f_pvals_binary[f_pvals <= pval_threshold] = 1
+        if mode == 'pval':
+            # transform into log space, as bg is roughly log-normal
+            # this requires adding 1 to each value to avoid NaN log-xform
+            if verbose:
+                print('log-transforming arrays...')
+            log_f_im = np.log10(im_arrs[0] + 1)
+            log_bg_im = np.log10(im_arrs[1] + 1)
+            if verbose:
+                print('applying gaussian filter...')
+            log_gaussian_f = filters.gaussian_filter(log_f_im,
+                                                     sigma=[0, 0, 10, 10])
+            log_gaussian_bg = filters.gaussian_filter(log_bg_im,
+                                                      sigma=[0, 0, 10, 10])
+            bg_mean = np.mean(log_gaussian_bg)
+            bg_sd = np.std(log_gaussian_bg)
+            # get p-val that px intensity could be brighter than the value in each
+            # array position in the "positive" im, which will indicate where
+            # fluorescence is.
+            if verbose:
+                print('computing p-value transformation...')
+            f_pvals = np.empty_like(log_gaussian_f)
+            for s in range(0, f_pvals.shape[0]):
+                print(' computing p-val xform for image ' + str(s + 1) +
+                      ' out of ' + str(f_pvals.shape[0]))
+                f_pvals[s, :, :, :] = 1-stats.norm.cdf(
+                    log_gaussian_f[s, :, :, :], bg_mean, bg_sd)
+            # convert to binary using empirically tested cutoffs (p<0.5/65535)
+            # OR using a different set cutoff (defined in arguments)
+            f_pvals = f_pvals*65535
+            f_pvals = f_pvals.astype('uint16')
+            raw_mask = np.copy(f_pvals)
+            if verbose:
+                print('converting to binary...')
+            raw_mask[f_pvals > pval_threshold] = 0
+            raw_mask[f_pvals <= pval_threshold] = 1
+        elif mode == 'threshold':  # use an abs threshold for finding masks
+            gaussian_im = filters.gaussian_filter(im_arrs[0],
+                                                  sigma=[0, 0, 10, 10])
+            raw_mask = np.empty_like(gaussian_im)
+            raw_mask[gaussian_im >= threshold] = 1
+            raw_mask[gaussian_im < threshold] = 0
         # eliminate too-small regions that don't correspond to cells
         cell_masks = []
         if return_all:
@@ -191,7 +198,7 @@ class MultiFinder:
         for im in range(0, im_arrs[0].shape[0]):
             if verbose:
                 print('generating mask #' + str(im + 1))
-            curr_im = f_pvals_binary[im, :, :, :]
+            curr_im = raw_mask[im, :, :, :]
             if verbose:
                 print('labeling contiguous objects...')
             r_labs = measure.label(curr_im, connectivity=2,
