@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH -n 1
-#SBATCH -t 0-06:00
+#SBATCH -t 0-24:00
 #SBATCH -p serial_requeue
 #SBATCH --mem=45000
 #SBATCH -o %A_%a.out
