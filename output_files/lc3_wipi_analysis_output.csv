@@ -1,0 +1,778 @@
+Unnamed: 0,Unnamed: 0.1,488_only_foci,488_overlap_foci,488_total_foci,561_only_foci,561_overlap_foci,561_total_foci,cell,filename,flagged_oof,flagged_z,im_n_cells,im_raw_cells,image,stains,cell_line,treatment,czi_id
+0,0,17.0,16.0,33.0,70.0,15.0,85.0,1.0,LC3-WIPI_HEK_wt_Torin_position15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,wt,Torin,position15
+1,1,27.0,24.0,51.0,86.0,24.0,110.0,2.0,LC3-WIPI_HEK_wt_Torin_position15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,wt,Torin,position15
+0,0,6.0,5.0,11.0,35.0,4.0,39.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+1,1,8.0,2.0,10.0,24.0,2.0,26.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+2,2,7.0,11.0,18.0,31.0,13.0,44.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,2.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+3,3,7.0,9.0,16.0,37.0,9.0,46.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,2.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+4,4,4.0,1.0,5.0,13.0,1.0,14.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,3.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+5,5,9.0,11.0,20.0,61.0,11.0,72.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,3.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+6,6,10.0,13.0,23.0,37.0,12.0,49.0,3.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,3.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+7,7,3.0,2.0,5.0,30.0,2.0,32.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+8,8,7.0,2.0,9.0,40.0,2.0,42.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+9,9,13.0,1.0,14.0,32.0,1.0,33.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+10,10,5.0,1.0,6.0,20.0,1.0,21.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+11,11,13.0,0.0,13.0,130.0,0.0,130.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,6.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+12,12,8.0,0.0,8.0,12.0,0.0,12.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,7.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+13,13,2.0,0.0,2.0,5.0,0.0,5.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,7.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+14,14,3.0,0.0,3.0,31.0,0.0,31.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+15,15,2.0,4.0,6.0,27.0,4.0,31.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+16,16,0.0,2.0,2.0,28.0,2.0,30.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,10.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+17,17,2.0,5.0,7.0,26.0,5.0,31.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,10.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+18,18,9.0,0.0,9.0,98.0,0.0,98.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,11.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+19,19,2.0,0.0,2.0,71.0,0.0,71.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,11.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+20,20,4.0,2.0,6.0,69.0,3.0,72.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,12.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+21,21,11.0,5.0,16.0,85.0,4.0,89.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,12.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+22,22,2.0,0.0,2.0,9.0,0.0,9.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,13.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+23,23,4.0,0.0,4.0,29.0,0.0,29.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,13.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+24,24,5.0,0.0,5.0,19.0,0.0,19.0,3.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,13.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+25,25,9.0,0.0,9.0,60.0,0.0,60.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,14.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+26,26,4.0,0.0,4.0,87.0,0.0,87.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,14.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+27,27,12.0,1.0,13.0,59.0,1.0,60.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,15.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+28,28,7.0,0.0,7.0,107.0,0.0,107.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_15pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,15.0,LC3-WIPI,dVPS37A,NoTreat,15pos
+0,0,11.0,0.0,11.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dATG7,Torin,40pos
+1,1,12.0,0.0,12.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dATG7,Torin,40pos
+2,2,30.0,0.0,30.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,2.0,LC3-WIPI,dATG7,Torin,40pos
+3,3,18.0,0.0,18.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,2.0,LC3-WIPI,dATG7,Torin,40pos
+4,4,25.0,0.0,25.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,3.0,LC3-WIPI,dATG7,Torin,40pos
+5,5,21.0,0.0,21.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,4.0,LC3-WIPI,dATG7,Torin,40pos
+6,6,24.0,0.0,24.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,4.0,4.0,5.0,LC3-WIPI,dATG7,Torin,40pos
+7,7,17.0,0.0,17.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,4.0,4.0,5.0,LC3-WIPI,dATG7,Torin,40pos
+8,8,23.0,0.0,23.0,0.0,0.0,0.0,3.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,4.0,4.0,5.0,LC3-WIPI,dATG7,Torin,40pos
+9,9,3.0,0.0,3.0,0.0,0.0,0.0,4.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,4.0,4.0,5.0,LC3-WIPI,dATG7,Torin,40pos
+10,10,26.0,0.0,26.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,7.0,LC3-WIPI,dATG7,Torin,40pos
+11,11,8.0,0.0,8.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,8.0,LC3-WIPI,dATG7,Torin,40pos
+12,12,27.0,0.0,27.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,8.0,LC3-WIPI,dATG7,Torin,40pos
+13,13,19.0,0.0,19.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,dATG7,Torin,40pos
+14,14,25.0,0.0,25.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,dATG7,Torin,40pos
+15,15,13.0,0.0,13.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,11.0,LC3-WIPI,dATG7,Torin,40pos
+16,16,12.0,0.0,12.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,11.0,LC3-WIPI,dATG7,Torin,40pos
+17,17,46.0,0.0,46.0,1.0,0.0,1.0,3.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,11.0,LC3-WIPI,dATG7,Torin,40pos
+18,18,14.0,0.0,14.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,3.0,12.0,LC3-WIPI,dATG7,Torin,40pos
+19,19,8.0,0.0,8.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,3.0,12.0,LC3-WIPI,dATG7,Torin,40pos
+20,20,5.0,0.0,5.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,13.0,LC3-WIPI,dATG7,Torin,40pos
+21,21,10.0,0.0,10.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,13.0,LC3-WIPI,dATG7,Torin,40pos
+22,22,11.0,0.0,11.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,14.0,LC3-WIPI,dATG7,Torin,40pos
+23,23,17.0,0.0,17.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,14.0,LC3-WIPI,dATG7,Torin,40pos
+24,24,14.0,0.0,14.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,3.0,15.0,LC3-WIPI,dATG7,Torin,40pos
+25,25,24.0,0.0,24.0,17.0,0.0,17.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,3.0,15.0,LC3-WIPI,dATG7,Torin,40pos
+26,26,12.0,0.0,12.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,16.0,LC3-WIPI,dATG7,Torin,40pos
+27,27,21.0,0.0,21.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,16.0,LC3-WIPI,dATG7,Torin,40pos
+28,28,28.0,0.0,28.0,4.0,0.0,4.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,17.0,LC3-WIPI,dATG7,Torin,40pos
+29,29,20.0,0.0,20.0,37.0,0.0,37.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,17.0,LC3-WIPI,dATG7,Torin,40pos
+30,30,11.0,0.0,11.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,18.0,LC3-WIPI,dATG7,Torin,40pos
+31,31,8.0,0.0,8.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,18.0,LC3-WIPI,dATG7,Torin,40pos
+32,32,8.0,0.0,8.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,19.0,LC3-WIPI,dATG7,Torin,40pos
+33,33,14.0,0.0,14.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,19.0,LC3-WIPI,dATG7,Torin,40pos
+34,34,5.0,0.0,5.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,20.0,LC3-WIPI,dATG7,Torin,40pos
+35,35,29.0,0.0,29.0,6.0,0.0,6.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,20.0,LC3-WIPI,dATG7,Torin,40pos
+36,36,45.0,0.0,45.0,23.0,0.0,23.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,21.0,LC3-WIPI,dATG7,Torin,40pos
+37,37,32.0,1.0,33.0,2.0,1.0,3.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,21.0,LC3-WIPI,dATG7,Torin,40pos
+38,38,26.0,0.0,26.0,13.0,0.0,13.0,3.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,21.0,LC3-WIPI,dATG7,Torin,40pos
+39,39,36.0,0.0,36.0,8.0,0.0,8.0,4.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,21.0,LC3-WIPI,dATG7,Torin,40pos
+40,40,9.0,0.0,9.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,22.0,LC3-WIPI,dATG7,Torin,40pos
+41,41,18.0,0.0,18.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,22.0,LC3-WIPI,dATG7,Torin,40pos
+42,42,10.0,0.0,10.0,4.0,0.0,4.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,23.0,LC3-WIPI,dATG7,Torin,40pos
+43,43,19.0,0.0,19.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,24.0,LC3-WIPI,dATG7,Torin,40pos
+44,44,26.0,0.0,26.0,4.0,0.0,4.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,24.0,LC3-WIPI,dATG7,Torin,40pos
+45,45,17.0,1.0,18.0,6.0,1.0,7.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,25.0,LC3-WIPI,dATG7,Torin,40pos
+46,46,19.0,0.0,19.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,25.0,LC3-WIPI,dATG7,Torin,40pos
+47,47,36.0,0.0,36.0,2.0,0.0,2.0,3.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,25.0,LC3-WIPI,dATG7,Torin,40pos
+48,48,10.0,0.0,10.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,26.0,LC3-WIPI,dATG7,Torin,40pos
+49,49,18.0,0.0,18.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,26.0,LC3-WIPI,dATG7,Torin,40pos
+50,50,15.0,0.0,15.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,27.0,LC3-WIPI,dATG7,Torin,40pos
+51,51,12.0,0.0,12.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,27.0,LC3-WIPI,dATG7,Torin,40pos
+52,52,12.0,0.0,12.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,28.0,LC3-WIPI,dATG7,Torin,40pos
+53,53,56.0,0.0,56.0,5.0,0.0,5.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,29.0,LC3-WIPI,dATG7,Torin,40pos
+54,54,48.0,0.0,48.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,30.0,LC3-WIPI,dATG7,Torin,40pos
+55,55,55.0,0.0,55.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,31.0,LC3-WIPI,dATG7,Torin,40pos
+56,56,49.0,0.0,49.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,31.0,LC3-WIPI,dATG7,Torin,40pos
+57,57,7.0,0.0,7.0,21.0,0.0,21.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,32.0,LC3-WIPI,dATG7,Torin,40pos
+58,58,52.0,0.0,52.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,33.0,LC3-WIPI,dATG7,Torin,40pos
+59,59,36.0,0.0,36.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,36.0,LC3-WIPI,dATG7,Torin,40pos
+60,60,18.0,0.0,18.0,6.0,0.0,6.0,2.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,36.0,LC3-WIPI,dATG7,Torin,40pos
+61,61,43.0,0.0,43.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,37.0,LC3-WIPI,dATG7,Torin,40pos
+62,62,41.0,0.0,41.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,39.0,LC3-WIPI,dATG7,Torin,40pos
+63,63,71.0,0.0,71.0,8.0,0.0,8.0,1.0,LC3-WIPI_HEK_dATG7_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,4.0,40.0,LC3-WIPI,dATG7,Torin,40pos
+0,0,14.0,6.0,20.0,54.0,5.0,59.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,wt,Torin,17pos
+1,1,12.0,2.0,14.0,68.0,2.0,70.0,2.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,wt,Torin,17pos
+2,2,7.0,5.0,12.0,56.0,4.0,60.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,2.0,LC3-WIPI,wt,Torin,17pos
+3,3,10.0,6.0,16.0,77.0,6.0,83.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,3.0,LC3-WIPI,wt,Torin,17pos
+4,4,8.0,8.0,16.0,62.0,8.0,70.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,wt,Torin,17pos
+5,5,8.0,11.0,19.0,38.0,11.0,49.0,2.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,wt,Torin,17pos
+6,6,16.0,15.0,31.0,66.0,16.0,82.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,wt,Torin,17pos
+7,7,7.0,11.0,18.0,55.0,9.0,64.0,2.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,wt,Torin,17pos
+8,8,24.0,27.0,51.0,257.0,26.0,283.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,6.0,LC3-WIPI,wt,Torin,17pos
+9,9,7.0,6.0,13.0,42.0,6.0,48.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,6.0,6.0,7.0,LC3-WIPI,wt,Torin,17pos
+10,10,17.0,11.0,28.0,42.0,10.0,52.0,2.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,6.0,6.0,7.0,LC3-WIPI,wt,Torin,17pos
+11,11,10.0,10.0,20.0,69.0,10.0,79.0,3.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,6.0,6.0,7.0,LC3-WIPI,wt,Torin,17pos
+12,12,4.0,5.0,9.0,41.0,4.0,45.0,4.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,6.0,6.0,7.0,LC3-WIPI,wt,Torin,17pos
+13,13,14.0,18.0,32.0,58.0,17.0,75.0,5.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,6.0,6.0,7.0,LC3-WIPI,wt,Torin,17pos
+14,14,10.0,3.0,13.0,60.0,3.0,63.0,6.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,6.0,6.0,7.0,LC3-WIPI,wt,Torin,17pos
+15,15,15.0,4.0,19.0,78.0,4.0,82.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,8.0,LC3-WIPI,wt,Torin,17pos
+16,16,23.0,11.0,34.0,65.0,10.0,75.0,2.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,8.0,LC3-WIPI,wt,Torin,17pos
+17,17,7.0,3.0,10.0,24.0,3.0,27.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,wt,Torin,17pos
+18,18,13.0,2.0,15.0,34.0,2.0,36.0,2.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,wt,Torin,17pos
+19,19,12.0,2.0,14.0,14.0,1.0,15.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,3.0,10.0,LC3-WIPI,wt,Torin,17pos
+20,20,9.0,2.0,11.0,20.0,2.0,22.0,2.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,3.0,10.0,LC3-WIPI,wt,Torin,17pos
+21,21,13.0,21.0,34.0,68.0,18.0,86.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,1.0,2.0,3.0,11.0,LC3-WIPI,wt,Torin,17pos
+22,22,12.0,19.0,31.0,58.0,21.0,79.0,2.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,1.0,2.0,3.0,11.0,LC3-WIPI,wt,Torin,17pos
+23,23,16.0,6.0,22.0,54.0,5.0,59.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,wt,Torin,17pos
+24,24,14.0,14.0,28.0,43.0,14.0,57.0,2.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,wt,Torin,17pos
+25,25,9.0,5.0,14.0,61.0,6.0,67.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,5.0,5.0,13.0,LC3-WIPI,wt,Torin,17pos
+26,26,7.0,14.0,21.0,60.0,14.0,74.0,2.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,5.0,5.0,13.0,LC3-WIPI,wt,Torin,17pos
+27,27,3.0,5.0,8.0,46.0,6.0,52.0,3.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,5.0,5.0,13.0,LC3-WIPI,wt,Torin,17pos
+28,28,14.0,4.0,18.0,53.0,4.0,57.0,4.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,5.0,5.0,13.0,LC3-WIPI,wt,Torin,17pos
+29,29,12.0,15.0,27.0,87.0,16.0,103.0,5.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,5.0,5.0,13.0,LC3-WIPI,wt,Torin,17pos
+30,30,32.0,3.0,35.0,63.0,2.0,65.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,0.0,1.0,2.0,14.0,LC3-WIPI,wt,Torin,17pos
+31,31,26.0,13.0,39.0,96.0,9.0,105.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,16.0,LC3-WIPI,wt,Torin,17pos
+32,32,28.0,15.0,43.0,241.0,14.0,255.0,1.0,LC3-WIPI_HEK_wt_Torin_17pos_IGNORE-POS-15_AiryscanProcessing.czi,0.0,1.0,1.0,2.0,17.0,LC3-WIPI,wt,Torin,17pos
+0,0,5.0,2.0,7.0,28.0,1.0,29.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dVPS37A,Torin,40pos
+1,1,11.0,7.0,18.0,39.0,7.0,46.0,2.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dVPS37A,Torin,40pos
+2,2,2.0,0.0,2.0,36.0,0.0,36.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,2.0,LC3-WIPI,dVPS37A,Torin,40pos
+3,3,7.0,4.0,11.0,65.0,5.0,70.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,3.0,3.0,LC3-WIPI,dVPS37A,Torin,40pos
+4,4,2.0,0.0,2.0,11.0,0.0,11.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,1.0,1.0,3.0,3.0,4.0,LC3-WIPI,dVPS37A,Torin,40pos
+5,5,5.0,0.0,5.0,20.0,0.0,20.0,2.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,1.0,1.0,3.0,3.0,4.0,LC3-WIPI,dVPS37A,Torin,40pos
+6,6,0.0,1.0,1.0,38.0,2.0,40.0,3.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,1.0,1.0,3.0,3.0,4.0,LC3-WIPI,dVPS37A,Torin,40pos
+7,7,6.0,2.0,8.0,22.0,1.0,23.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,5.0,LC3-WIPI,dVPS37A,Torin,40pos
+8,8,2.0,1.0,3.0,55.0,1.0,56.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,dVPS37A,Torin,40pos
+9,9,2.0,0.0,2.0,43.0,0.0,43.0,2.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,dVPS37A,Torin,40pos
+10,10,8.0,1.0,9.0,24.0,1.0,25.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,7.0,LC3-WIPI,dVPS37A,Torin,40pos
+11,11,6.0,1.0,7.0,24.0,1.0,25.0,2.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,7.0,LC3-WIPI,dVPS37A,Torin,40pos
+12,12,11.0,4.0,15.0,46.0,4.0,50.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,8.0,LC3-WIPI,dVPS37A,Torin,40pos
+13,13,5.0,9.0,14.0,51.0,9.0,60.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,9.0,LC3-WIPI,dVPS37A,Torin,40pos
+14,14,15.0,6.0,21.0,49.0,7.0,56.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,2.0,10.0,LC3-WIPI,dVPS37A,Torin,40pos
+15,15,14.0,11.0,25.0,176.0,12.0,188.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,11.0,LC3-WIPI,dVPS37A,Torin,40pos
+16,16,0.0,6.0,6.0,39.0,6.0,45.0,2.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,11.0,LC3-WIPI,dVPS37A,Torin,40pos
+17,17,15.0,5.0,20.0,76.0,4.0,80.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,12.0,LC3-WIPI,dVPS37A,Torin,40pos
+18,18,14.0,1.0,15.0,70.0,1.0,71.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,13.0,LC3-WIPI,dVPS37A,Torin,40pos
+19,19,15.0,0.0,15.0,31.0,0.0,31.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,14.0,LC3-WIPI,dVPS37A,Torin,40pos
+20,20,7.0,0.0,7.0,23.0,0.0,23.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,15.0,LC3-WIPI,dVPS37A,Torin,40pos
+21,21,11.0,1.0,12.0,40.0,1.0,41.0,2.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,15.0,LC3-WIPI,dVPS37A,Torin,40pos
+22,22,0.0,0.0,0.0,36.0,0.0,36.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,1.0,1.0,2.0,2.0,16.0,LC3-WIPI,dVPS37A,Torin,40pos
+23,23,0.0,0.0,0.0,73.0,0.0,73.0,2.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,1.0,1.0,2.0,2.0,16.0,LC3-WIPI,dVPS37A,Torin,40pos
+24,24,11.0,2.0,13.0,38.0,3.0,41.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,17.0,LC3-WIPI,dVPS37A,Torin,40pos
+25,25,8.0,2.0,10.0,104.0,2.0,106.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,18.0,LC3-WIPI,dVPS37A,Torin,40pos
+26,26,15.0,11.0,26.0,70.0,10.0,80.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,2.0,19.0,LC3-WIPI,dVPS37A,Torin,40pos
+27,27,3.0,1.0,4.0,7.0,1.0,8.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,20.0,LC3-WIPI,dVPS37A,Torin,40pos
+28,28,9.0,0.0,9.0,25.0,0.0,25.0,2.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,20.0,LC3-WIPI,dVPS37A,Torin,40pos
+29,29,7.0,2.0,9.0,45.0,2.0,47.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,1.0,1.0,1.0,1.0,21.0,LC3-WIPI,dVPS37A,Torin,40pos
+30,30,1.0,7.0,8.0,61.0,6.0,67.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,24.0,LC3-WIPI,dVPS37A,Torin,40pos
+31,31,1.0,0.0,1.0,26.0,0.0,26.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,25.0,LC3-WIPI,dVPS37A,Torin,40pos
+32,32,1.0,0.0,1.0,27.0,0.0,27.0,2.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,25.0,LC3-WIPI,dVPS37A,Torin,40pos
+33,33,7.0,1.0,8.0,88.0,1.0,89.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,27.0,LC3-WIPI,dVPS37A,Torin,40pos
+34,34,1.0,0.0,1.0,38.0,0.0,38.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,28.0,LC3-WIPI,dVPS37A,Torin,40pos
+35,35,1.0,0.0,1.0,8.0,0.0,8.0,2.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,28.0,LC3-WIPI,dVPS37A,Torin,40pos
+36,36,3.0,0.0,3.0,65.0,0.0,65.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,29.0,LC3-WIPI,dVPS37A,Torin,40pos
+37,37,9.0,1.0,10.0,34.0,1.0,35.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,30.0,LC3-WIPI,dVPS37A,Torin,40pos
+38,38,10.0,5.0,15.0,101.0,5.0,106.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,32.0,LC3-WIPI,dVPS37A,Torin,40pos
+39,39,4.0,0.0,4.0,25.0,0.0,25.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,33.0,LC3-WIPI,dVPS37A,Torin,40pos
+40,40,12.0,3.0,15.0,29.0,3.0,32.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,34.0,LC3-WIPI,dVPS37A,Torin,40pos
+41,41,4.0,5.0,9.0,50.0,4.0,54.0,2.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,34.0,LC3-WIPI,dVPS37A,Torin,40pos
+42,42,5.0,6.0,11.0,68.0,7.0,75.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,35.0,LC3-WIPI,dVPS37A,Torin,40pos
+43,43,9.0,5.0,14.0,142.0,6.0,148.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,37.0,LC3-WIPI,dVPS37A,Torin,40pos
+44,44,17.0,3.0,20.0,48.0,3.0,51.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,38.0,LC3-WIPI,dVPS37A,Torin,40pos
+45,45,26.0,1.0,27.0,68.0,1.0,69.0,1.0,LC3-WIPI_HEK_dVPS37A_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,40.0,LC3-WIPI,dVPS37A,Torin,40pos
+0,0,3.0,4.0,7.0,29.0,5.0,34.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,1.0,LC3-WIPI,wt,Torin,23pos
+1,1,8.0,9.0,17.0,38.0,9.0,47.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,1.0,LC3-WIPI,wt,Torin,23pos
+2,2,8.0,7.0,15.0,41.0,8.0,49.0,3.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,1.0,LC3-WIPI,wt,Torin,23pos
+3,3,4.0,3.0,7.0,48.0,3.0,51.0,4.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,1.0,LC3-WIPI,wt,Torin,23pos
+4,4,11.0,5.0,16.0,50.0,5.0,55.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,2.0,LC3-WIPI,wt,Torin,23pos
+5,5,8.0,2.0,10.0,89.0,2.0,91.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,2.0,LC3-WIPI,wt,Torin,23pos
+6,6,12.0,3.0,15.0,65.0,3.0,68.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,3.0,LC3-WIPI,wt,Torin,23pos
+7,7,10.0,7.0,17.0,58.0,6.0,64.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,3.0,LC3-WIPI,wt,Torin,23pos
+8,8,6.0,12.0,18.0,84.0,13.0,97.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,5.0,5.0,4.0,LC3-WIPI,wt,Torin,23pos
+9,9,19.0,15.0,34.0,79.0,14.0,93.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,5.0,5.0,4.0,LC3-WIPI,wt,Torin,23pos
+10,10,2.0,6.0,8.0,63.0,7.0,70.0,3.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,5.0,5.0,4.0,LC3-WIPI,wt,Torin,23pos
+11,11,0.0,2.0,2.0,15.0,2.0,17.0,4.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,5.0,5.0,4.0,LC3-WIPI,wt,Torin,23pos
+12,12,6.0,14.0,20.0,144.0,14.0,158.0,5.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,5.0,5.0,4.0,LC3-WIPI,wt,Torin,23pos
+13,13,5.0,15.0,20.0,74.0,13.0,87.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,wt,Torin,23pos
+14,14,5.0,5.0,10.0,60.0,6.0,66.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,wt,Torin,23pos
+15,15,10.0,10.0,20.0,81.0,10.0,91.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,6.0,LC3-WIPI,wt,Torin,23pos
+16,16,16.0,8.0,24.0,65.0,8.0,73.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,6.0,LC3-WIPI,wt,Torin,23pos
+17,17,7.0,13.0,20.0,73.0,12.0,85.0,3.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,6.0,LC3-WIPI,wt,Torin,23pos
+18,18,15.0,0.0,15.0,95.0,0.0,95.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,7.0,LC3-WIPI,wt,Torin,23pos
+19,19,13.0,9.0,22.0,65.0,8.0,73.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,8.0,LC3-WIPI,wt,Torin,23pos
+20,20,8.0,6.0,14.0,48.0,8.0,56.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,8.0,LC3-WIPI,wt,Torin,23pos
+21,21,13.0,9.0,22.0,80.0,10.0,90.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,wt,Torin,23pos
+22,22,10.0,8.0,18.0,63.0,8.0,71.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,wt,Torin,23pos
+23,23,29.0,11.0,40.0,78.0,13.0,91.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,1.0,0.0,2.0,2.0,10.0,LC3-WIPI,wt,Torin,23pos
+24,24,18.0,20.0,38.0,131.0,21.0,152.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,1.0,0.0,2.0,2.0,10.0,LC3-WIPI,wt,Torin,23pos
+25,25,14.0,15.0,29.0,38.0,15.0,53.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,wt,Torin,23pos
+26,26,14.0,9.0,23.0,44.0,11.0,55.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,wt,Torin,23pos
+27,27,6.0,4.0,10.0,27.0,4.0,31.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,wt,Torin,23pos
+28,28,4.0,4.0,8.0,27.0,4.0,31.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,wt,Torin,23pos
+29,29,4.0,4.0,8.0,69.0,4.0,73.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,13.0,LC3-WIPI,wt,Torin,23pos
+30,30,5.0,8.0,13.0,92.0,8.0,100.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,1.0,1.0,1.0,1.0,14.0,LC3-WIPI,wt,Torin,23pos
+31,31,8.0,13.0,21.0,93.0,13.0,106.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,15.0,LC3-WIPI,wt,Torin,23pos
+32,32,4.0,7.0,11.0,98.0,8.0,106.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,15.0,LC3-WIPI,wt,Torin,23pos
+33,33,1.0,0.0,1.0,5.0,0.0,5.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,3.0,16.0,LC3-WIPI,wt,Torin,23pos
+34,34,4.0,0.0,4.0,7.0,0.0,7.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,3.0,16.0,LC3-WIPI,wt,Torin,23pos
+35,35,21.0,14.0,35.0,77.0,15.0,92.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,wt,Torin,23pos
+36,36,29.0,14.0,43.0,128.0,15.0,143.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,wt,Torin,23pos
+37,37,4.0,5.0,9.0,37.0,5.0,42.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,18.0,LC3-WIPI,wt,Torin,23pos
+38,38,2.0,4.0,6.0,31.0,4.0,35.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,18.0,LC3-WIPI,wt,Torin,23pos
+39,39,17.0,11.0,28.0,58.0,11.0,69.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,19.0,LC3-WIPI,wt,Torin,23pos
+40,40,3.0,8.0,11.0,62.0,10.0,72.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,20.0,LC3-WIPI,wt,Torin,23pos
+41,41,3.0,5.0,8.0,34.0,5.0,39.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,20.0,LC3-WIPI,wt,Torin,23pos
+42,42,3.0,8.0,11.0,54.0,12.0,66.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,21.0,LC3-WIPI,wt,Torin,23pos
+43,43,12.0,13.0,25.0,79.0,13.0,92.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,21.0,LC3-WIPI,wt,Torin,23pos
+44,44,19.0,14.0,33.0,72.0,14.0,86.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,22.0,LC3-WIPI,wt,Torin,23pos
+45,45,12.0,14.0,26.0,68.0,13.0,81.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,22.0,LC3-WIPI,wt,Torin,23pos
+46,46,8.0,2.0,10.0,86.0,2.0,88.0,1.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,23.0,LC3-WIPI,wt,Torin,23pos
+47,47,14.0,3.0,17.0,85.0,4.0,89.0,2.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,23.0,LC3-WIPI,wt,Torin,23pos
+48,48,9.0,9.0,18.0,68.0,9.0,77.0,3.0,LC3-WIPI_HEK_wt_Torin_23pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,23.0,LC3-WIPI,wt,Torin,23pos
+0,0,29.0,49.0,78.0,19.0,50.0,69.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dTMEM,Torin,40pos
+1,1,33.0,68.0,101.0,19.0,67.0,86.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dTMEM,Torin,40pos
+2,2,64.0,120.0,184.0,57.0,125.0,182.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,2.0,LC3-WIPI,dTMEM,Torin,40pos
+3,3,67.0,140.0,207.0,46.0,135.0,181.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,2.0,LC3-WIPI,dTMEM,Torin,40pos
+4,4,53.0,32.0,85.0,40.0,32.0,72.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,3.0,LC3-WIPI,dTMEM,Torin,40pos
+5,5,50.0,98.0,148.0,111.0,95.0,206.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,4.0,LC3-WIPI,dTMEM,Torin,40pos
+6,6,14.0,24.0,38.0,8.0,23.0,31.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,5.0,LC3-WIPI,dTMEM,Torin,40pos
+7,7,48.0,93.0,141.0,49.0,91.0,140.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,5.0,LC3-WIPI,dTMEM,Torin,40pos
+8,8,24.0,78.0,102.0,36.0,79.0,115.0,3.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,5.0,LC3-WIPI,dTMEM,Torin,40pos
+9,9,14.0,43.0,57.0,35.0,43.0,78.0,4.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,5.0,LC3-WIPI,dTMEM,Torin,40pos
+10,10,40.0,122.0,162.0,41.0,124.0,165.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,6.0,LC3-WIPI,dTMEM,Torin,40pos
+11,11,63.0,109.0,172.0,26.0,107.0,133.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,6.0,LC3-WIPI,dTMEM,Torin,40pos
+12,12,76.0,29.0,105.0,75.0,31.0,106.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,5.0,4.0,7.0,LC3-WIPI,dTMEM,Torin,40pos
+13,13,55.0,19.0,74.0,23.0,17.0,40.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,5.0,4.0,7.0,LC3-WIPI,dTMEM,Torin,40pos
+14,14,131.0,57.0,188.0,134.0,61.0,195.0,3.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,5.0,4.0,7.0,LC3-WIPI,dTMEM,Torin,40pos
+15,15,89.0,42.0,131.0,75.0,41.0,116.0,4.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,5.0,4.0,7.0,LC3-WIPI,dTMEM,Torin,40pos
+16,16,16.0,1.0,17.0,1.0,0.0,1.0,5.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,5.0,4.0,7.0,LC3-WIPI,dTMEM,Torin,40pos
+17,17,33.0,16.0,49.0,62.0,16.0,78.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,1.0,1.0,2.0,2.0,8.0,LC3-WIPI,dTMEM,Torin,40pos
+18,18,35.0,22.0,57.0,57.0,22.0,79.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,1.0,1.0,2.0,2.0,8.0,LC3-WIPI,dTMEM,Torin,40pos
+19,19,68.0,81.0,149.0,69.0,82.0,151.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,3.0,9.0,LC3-WIPI,dTMEM,Torin,40pos
+20,20,38.0,66.0,104.0,40.0,65.0,105.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,3.0,9.0,LC3-WIPI,dTMEM,Torin,40pos
+21,21,14.0,57.0,71.0,63.0,57.0,120.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,10.0,LC3-WIPI,dTMEM,Torin,40pos
+22,22,14.0,84.0,98.0,59.0,80.0,139.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,10.0,LC3-WIPI,dTMEM,Torin,40pos
+23,23,77.0,41.0,118.0,97.0,41.0,138.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,11.0,LC3-WIPI,dTMEM,Torin,40pos
+24,24,13.0,62.0,75.0,15.0,59.0,74.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,12.0,LC3-WIPI,dTMEM,Torin,40pos
+25,25,23.0,29.0,52.0,23.0,28.0,51.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,12.0,LC3-WIPI,dTMEM,Torin,40pos
+26,26,20.0,68.0,88.0,23.0,66.0,89.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,3.0,13.0,LC3-WIPI,dTMEM,Torin,40pos
+27,27,18.0,48.0,66.0,26.0,45.0,71.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,3.0,13.0,LC3-WIPI,dTMEM,Torin,40pos
+28,28,113.0,104.0,217.0,123.0,104.0,227.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,14.0,LC3-WIPI,dTMEM,Torin,40pos
+29,29,28.0,9.0,37.0,7.0,8.0,15.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,14.0,LC3-WIPI,dTMEM,Torin,40pos
+30,30,41.0,44.0,85.0,61.0,43.0,104.0,3.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,14.0,LC3-WIPI,dTMEM,Torin,40pos
+31,31,57.0,18.0,75.0,63.0,18.0,81.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,15.0,LC3-WIPI,dTMEM,Torin,40pos
+32,32,21.0,63.0,84.0,55.0,60.0,115.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,dTMEM,Torin,40pos
+33,33,25.0,70.0,95.0,68.0,72.0,140.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,dTMEM,Torin,40pos
+34,34,34.0,85.0,119.0,41.0,84.0,125.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,18.0,LC3-WIPI,dTMEM,Torin,40pos
+35,35,118.0,56.0,174.0,108.0,58.0,166.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,19.0,LC3-WIPI,dTMEM,Torin,40pos
+36,36,45.0,158.0,203.0,114.0,153.0,267.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,2.0,20.0,LC3-WIPI,dTMEM,Torin,40pos
+37,37,52.0,25.0,77.0,51.0,25.0,76.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,21.0,LC3-WIPI,dTMEM,Torin,40pos
+38,38,48.0,22.0,70.0,27.0,23.0,50.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,21.0,LC3-WIPI,dTMEM,Torin,40pos
+39,39,27.0,86.0,113.0,21.0,88.0,109.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,22.0,LC3-WIPI,dTMEM,Torin,40pos
+40,40,26.0,82.0,108.0,13.0,84.0,97.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,23.0,LC3-WIPI,dTMEM,Torin,40pos
+41,41,18.0,91.0,109.0,8.0,93.0,101.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,23.0,LC3-WIPI,dTMEM,Torin,40pos
+42,42,69.0,53.0,122.0,70.0,52.0,122.0,3.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,23.0,LC3-WIPI,dTMEM,Torin,40pos
+43,43,26.0,37.0,63.0,32.0,34.0,66.0,4.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,4.0,4.0,23.0,LC3-WIPI,dTMEM,Torin,40pos
+44,44,99.0,49.0,148.0,77.0,45.0,122.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,24.0,LC3-WIPI,dTMEM,Torin,40pos
+45,45,29.0,93.0,122.0,28.0,96.0,124.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,25.0,LC3-WIPI,dTMEM,Torin,40pos
+46,46,32.0,48.0,80.0,10.0,51.0,61.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,25.0,LC3-WIPI,dTMEM,Torin,40pos
+47,47,66.0,84.0,150.0,43.0,84.0,127.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,26.0,LC3-WIPI,dTMEM,Torin,40pos
+48,48,49.0,72.0,121.0,41.0,72.0,113.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,26.0,LC3-WIPI,dTMEM,Torin,40pos
+49,49,14.0,84.0,98.0,25.0,82.0,107.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,8.0,9.0,27.0,LC3-WIPI,dTMEM,Torin,40pos
+50,50,8.0,33.0,41.0,28.0,35.0,63.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,8.0,9.0,27.0,LC3-WIPI,dTMEM,Torin,40pos
+51,51,28.0,147.0,175.0,41.0,145.0,186.0,3.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,8.0,9.0,27.0,LC3-WIPI,dTMEM,Torin,40pos
+52,52,85.0,117.0,202.0,114.0,125.0,239.0,4.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,8.0,9.0,27.0,LC3-WIPI,dTMEM,Torin,40pos
+53,53,14.0,42.0,56.0,26.0,42.0,68.0,5.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,8.0,9.0,27.0,LC3-WIPI,dTMEM,Torin,40pos
+54,54,20.0,45.0,65.0,30.0,43.0,73.0,6.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,8.0,9.0,27.0,LC3-WIPI,dTMEM,Torin,40pos
+55,55,36.0,105.0,141.0,112.0,107.0,219.0,7.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,8.0,9.0,27.0,LC3-WIPI,dTMEM,Torin,40pos
+56,56,3.0,3.0,6.0,9.0,4.0,13.0,8.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,8.0,9.0,27.0,LC3-WIPI,dTMEM,Torin,40pos
+57,57,42.0,82.0,124.0,22.0,80.0,102.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,28.0,LC3-WIPI,dTMEM,Torin,40pos
+58,58,29.0,67.0,96.0,26.0,66.0,92.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,28.0,LC3-WIPI,dTMEM,Torin,40pos
+59,59,67.0,46.0,113.0,52.0,50.0,102.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,29.0,LC3-WIPI,dTMEM,Torin,40pos
+60,60,88.0,63.0,151.0,41.0,64.0,105.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,29.0,LC3-WIPI,dTMEM,Torin,40pos
+61,61,80.0,36.0,116.0,48.0,34.0,82.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,30.0,LC3-WIPI,dTMEM,Torin,40pos
+62,62,47.0,90.0,137.0,64.0,89.0,153.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,30.0,LC3-WIPI,dTMEM,Torin,40pos
+63,63,21.0,38.0,59.0,27.0,39.0,66.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,31.0,LC3-WIPI,dTMEM,Torin,40pos
+64,64,26.0,63.0,89.0,30.0,61.0,91.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,31.0,LC3-WIPI,dTMEM,Torin,40pos
+65,65,26.0,23.0,49.0,26.0,22.0,48.0,3.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,3.0,3.0,31.0,LC3-WIPI,dTMEM,Torin,40pos
+66,66,33.0,71.0,104.0,36.0,69.0,105.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,32.0,LC3-WIPI,dTMEM,Torin,40pos
+67,67,49.0,65.0,114.0,73.0,65.0,138.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,3.0,33.0,LC3-WIPI,dTMEM,Torin,40pos
+68,68,42.0,67.0,109.0,66.0,64.0,130.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,3.0,33.0,LC3-WIPI,dTMEM,Torin,40pos
+69,69,21.0,96.0,117.0,15.0,99.0,114.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,34.0,LC3-WIPI,dTMEM,Torin,40pos
+70,70,14.0,72.0,86.0,12.0,76.0,88.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,34.0,LC3-WIPI,dTMEM,Torin,40pos
+71,71,15.0,46.0,61.0,34.0,47.0,81.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,35.0,LC3-WIPI,dTMEM,Torin,40pos
+72,72,22.0,23.0,45.0,38.0,24.0,62.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,35.0,LC3-WIPI,dTMEM,Torin,40pos
+73,73,55.0,115.0,170.0,35.0,119.0,154.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,36.0,LC3-WIPI,dTMEM,Torin,40pos
+74,74,62.0,151.0,213.0,50.0,148.0,198.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,36.0,LC3-WIPI,dTMEM,Torin,40pos
+75,75,79.0,112.0,191.0,76.0,109.0,185.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,37.0,LC3-WIPI,dTMEM,Torin,40pos
+76,76,121.0,128.0,249.0,43.0,127.0,170.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,38.0,LC3-WIPI,dTMEM,Torin,40pos
+77,77,8.0,21.0,29.0,24.0,20.0,44.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,39.0,LC3-WIPI,dTMEM,Torin,40pos
+78,78,13.0,26.0,39.0,17.0,27.0,44.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,39.0,LC3-WIPI,dTMEM,Torin,40pos
+79,79,23.0,54.0,77.0,44.0,53.0,97.0,3.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,39.0,LC3-WIPI,dTMEM,Torin,40pos
+80,80,42.0,96.0,138.0,50.0,94.0,144.0,1.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,3.0,40.0,LC3-WIPI,dTMEM,Torin,40pos
+81,81,44.0,53.0,97.0,25.0,50.0,75.0,2.0,LC3-WIPI_HEK_dTMEM_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,3.0,40.0,LC3-WIPI,dTMEM,Torin,40pos
+0,0,3.0,0.0,3.0,5.0,0.0,5.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,1.0,0.0,3.0,3.0,1.0,LC3-WIPI,dFIP200,NoTreat,40pos
+1,1,3.0,0.0,3.0,4.0,0.0,4.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,1.0,0.0,3.0,3.0,1.0,LC3-WIPI,dFIP200,NoTreat,40pos
+2,2,1.0,0.0,1.0,5.0,0.0,5.0,3.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,1.0,0.0,3.0,3.0,1.0,LC3-WIPI,dFIP200,NoTreat,40pos
+3,3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,2.0,LC3-WIPI,dFIP200,NoTreat,40pos
+4,4,0.0,0.0,0.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,2.0,LC3-WIPI,dFIP200,NoTreat,40pos
+5,5,0.0,0.0,0.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,3.0,LC3-WIPI,dFIP200,NoTreat,40pos
+6,6,1.0,0.0,1.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,3.0,LC3-WIPI,dFIP200,NoTreat,40pos
+7,7,0.0,0.0,0.0,3.0,0.0,3.0,3.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,3.0,LC3-WIPI,dFIP200,NoTreat,40pos
+8,8,1.0,0.0,1.0,7.0,0.0,7.0,4.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,3.0,LC3-WIPI,dFIP200,NoTreat,40pos
+9,9,1.0,0.0,1.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,4.0,LC3-WIPI,dFIP200,NoTreat,40pos
+10,10,2.0,0.0,2.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,4.0,LC3-WIPI,dFIP200,NoTreat,40pos
+11,11,1.0,0.0,1.0,12.0,0.0,12.0,3.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,4.0,LC3-WIPI,dFIP200,NoTreat,40pos
+12,12,0.0,0.0,0.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,5.0,LC3-WIPI,dFIP200,NoTreat,40pos
+13,13,0.0,0.0,0.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,5.0,LC3-WIPI,dFIP200,NoTreat,40pos
+14,14,0.0,0.0,0.0,0.0,0.0,0.0,3.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,5.0,LC3-WIPI,dFIP200,NoTreat,40pos
+15,15,0.0,0.0,0.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,dFIP200,NoTreat,40pos
+16,16,0.0,0.0,0.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,dFIP200,NoTreat,40pos
+17,17,0.0,0.0,0.0,9.0,0.0,9.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,7.0,LC3-WIPI,dFIP200,NoTreat,40pos
+18,18,4.0,0.0,4.0,8.0,0.0,8.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,7.0,LC3-WIPI,dFIP200,NoTreat,40pos
+19,19,1.0,0.0,1.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,8.0,LC3-WIPI,dFIP200,NoTreat,40pos
+20,20,1.0,0.0,1.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,8.0,LC3-WIPI,dFIP200,NoTreat,40pos
+21,21,1.0,0.0,1.0,2.0,0.0,2.0,3.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,8.0,LC3-WIPI,dFIP200,NoTreat,40pos
+22,22,1.0,0.0,1.0,2.0,0.0,2.0,4.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,8.0,LC3-WIPI,dFIP200,NoTreat,40pos
+23,23,0.0,0.0,0.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,5.0,9.0,LC3-WIPI,dFIP200,NoTreat,40pos
+24,24,4.0,0.0,4.0,9.0,0.0,9.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,5.0,9.0,LC3-WIPI,dFIP200,NoTreat,40pos
+25,25,3.0,0.0,3.0,4.0,0.0,4.0,3.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,5.0,9.0,LC3-WIPI,dFIP200,NoTreat,40pos
+26,26,9.0,0.0,9.0,35.0,0.0,35.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,10.0,LC3-WIPI,dFIP200,NoTreat,40pos
+27,27,2.0,0.0,2.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,11.0,LC3-WIPI,dFIP200,NoTreat,40pos
+28,28,3.0,0.0,3.0,6.0,0.0,6.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,11.0,LC3-WIPI,dFIP200,NoTreat,40pos
+29,29,1.0,0.0,1.0,1.0,0.0,1.0,3.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,11.0,LC3-WIPI,dFIP200,NoTreat,40pos
+30,30,3.0,1.0,4.0,9.0,1.0,10.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,3.0,12.0,LC3-WIPI,dFIP200,NoTreat,40pos
+31,31,0.0,0.0,0.0,7.0,0.0,7.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,3.0,12.0,LC3-WIPI,dFIP200,NoTreat,40pos
+32,32,2.0,0.0,2.0,12.0,1.0,13.0,3.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,3.0,12.0,LC3-WIPI,dFIP200,NoTreat,40pos
+33,33,4.0,0.0,4.0,5.0,0.0,5.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,1.0,1.0,13.0,LC3-WIPI,dFIP200,NoTreat,40pos
+34,34,2.0,0.0,2.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,14.0,LC3-WIPI,dFIP200,NoTreat,40pos
+35,35,0.0,0.0,0.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,14.0,LC3-WIPI,dFIP200,NoTreat,40pos
+36,36,3.0,0.0,3.0,8.0,0.0,8.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,15.0,LC3-WIPI,dFIP200,NoTreat,40pos
+37,37,2.0,0.0,2.0,5.0,0.0,5.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,15.0,LC3-WIPI,dFIP200,NoTreat,40pos
+38,38,0.0,0.0,0.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,17.0,LC3-WIPI,dFIP200,NoTreat,40pos
+39,39,0.0,0.0,0.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,18.0,LC3-WIPI,dFIP200,NoTreat,40pos
+40,40,0.0,0.0,0.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,18.0,LC3-WIPI,dFIP200,NoTreat,40pos
+41,41,0.0,0.0,0.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,19.0,LC3-WIPI,dFIP200,NoTreat,40pos
+42,42,0.0,0.0,0.0,4.0,0.0,4.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,1.0,1.0,20.0,LC3-WIPI,dFIP200,NoTreat,40pos
+43,43,2.0,0.0,2.0,4.0,0.0,4.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,22.0,LC3-WIPI,dFIP200,NoTreat,40pos
+44,44,2.0,0.0,2.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,22.0,LC3-WIPI,dFIP200,NoTreat,40pos
+45,45,3.0,0.0,3.0,143.0,0.0,143.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,1.0,2.0,23.0,LC3-WIPI,dFIP200,NoTreat,40pos
+46,46,2.0,0.0,2.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,25.0,LC3-WIPI,dFIP200,NoTreat,40pos
+47,47,0.0,0.0,0.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,26.0,LC3-WIPI,dFIP200,NoTreat,40pos
+48,48,0.0,0.0,0.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,1.0,1.0,27.0,LC3-WIPI,dFIP200,NoTreat,40pos
+49,49,4.0,0.0,4.0,7.0,0.0,7.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,28.0,LC3-WIPI,dFIP200,NoTreat,40pos
+50,50,0.0,0.0,0.0,4.0,0.0,4.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,29.0,LC3-WIPI,dFIP200,NoTreat,40pos
+51,51,2.0,0.0,2.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,33.0,LC3-WIPI,dFIP200,NoTreat,40pos
+52,52,0.0,0.0,0.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,34.0,LC3-WIPI,dFIP200,NoTreat,40pos
+53,53,1.0,0.0,1.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,34.0,LC3-WIPI,dFIP200,NoTreat,40pos
+54,54,1.0,0.0,1.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,35.0,LC3-WIPI,dFIP200,NoTreat,40pos
+55,55,2.0,0.0,2.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,35.0,LC3-WIPI,dFIP200,NoTreat,40pos
+56,56,24.0,0.0,24.0,89.0,0.0,89.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,2.0,36.0,LC3-WIPI,dFIP200,NoTreat,40pos
+57,57,5.0,0.0,5.0,4.0,0.0,4.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,37.0,LC3-WIPI,dFIP200,NoTreat,40pos
+58,58,1.0,0.0,1.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,37.0,LC3-WIPI,dFIP200,NoTreat,40pos
+59,59,7.0,0.0,7.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,38.0,LC3-WIPI,dFIP200,NoTreat,40pos
+60,60,8.0,0.0,8.0,6.0,0.0,6.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,39.0,LC3-WIPI,dFIP200,NoTreat,40pos
+61,61,6.0,0.0,6.0,10.0,0.0,10.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,39.0,LC3-WIPI,dFIP200,NoTreat,40pos
+62,62,6.0,0.0,6.0,8.0,0.0,8.0,3.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,39.0,LC3-WIPI,dFIP200,NoTreat,40pos
+63,63,10.0,0.0,10.0,5.0,0.0,5.0,4.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,39.0,LC3-WIPI,dFIP200,NoTreat,40pos
+64,64,7.0,0.0,7.0,8.0,0.0,8.0,1.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,40.0,LC3-WIPI,dFIP200,NoTreat,40pos
+65,65,2.0,0.0,2.0,14.0,0.0,14.0,2.0,LC3-WIPI_HEK_dFIP200_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,40.0,LC3-WIPI,dFIP200,NoTreat,40pos
+0,0,4.0,2.0,6.0,14.0,2.0,16.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,3.0,1.0,LC3-WIPI,dP62,NoTreat,40pos
+1,1,4.0,0.0,4.0,10.0,0.0,10.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,3.0,1.0,LC3-WIPI,dP62,NoTreat,40pos
+2,2,4.0,3.0,7.0,23.0,3.0,26.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,2.0,LC3-WIPI,dP62,NoTreat,40pos
+3,3,2.0,2.0,4.0,7.0,2.0,9.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,2.0,LC3-WIPI,dP62,NoTreat,40pos
+4,4,1.0,0.0,1.0,12.0,0.0,12.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,1.0,1.0,1.0,1.0,3.0,LC3-WIPI,dP62,NoTreat,40pos
+5,5,3.0,0.0,3.0,24.0,0.0,24.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,4.0,LC3-WIPI,dP62,NoTreat,40pos
+6,6,0.0,0.0,0.0,16.0,0.0,16.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,4.0,LC3-WIPI,dP62,NoTreat,40pos
+7,7,3.0,1.0,4.0,19.0,1.0,20.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,dP62,NoTreat,40pos
+8,8,2.0,0.0,2.0,16.0,0.0,16.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,dP62,NoTreat,40pos
+9,9,3.0,3.0,6.0,16.0,3.0,19.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,6.0,LC3-WIPI,dP62,NoTreat,40pos
+10,10,1.0,3.0,4.0,20.0,3.0,23.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,6.0,LC3-WIPI,dP62,NoTreat,40pos
+11,11,1.0,1.0,2.0,18.0,1.0,19.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,7.0,LC3-WIPI,dP62,NoTreat,40pos
+12,12,7.0,1.0,8.0,13.0,1.0,14.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,8.0,LC3-WIPI,dP62,NoTreat,40pos
+13,13,3.0,0.0,3.0,19.0,0.0,19.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,8.0,LC3-WIPI,dP62,NoTreat,40pos
+14,14,5.0,1.0,6.0,18.0,1.0,19.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,dP62,NoTreat,40pos
+15,15,1.0,1.0,2.0,9.0,1.0,10.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,dP62,NoTreat,40pos
+16,16,3.0,0.0,3.0,18.0,0.0,18.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,10.0,LC3-WIPI,dP62,NoTreat,40pos
+17,17,4.0,0.0,4.0,25.0,0.0,25.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,10.0,LC3-WIPI,dP62,NoTreat,40pos
+18,18,6.0,1.0,7.0,49.0,1.0,50.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,dP62,NoTreat,40pos
+19,19,18.0,2.0,20.0,58.0,2.0,60.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,dP62,NoTreat,40pos
+20,20,0.0,0.0,0.0,20.0,0.0,20.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,dP62,NoTreat,40pos
+21,21,2.0,1.0,3.0,46.0,1.0,47.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,dP62,NoTreat,40pos
+22,22,3.0,1.0,4.0,28.0,1.0,29.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,3.0,13.0,LC3-WIPI,dP62,NoTreat,40pos
+23,23,2.0,4.0,6.0,40.0,3.0,43.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,3.0,13.0,LC3-WIPI,dP62,NoTreat,40pos
+24,24,0.0,1.0,1.0,12.0,1.0,13.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,14.0,LC3-WIPI,dP62,NoTreat,40pos
+25,25,2.0,0.0,2.0,16.0,0.0,16.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,14.0,LC3-WIPI,dP62,NoTreat,40pos
+26,26,2.0,2.0,4.0,16.0,2.0,18.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,1.0,1.0,2.0,2.0,15.0,LC3-WIPI,dP62,NoTreat,40pos
+27,27,4.0,0.0,4.0,20.0,0.0,20.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,1.0,1.0,2.0,2.0,15.0,LC3-WIPI,dP62,NoTreat,40pos
+28,28,3.0,0.0,3.0,20.0,0.0,20.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,16.0,LC3-WIPI,dP62,NoTreat,40pos
+29,29,5.0,0.0,5.0,27.0,0.0,27.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,16.0,LC3-WIPI,dP62,NoTreat,40pos
+30,30,3.0,0.0,3.0,45.0,0.0,45.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,dP62,NoTreat,40pos
+31,31,0.0,0.0,0.0,37.0,0.0,37.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,dP62,NoTreat,40pos
+32,32,1.0,0.0,1.0,32.0,0.0,32.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,18.0,LC3-WIPI,dP62,NoTreat,40pos
+33,33,0.0,0.0,0.0,19.0,0.0,19.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,19.0,LC3-WIPI,dP62,NoTreat,40pos
+34,34,0.0,0.0,0.0,12.0,0.0,12.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,19.0,LC3-WIPI,dP62,NoTreat,40pos
+35,35,10.0,2.0,12.0,29.0,1.0,30.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,20.0,LC3-WIPI,dP62,NoTreat,40pos
+36,36,4.0,2.0,6.0,36.0,2.0,38.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,20.0,LC3-WIPI,dP62,NoTreat,40pos
+37,37,5.0,1.0,6.0,33.0,1.0,34.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,21.0,LC3-WIPI,dP62,NoTreat,40pos
+38,38,5.0,1.0,6.0,57.0,1.0,58.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,21.0,LC3-WIPI,dP62,NoTreat,40pos
+39,39,11.0,2.0,13.0,38.0,2.0,40.0,3.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,21.0,LC3-WIPI,dP62,NoTreat,40pos
+40,40,24.0,0.0,24.0,42.0,0.0,42.0,4.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,21.0,LC3-WIPI,dP62,NoTreat,40pos
+41,41,4.0,0.0,4.0,6.0,0.0,6.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,22.0,LC3-WIPI,dP62,NoTreat,40pos
+42,42,3.0,1.0,4.0,11.0,1.0,12.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,22.0,LC3-WIPI,dP62,NoTreat,40pos
+43,43,2.0,0.0,2.0,17.0,0.0,17.0,3.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,22.0,LC3-WIPI,dP62,NoTreat,40pos
+44,44,4.0,0.0,4.0,11.0,0.0,11.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,23.0,LC3-WIPI,dP62,NoTreat,40pos
+45,45,1.0,1.0,2.0,5.0,1.0,6.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,23.0,LC3-WIPI,dP62,NoTreat,40pos
+46,46,9.0,1.0,10.0,38.0,1.0,39.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,24.0,LC3-WIPI,dP62,NoTreat,40pos
+47,47,5.0,3.0,8.0,26.0,2.0,28.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,24.0,LC3-WIPI,dP62,NoTreat,40pos
+48,48,1.0,1.0,2.0,17.0,1.0,18.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,25.0,LC3-WIPI,dP62,NoTreat,40pos
+49,49,1.0,3.0,4.0,22.0,3.0,25.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,25.0,LC3-WIPI,dP62,NoTreat,40pos
+50,50,9.0,1.0,10.0,18.0,1.0,19.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,26.0,LC3-WIPI,dP62,NoTreat,40pos
+51,51,2.0,0.0,2.0,8.0,0.0,8.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,26.0,LC3-WIPI,dP62,NoTreat,40pos
+52,52,4.0,1.0,5.0,27.0,1.0,28.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,27.0,LC3-WIPI,dP62,NoTreat,40pos
+53,53,8.0,0.0,8.0,27.0,0.0,27.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,27.0,LC3-WIPI,dP62,NoTreat,40pos
+54,54,1.0,0.0,1.0,6.0,0.0,6.0,3.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,27.0,LC3-WIPI,dP62,NoTreat,40pos
+55,55,9.0,0.0,9.0,42.0,0.0,42.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,28.0,LC3-WIPI,dP62,NoTreat,40pos
+56,56,5.0,2.0,7.0,55.0,2.0,57.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,28.0,LC3-WIPI,dP62,NoTreat,40pos
+57,57,3.0,2.0,5.0,23.0,2.0,25.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,29.0,LC3-WIPI,dP62,NoTreat,40pos
+58,58,6.0,1.0,7.0,14.0,1.0,15.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,29.0,LC3-WIPI,dP62,NoTreat,40pos
+59,59,2.0,2.0,4.0,21.0,2.0,23.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,30.0,LC3-WIPI,dP62,NoTreat,40pos
+60,60,11.0,2.0,13.0,26.0,2.0,28.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,30.0,LC3-WIPI,dP62,NoTreat,40pos
+61,61,3.0,0.0,3.0,10.0,0.0,10.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,31.0,LC3-WIPI,dP62,NoTreat,40pos
+62,62,2.0,2.0,4.0,14.0,2.0,16.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,31.0,LC3-WIPI,dP62,NoTreat,40pos
+63,63,0.0,1.0,1.0,13.0,1.0,14.0,3.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,31.0,LC3-WIPI,dP62,NoTreat,40pos
+64,64,4.0,0.0,4.0,8.0,0.0,8.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,32.0,LC3-WIPI,dP62,NoTreat,40pos
+65,65,1.0,0.0,1.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,32.0,LC3-WIPI,dP62,NoTreat,40pos
+66,66,13.0,1.0,14.0,67.0,1.0,68.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,33.0,LC3-WIPI,dP62,NoTreat,40pos
+67,67,0.0,2.0,2.0,36.0,2.0,38.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,34.0,LC3-WIPI,dP62,NoTreat,40pos
+68,68,4.0,1.0,5.0,16.0,1.0,17.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,34.0,LC3-WIPI,dP62,NoTreat,40pos
+69,69,0.0,0.0,0.0,23.0,0.0,23.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,1.0,3.0,35.0,LC3-WIPI,dP62,NoTreat,40pos
+70,70,5.0,0.0,5.0,11.0,0.0,11.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,5.0,36.0,LC3-WIPI,dP62,NoTreat,40pos
+71,71,3.0,1.0,4.0,35.0,1.0,36.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,5.0,36.0,LC3-WIPI,dP62,NoTreat,40pos
+72,72,3.0,1.0,4.0,40.0,1.0,41.0,3.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,5.0,36.0,LC3-WIPI,dP62,NoTreat,40pos
+73,73,2.0,1.0,3.0,22.0,1.0,23.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,37.0,LC3-WIPI,dP62,NoTreat,40pos
+74,74,5.0,3.0,8.0,27.0,3.0,30.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,37.0,LC3-WIPI,dP62,NoTreat,40pos
+75,75,0.0,0.0,0.0,37.0,0.0,37.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,5.0,5.0,38.0,LC3-WIPI,dP62,NoTreat,40pos
+76,76,0.0,1.0,1.0,28.0,1.0,29.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,5.0,5.0,38.0,LC3-WIPI,dP62,NoTreat,40pos
+77,77,3.0,0.0,3.0,9.0,0.0,9.0,3.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,5.0,5.0,38.0,LC3-WIPI,dP62,NoTreat,40pos
+78,78,1.0,0.0,1.0,5.0,0.0,5.0,4.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,5.0,5.0,38.0,LC3-WIPI,dP62,NoTreat,40pos
+79,79,0.0,1.0,1.0,9.0,1.0,10.0,5.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,5.0,5.0,38.0,LC3-WIPI,dP62,NoTreat,40pos
+80,80,3.0,0.0,3.0,92.0,0.0,92.0,1.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,40.0,LC3-WIPI,dP62,NoTreat,40pos
+81,81,3.0,0.0,3.0,84.0,0.0,84.0,2.0,LC3-WIPI_HEK_dP62_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,40.0,LC3-WIPI,dP62,NoTreat,40pos
+0,0,4.0,0.0,4.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dFIP200,Torin,40pos
+1,1,5.0,0.0,5.0,5.0,0.0,5.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dFIP200,Torin,40pos
+2,2,0.0,0.0,0.0,8.0,0.0,8.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,2.0,LC3-WIPI,dFIP200,Torin,40pos
+3,3,0.0,0.0,0.0,4.0,0.0,4.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,2.0,LC3-WIPI,dFIP200,Torin,40pos
+4,4,4.0,0.0,4.0,5.0,0.0,5.0,3.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,2.0,LC3-WIPI,dFIP200,Torin,40pos
+5,5,2.0,0.0,2.0,10.0,0.0,10.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,3.0,LC3-WIPI,dFIP200,Torin,40pos
+6,6,0.0,0.0,0.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,3.0,LC3-WIPI,dFIP200,Torin,40pos
+7,7,1.0,0.0,1.0,17.0,0.0,17.0,3.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,3.0,LC3-WIPI,dFIP200,Torin,40pos
+8,8,6.0,0.0,6.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,dFIP200,Torin,40pos
+9,9,1.0,0.0,1.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,dFIP200,Torin,40pos
+10,10,5.0,0.0,5.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,dFIP200,Torin,40pos
+11,11,1.0,0.0,1.0,6.0,0.0,6.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,dFIP200,Torin,40pos
+12,12,6.0,0.0,6.0,7.0,0.0,7.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,dFIP200,Torin,40pos
+13,13,4.0,0.0,4.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,dFIP200,Torin,40pos
+14,14,4.0,0.0,4.0,15.0,0.0,15.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,7.0,LC3-WIPI,dFIP200,Torin,40pos
+15,15,1.0,0.0,1.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,8.0,LC3-WIPI,dFIP200,Torin,40pos
+16,16,5.0,0.0,5.0,9.0,0.0,9.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,8.0,LC3-WIPI,dFIP200,Torin,40pos
+17,17,7.0,0.0,7.0,24.0,0.0,24.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,2.0,9.0,LC3-WIPI,dFIP200,Torin,40pos
+18,18,5.0,0.0,5.0,166.0,0.0,166.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,10.0,LC3-WIPI,dFIP200,Torin,40pos
+19,19,0.0,0.0,0.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,dFIP200,Torin,40pos
+20,20,0.0,0.0,0.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,dFIP200,Torin,40pos
+21,21,4.0,0.0,4.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,1.0,0.0,2.0,2.0,12.0,LC3-WIPI,dFIP200,Torin,40pos
+22,22,1.0,0.0,1.0,3.0,0.0,3.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,1.0,0.0,2.0,2.0,12.0,LC3-WIPI,dFIP200,Torin,40pos
+23,23,2.0,0.0,2.0,30.0,0.0,30.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,13.0,LC3-WIPI,dFIP200,Torin,40pos
+24,24,10.0,0.0,10.0,10.0,0.0,10.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,13.0,LC3-WIPI,dFIP200,Torin,40pos
+25,25,5.0,0.0,5.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,1.0,0.0,1.0,1.0,14.0,LC3-WIPI,dFIP200,Torin,40pos
+26,26,2.0,0.0,2.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,15.0,LC3-WIPI,dFIP200,Torin,40pos
+27,27,1.0,0.0,1.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,15.0,LC3-WIPI,dFIP200,Torin,40pos
+28,28,0.0,0.0,0.0,0.0,0.0,0.0,3.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,3.0,3.0,15.0,LC3-WIPI,dFIP200,Torin,40pos
+29,29,1.0,0.0,1.0,16.0,0.0,16.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,3.0,16.0,LC3-WIPI,dFIP200,Torin,40pos
+30,30,4.0,0.0,4.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,3.0,16.0,LC3-WIPI,dFIP200,Torin,40pos
+31,31,4.0,0.0,4.0,18.0,0.0,18.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,17.0,LC3-WIPI,dFIP200,Torin,40pos
+32,32,0.0,0.0,0.0,32.0,0.0,32.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,4.0,4.0,18.0,LC3-WIPI,dFIP200,Torin,40pos
+33,33,0.0,0.0,0.0,5.0,0.0,5.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,4.0,4.0,18.0,LC3-WIPI,dFIP200,Torin,40pos
+34,34,2.0,0.0,2.0,8.0,0.0,8.0,3.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,4.0,4.0,18.0,LC3-WIPI,dFIP200,Torin,40pos
+35,35,4.0,0.0,4.0,17.0,0.0,17.0,4.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,4.0,4.0,18.0,LC3-WIPI,dFIP200,Torin,40pos
+36,36,1.0,0.0,1.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,19.0,LC3-WIPI,dFIP200,Torin,40pos
+37,37,6.0,0.0,6.0,10.0,0.0,10.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,1.0,1.0,3.0,3.0,20.0,LC3-WIPI,dFIP200,Torin,40pos
+38,38,8.0,0.0,8.0,6.0,0.0,6.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,1.0,1.0,3.0,3.0,20.0,LC3-WIPI,dFIP200,Torin,40pos
+39,39,5.0,0.0,5.0,5.0,0.0,5.0,3.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,1.0,1.0,3.0,3.0,20.0,LC3-WIPI,dFIP200,Torin,40pos
+40,40,1.0,0.0,1.0,8.0,0.0,8.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,1.0,0.0,2.0,2.0,22.0,LC3-WIPI,dFIP200,Torin,40pos
+41,41,1.0,0.0,1.0,6.0,0.0,6.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,1.0,0.0,2.0,2.0,22.0,LC3-WIPI,dFIP200,Torin,40pos
+42,42,4.0,0.0,4.0,6.0,0.0,6.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,23.0,LC3-WIPI,dFIP200,Torin,40pos
+43,43,7.0,0.0,7.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,2.0,2.0,23.0,LC3-WIPI,dFIP200,Torin,40pos
+44,44,7.0,0.0,7.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,24.0,LC3-WIPI,dFIP200,Torin,40pos
+45,45,1.0,0.0,1.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,31.0,LC3-WIPI,dFIP200,Torin,40pos
+46,46,0.0,0.0,0.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,32.0,LC3-WIPI,dFIP200,Torin,40pos
+47,47,1.0,0.0,1.0,11.0,0.0,11.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,4.0,34.0,LC3-WIPI,dFIP200,Torin,40pos
+48,48,3.0,0.0,3.0,3.0,0.0,3.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,4.0,34.0,LC3-WIPI,dFIP200,Torin,40pos
+49,49,1.0,0.0,1.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,1.0,1.0,35.0,LC3-WIPI,dFIP200,Torin,40pos
+50,50,0.0,0.0,0.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,1.0,1.0,1.0,36.0,LC3-WIPI,dFIP200,Torin,40pos
+51,51,0.0,0.0,0.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,39.0,LC3-WIPI,dFIP200,Torin,40pos
+52,52,0.0,0.0,0.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dFIP200_Torin_40pos_AiryscanProcessing.czi,0.0,0.0,2.0,2.0,39.0,LC3-WIPI,dFIP200,Torin,40pos
+0,0,7.0,10.0,17.0,61.0,10.0,71.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+1,1,2.0,3.0,5.0,43.0,3.0,46.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,1.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+2,2,6.0,9.0,15.0,57.0,9.0,66.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,2.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+3,3,3.0,21.0,24.0,53.0,19.0,72.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,2.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+4,4,3.0,0.0,3.0,28.0,0.0,28.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,4.0,4.0,3.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+5,5,5.0,2.0,7.0,103.0,3.0,106.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,4.0,4.0,3.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+6,6,1.0,0.0,1.0,7.0,0.0,7.0,3.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,4.0,4.0,3.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+7,7,10.0,1.0,11.0,52.0,1.0,53.0,4.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,4.0,4.0,3.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+8,8,2.0,0.0,2.0,18.0,0.0,18.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+9,9,12.0,6.0,18.0,41.0,5.0,46.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+10,10,3.0,1.0,4.0,23.0,1.0,24.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,5.0,4.0,5.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+11,11,1.0,1.0,2.0,5.0,1.0,6.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,5.0,4.0,5.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+12,12,0.0,1.0,1.0,2.0,1.0,3.0,3.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,5.0,4.0,5.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+13,13,1.0,1.0,2.0,19.0,1.0,20.0,4.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,5.0,4.0,5.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+14,14,0.0,1.0,1.0,8.0,1.0,9.0,5.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,5.0,4.0,5.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+15,15,2.0,2.0,4.0,8.0,2.0,10.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+16,16,4.0,0.0,4.0,14.0,0.0,14.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+17,17,8.0,9.0,17.0,33.0,9.0,42.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,7.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+18,18,11.0,6.0,17.0,38.0,7.0,45.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,7.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+19,19,3.0,0.0,3.0,9.0,0.0,9.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,1.0,1.0,2.0,2.0,8.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+20,20,1.0,1.0,2.0,44.0,1.0,45.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,1.0,1.0,2.0,2.0,8.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+21,21,4.0,2.0,6.0,14.0,2.0,16.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,9.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+22,22,0.0,1.0,1.0,23.0,1.0,24.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,9.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+23,23,4.0,1.0,5.0,22.0,1.0,23.0,3.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,9.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+24,24,6.0,3.0,9.0,13.0,3.0,16.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,10.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+25,25,7.0,2.0,9.0,17.0,2.0,19.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,10.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+26,26,2.0,6.0,8.0,26.0,6.0,32.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+27,27,1.0,8.0,9.0,32.0,7.0,39.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+28,28,11.0,1.0,12.0,21.0,1.0,22.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+29,29,7.0,2.0,9.0,32.0,2.0,34.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+30,30,5.0,5.0,10.0,46.0,5.0,51.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,13.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+31,31,5.0,4.0,9.0,52.0,4.0,56.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,13.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+32,32,5.0,3.0,8.0,38.0,3.0,41.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,14.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+33,33,3.0,2.0,5.0,25.0,2.0,27.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,14.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+34,34,6.0,6.0,12.0,79.0,6.0,85.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,15.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+35,35,20.0,14.0,34.0,44.0,14.0,58.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,16.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+36,36,10.0,13.0,23.0,32.0,13.0,45.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,16.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+37,37,10.0,2.0,12.0,34.0,2.0,36.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+38,38,7.0,4.0,11.0,82.0,3.0,85.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+39,39,5.0,2.0,7.0,89.0,1.0,90.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,18.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+40,40,4.0,1.0,5.0,112.0,1.0,113.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,18.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+41,41,9.0,5.0,14.0,92.0,4.0,96.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,1.0,1.0,19.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+42,42,11.0,1.0,12.0,75.0,1.0,76.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,20.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+43,43,9.0,7.0,16.0,28.0,6.0,34.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,20.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+44,44,13.0,5.0,18.0,85.0,6.0,91.0,3.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,20.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+45,45,6.0,1.0,7.0,17.0,1.0,18.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,21.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+46,46,5.0,1.0,6.0,39.0,1.0,40.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,21.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+47,47,6.0,1.0,7.0,45.0,1.0,46.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,22.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+48,48,3.0,1.0,4.0,47.0,1.0,48.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,22.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+49,49,6.0,5.0,11.0,38.0,5.0,43.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,3.0,23.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+50,50,1.0,3.0,4.0,42.0,3.0,45.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,2.0,3.0,23.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+51,51,3.0,2.0,5.0,67.0,2.0,69.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,24.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+52,52,5.0,2.0,7.0,52.0,2.0,54.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,24.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+53,53,0.0,0.0,0.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,25.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+54,54,1.0,0.0,1.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,25.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+55,55,1.0,3.0,4.0,25.0,3.0,28.0,3.0,LC3-WIPI_HEK_dVPS37A_NoTreat_25pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,25.0,LC3-WIPI,dVPS37A,NoTreat,25pos
+0,0,9.0,1.0,10.0,68.0,1.0,69.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,3.0,4.0,1.0,LC3-WIPI,wt,NoTreat,40pos
+1,1,1.0,0.0,1.0,44.0,0.0,44.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,3.0,4.0,1.0,LC3-WIPI,wt,NoTreat,40pos
+2,2,2.0,0.0,2.0,24.0,0.0,24.0,3.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,3.0,4.0,1.0,LC3-WIPI,wt,NoTreat,40pos
+3,3,8.0,1.0,9.0,38.0,1.0,39.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,1.0,2.0,LC3-WIPI,wt,NoTreat,40pos
+4,4,1.0,3.0,4.0,49.0,1.0,50.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,3.0,LC3-WIPI,wt,NoTreat,40pos
+5,5,3.0,0.0,3.0,65.0,0.0,65.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,3.0,LC3-WIPI,wt,NoTreat,40pos
+6,6,2.0,0.0,2.0,15.0,0.0,15.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,wt,NoTreat,40pos
+7,7,0.0,1.0,1.0,16.0,1.0,17.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,wt,NoTreat,40pos
+8,8,1.0,0.0,1.0,15.0,0.0,15.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,wt,NoTreat,40pos
+9,9,0.0,0.0,0.0,8.0,0.0,8.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,wt,NoTreat,40pos
+10,10,2.0,3.0,5.0,37.0,3.0,40.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,wt,NoTreat,40pos
+11,11,2.0,1.0,3.0,28.0,1.0,29.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,wt,NoTreat,40pos
+12,12,0.0,4.0,4.0,28.0,2.0,30.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,1.0,7.0,LC3-WIPI,wt,NoTreat,40pos
+13,13,2.0,1.0,3.0,39.0,1.0,40.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,1.0,8.0,LC3-WIPI,wt,NoTreat,40pos
+14,14,3.0,1.0,4.0,11.0,1.0,12.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,2.0,2.0,9.0,LC3-WIPI,wt,NoTreat,40pos
+15,15,1.0,0.0,1.0,27.0,0.0,27.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,2.0,2.0,9.0,LC3-WIPI,wt,NoTreat,40pos
+16,16,3.0,1.0,4.0,10.0,1.0,11.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,3.0,3.0,10.0,LC3-WIPI,wt,NoTreat,40pos
+17,17,4.0,0.0,4.0,7.0,0.0,7.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,3.0,3.0,10.0,LC3-WIPI,wt,NoTreat,40pos
+18,18,0.0,0.0,0.0,11.0,0.0,11.0,3.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,3.0,3.0,10.0,LC3-WIPI,wt,NoTreat,40pos
+19,19,1.0,1.0,2.0,17.0,1.0,18.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,wt,NoTreat,40pos
+20,20,1.0,2.0,3.0,10.0,2.0,12.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,wt,NoTreat,40pos
+21,21,0.0,1.0,1.0,13.0,1.0,14.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,wt,NoTreat,40pos
+22,22,3.0,1.0,4.0,13.0,1.0,14.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,wt,NoTreat,40pos
+23,23,3.0,0.0,3.0,48.0,0.0,48.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,2.0,2.0,13.0,LC3-WIPI,wt,NoTreat,40pos
+24,24,4.0,0.0,4.0,49.0,0.0,49.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,2.0,2.0,13.0,LC3-WIPI,wt,NoTreat,40pos
+25,25,10.0,0.0,10.0,39.0,0.0,39.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,1.0,14.0,LC3-WIPI,wt,NoTreat,40pos
+26,26,0.0,0.0,0.0,46.0,0.0,46.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,2.0,2.0,15.0,LC3-WIPI,wt,NoTreat,40pos
+27,27,1.0,0.0,1.0,31.0,0.0,31.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,2.0,2.0,15.0,LC3-WIPI,wt,NoTreat,40pos
+28,28,1.0,0.0,1.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,1.0,0.0,1.0,1.0,16.0,LC3-WIPI,wt,NoTreat,40pos
+29,29,0.0,0.0,0.0,18.0,0.0,18.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,wt,NoTreat,40pos
+30,30,0.0,1.0,1.0,25.0,1.0,26.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,wt,NoTreat,40pos
+31,31,1.0,0.0,1.0,8.0,0.0,8.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,18.0,LC3-WIPI,wt,NoTreat,40pos
+32,32,3.0,0.0,3.0,8.0,0.0,8.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,18.0,LC3-WIPI,wt,NoTreat,40pos
+33,33,2.0,0.0,2.0,17.0,0.0,17.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,1.0,19.0,LC3-WIPI,wt,NoTreat,40pos
+34,34,1.0,2.0,3.0,19.0,2.0,21.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,20.0,LC3-WIPI,wt,NoTreat,40pos
+35,35,1.0,0.0,1.0,6.0,0.0,6.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,20.0,LC3-WIPI,wt,NoTreat,40pos
+36,36,1.0,2.0,3.0,12.0,2.0,14.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,21.0,LC3-WIPI,wt,NoTreat,40pos
+37,37,3.0,2.0,5.0,23.0,2.0,25.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,21.0,LC3-WIPI,wt,NoTreat,40pos
+38,38,0.0,0.0,0.0,22.0,0.0,22.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,2.0,2.0,23.0,LC3-WIPI,wt,NoTreat,40pos
+39,39,1.0,0.0,1.0,19.0,0.0,19.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,2.0,2.0,23.0,LC3-WIPI,wt,NoTreat,40pos
+40,40,1.0,0.0,1.0,14.0,0.0,14.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,1.0,24.0,LC3-WIPI,wt,NoTreat,40pos
+41,41,6.0,2.0,8.0,25.0,2.0,27.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,1.0,25.0,LC3-WIPI,wt,NoTreat,40pos
+42,42,5.0,0.0,5.0,13.0,0.0,13.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,1.0,2.0,26.0,LC3-WIPI,wt,NoTreat,40pos
+43,43,5.0,0.0,5.0,22.0,0.0,22.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,2.0,2.0,27.0,LC3-WIPI,wt,NoTreat,40pos
+44,44,1.0,0.0,1.0,32.0,0.0,32.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,2.0,2.0,27.0,LC3-WIPI,wt,NoTreat,40pos
+45,45,4.0,3.0,7.0,46.0,3.0,49.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,1.0,28.0,LC3-WIPI,wt,NoTreat,40pos
+46,46,2.0,0.0,2.0,16.0,0.0,16.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,1.0,0.0,2.0,2.0,29.0,LC3-WIPI,wt,NoTreat,40pos
+47,47,6.0,0.0,6.0,31.0,0.0,31.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,1.0,0.0,2.0,2.0,29.0,LC3-WIPI,wt,NoTreat,40pos
+48,48,19.0,3.0,22.0,60.0,3.0,63.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,2.0,30.0,LC3-WIPI,wt,NoTreat,40pos
+49,49,14.0,2.0,16.0,101.0,2.0,103.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,1.0,31.0,LC3-WIPI,wt,NoTreat,40pos
+50,50,8.0,0.0,8.0,118.0,0.0,118.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,1.0,35.0,LC3-WIPI,wt,NoTreat,40pos
+51,51,4.0,1.0,5.0,19.0,1.0,20.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,37.0,LC3-WIPI,wt,NoTreat,40pos
+52,52,3.0,2.0,5.0,37.0,1.0,38.0,2.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,2.0,2.0,37.0,LC3-WIPI,wt,NoTreat,40pos
+53,53,28.0,1.0,29.0,19.0,1.0,20.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,0.0,1.0,3.0,38.0,LC3-WIPI,wt,NoTreat,40pos
+54,54,15.0,4.0,19.0,96.0,4.0,100.0,1.0,LC3-WIPI_HEK_wt_NoTreat_40pos_AiryscanProcessing2.czi,0.0,1.0,1.0,1.0,39.0,LC3-WIPI,wt,NoTreat,40pos
+0,0,38.0,0.0,38.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,1.0,LC3-WIPI,dATG7,NoTreat,40pos
+1,1,1.0,0.0,1.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,5.0,5.0,2.0,LC3-WIPI,dATG7,NoTreat,40pos
+2,2,20.0,0.0,20.0,3.0,0.0,3.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,5.0,5.0,2.0,LC3-WIPI,dATG7,NoTreat,40pos
+3,3,24.0,0.0,24.0,0.0,0.0,0.0,3.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,5.0,5.0,2.0,LC3-WIPI,dATG7,NoTreat,40pos
+4,4,16.0,0.0,16.0,1.0,0.0,1.0,4.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,5.0,5.0,2.0,LC3-WIPI,dATG7,NoTreat,40pos
+5,5,14.0,0.0,14.0,0.0,0.0,0.0,5.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,5.0,5.0,2.0,LC3-WIPI,dATG7,NoTreat,40pos
+6,6,24.0,0.0,24.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,1.0,0.0,2.0,2.0,3.0,LC3-WIPI,dATG7,NoTreat,40pos
+7,7,28.0,0.0,28.0,3.0,0.0,3.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,1.0,0.0,2.0,2.0,3.0,LC3-WIPI,dATG7,NoTreat,40pos
+8,8,14.0,0.0,14.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,dATG7,NoTreat,40pos
+9,9,10.0,0.0,10.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,4.0,LC3-WIPI,dATG7,NoTreat,40pos
+10,10,5.0,0.0,5.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,dATG7,NoTreat,40pos
+11,11,8.0,0.0,8.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,5.0,LC3-WIPI,dATG7,NoTreat,40pos
+12,12,15.0,0.0,15.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,dATG7,NoTreat,40pos
+13,13,17.0,0.0,17.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,6.0,LC3-WIPI,dATG7,NoTreat,40pos
+14,14,25.0,0.0,25.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,7.0,LC3-WIPI,dATG7,NoTreat,40pos
+15,15,19.0,0.0,19.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,8.0,LC3-WIPI,dATG7,NoTreat,40pos
+16,16,7.0,0.0,7.0,4.0,0.0,4.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,9.0,LC3-WIPI,dATG7,NoTreat,40pos
+17,17,10.0,0.0,10.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,9.0,LC3-WIPI,dATG7,NoTreat,40pos
+18,18,30.0,0.0,30.0,3.0,0.0,3.0,3.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,9.0,LC3-WIPI,dATG7,NoTreat,40pos
+19,19,16.0,0.0,16.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,10.0,LC3-WIPI,dATG7,NoTreat,40pos
+20,20,15.0,0.0,15.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,dATG7,NoTreat,40pos
+21,21,19.0,0.0,19.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,11.0,LC3-WIPI,dATG7,NoTreat,40pos
+22,22,11.0,0.0,11.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,dATG7,NoTreat,40pos
+23,23,18.0,0.0,18.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,dATG7,NoTreat,40pos
+24,24,13.0,0.0,13.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,13.0,LC3-WIPI,dATG7,NoTreat,40pos
+25,25,19.0,0.0,19.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,13.0,LC3-WIPI,dATG7,NoTreat,40pos
+26,26,4.0,0.0,4.0,0.0,0.0,0.0,3.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,13.0,LC3-WIPI,dATG7,NoTreat,40pos
+27,27,27.0,0.0,27.0,1.0,0.0,1.0,4.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,13.0,LC3-WIPI,dATG7,NoTreat,40pos
+28,28,24.0,0.0,24.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,1.0,0.0,2.0,2.0,14.0,LC3-WIPI,dATG7,NoTreat,40pos
+29,29,17.0,0.0,17.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,1.0,0.0,2.0,2.0,14.0,LC3-WIPI,dATG7,NoTreat,40pos
+30,30,21.0,0.0,21.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,15.0,LC3-WIPI,dATG7,NoTreat,40pos
+31,31,35.0,0.0,35.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,15.0,LC3-WIPI,dATG7,NoTreat,40pos
+32,32,15.0,0.0,15.0,6.0,0.0,6.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,16.0,LC3-WIPI,dATG7,NoTreat,40pos
+33,33,28.0,0.0,28.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,16.0,LC3-WIPI,dATG7,NoTreat,40pos
+34,34,11.0,0.0,11.0,2.0,0.0,2.0,3.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,16.0,LC3-WIPI,dATG7,NoTreat,40pos
+35,35,32.0,0.0,32.0,2.0,0.0,2.0,4.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,16.0,LC3-WIPI,dATG7,NoTreat,40pos
+36,36,28.0,0.0,28.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,17.0,LC3-WIPI,dATG7,NoTreat,40pos
+37,37,16.0,0.0,16.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,18.0,LC3-WIPI,dATG7,NoTreat,40pos
+38,38,45.0,0.0,45.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,19.0,LC3-WIPI,dATG7,NoTreat,40pos
+39,39,15.0,0.0,15.0,3.0,0.0,3.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,20.0,LC3-WIPI,dATG7,NoTreat,40pos
+40,40,4.0,0.0,4.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,21.0,LC3-WIPI,dATG7,NoTreat,40pos
+41,41,5.0,0.0,5.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,21.0,LC3-WIPI,dATG7,NoTreat,40pos
+42,42,8.0,0.0,8.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,22.0,LC3-WIPI,dATG7,NoTreat,40pos
+43,43,30.0,0.0,30.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,3.0,23.0,LC3-WIPI,dATG7,NoTreat,40pos
+44,44,45.0,0.0,45.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,3.0,23.0,LC3-WIPI,dATG7,NoTreat,40pos
+45,45,14.0,0.0,14.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,24.0,LC3-WIPI,dATG7,NoTreat,40pos
+46,46,14.0,0.0,14.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,24.0,LC3-WIPI,dATG7,NoTreat,40pos
+47,47,24.0,0.0,24.0,1.0,0.0,1.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,25.0,LC3-WIPI,dATG7,NoTreat,40pos
+48,48,23.0,0.0,23.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,25.0,LC3-WIPI,dATG7,NoTreat,40pos
+49,49,24.0,0.0,24.0,2.0,0.0,2.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,26.0,LC3-WIPI,dATG7,NoTreat,40pos
+50,50,17.0,0.0,17.0,1.0,0.0,1.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,26.0,LC3-WIPI,dATG7,NoTreat,40pos
+51,51,15.0,0.0,15.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,27.0,LC3-WIPI,dATG7,NoTreat,40pos
+52,52,17.0,0.0,17.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,27.0,LC3-WIPI,dATG7,NoTreat,40pos
+53,53,14.0,0.0,14.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,28.0,LC3-WIPI,dATG7,NoTreat,40pos
+54,54,8.0,0.0,8.0,0.0,0.0,0.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,28.0,LC3-WIPI,dATG7,NoTreat,40pos
+55,55,24.0,0.0,24.0,13.0,0.0,13.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,29.0,LC3-WIPI,dATG7,NoTreat,40pos
+56,56,26.0,0.0,26.0,3.0,0.0,3.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,29.0,LC3-WIPI,dATG7,NoTreat,40pos
+57,57,26.0,0.0,26.0,4.0,0.0,4.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,30.0,LC3-WIPI,dATG7,NoTreat,40pos
+58,58,36.0,0.0,36.0,12.0,0.0,12.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,30.0,LC3-WIPI,dATG7,NoTreat,40pos
+59,59,19.0,0.0,19.0,11.0,0.0,11.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,5.0,31.0,LC3-WIPI,dATG7,NoTreat,40pos
+60,60,24.0,0.0,24.0,3.0,0.0,3.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,5.0,31.0,LC3-WIPI,dATG7,NoTreat,40pos
+61,61,27.0,0.0,27.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,32.0,LC3-WIPI,dATG7,NoTreat,40pos
+62,62,19.0,0.0,19.0,2.0,0.0,2.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,32.0,LC3-WIPI,dATG7,NoTreat,40pos
+63,63,16.0,0.0,16.0,4.0,0.0,4.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,33.0,LC3-WIPI,dATG7,NoTreat,40pos
+64,64,26.0,0.0,26.0,20.0,0.0,20.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,33.0,LC3-WIPI,dATG7,NoTreat,40pos
+65,65,61.0,0.0,61.0,5.0,0.0,5.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,34.0,LC3-WIPI,dATG7,NoTreat,40pos
+66,66,27.0,0.0,27.0,28.0,0.0,28.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,35.0,LC3-WIPI,dATG7,NoTreat,40pos
+67,67,28.0,0.0,28.0,8.0,0.0,8.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,35.0,LC3-WIPI,dATG7,NoTreat,40pos
+68,68,25.0,0.0,25.0,11.0,0.0,11.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,36.0,LC3-WIPI,dATG7,NoTreat,40pos
+69,69,42.0,0.0,42.0,10.0,0.0,10.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,36.0,LC3-WIPI,dATG7,NoTreat,40pos
+70,70,27.0,0.0,27.0,1.0,0.0,1.0,3.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,36.0,LC3-WIPI,dATG7,NoTreat,40pos
+71,71,26.0,0.0,26.0,10.0,0.0,10.0,4.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,4.0,4.0,36.0,LC3-WIPI,dATG7,NoTreat,40pos
+72,72,29.0,0.0,29.0,8.0,0.0,8.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,37.0,LC3-WIPI,dATG7,NoTreat,40pos
+73,73,31.0,0.0,31.0,6.0,0.0,6.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,37.0,LC3-WIPI,dATG7,NoTreat,40pos
+74,74,12.0,0.0,12.0,0.0,0.0,0.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,38.0,LC3-WIPI,dATG7,NoTreat,40pos
+75,75,29.0,0.0,29.0,4.0,0.0,4.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,38.0,LC3-WIPI,dATG7,NoTreat,40pos
+76,76,17.0,0.0,17.0,2.0,0.0,2.0,3.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,4.0,38.0,LC3-WIPI,dATG7,NoTreat,40pos
+77,77,48.0,0.0,48.0,26.0,0.0,26.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,39.0,LC3-WIPI,dATG7,NoTreat,40pos
+78,78,28.0,0.0,28.0,11.0,0.0,11.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,39.0,LC3-WIPI,dATG7,NoTreat,40pos
+79,79,23.0,1.0,24.0,31.0,1.0,32.0,1.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,40.0,LC3-WIPI,dATG7,NoTreat,40pos
+80,80,29.0,0.0,29.0,6.0,0.0,6.0,2.0,LC3-WIPI_HEK_dATG7_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,40.0,LC3-WIPI,dATG7,NoTreat,40pos
+0,0,43.0,135.0,178.0,55.0,138.0,193.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,1.0,LC3-WIPI,dTMEM,NoTreat,40pos
+1,1,15.0,92.0,107.0,38.0,86.0,124.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,2.0,LC3-WIPI,dTMEM,NoTreat,40pos
+2,2,33.0,101.0,134.0,47.0,99.0,146.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,2.0,LC3-WIPI,dTMEM,NoTreat,40pos
+3,3,14.0,73.0,87.0,12.0,74.0,86.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,3.0,LC3-WIPI,dTMEM,NoTreat,40pos
+4,4,25.0,97.0,122.0,21.0,95.0,116.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,3.0,LC3-WIPI,dTMEM,NoTreat,40pos
+5,5,118.0,143.0,261.0,76.0,141.0,217.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,4.0,LC3-WIPI,dTMEM,NoTreat,40pos
+6,6,12.0,41.0,53.0,19.0,41.0,60.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,3.0,5.0,LC3-WIPI,dTMEM,NoTreat,40pos
+7,7,10.0,61.0,71.0,39.0,57.0,96.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,3.0,5.0,LC3-WIPI,dTMEM,NoTreat,40pos
+8,8,12.0,31.0,43.0,16.0,30.0,46.0,3.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,3.0,5.0,LC3-WIPI,dTMEM,NoTreat,40pos
+9,9,11.0,69.0,80.0,27.0,69.0,96.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,6.0,LC3-WIPI,dTMEM,NoTreat,40pos
+10,10,7.0,19.0,26.0,6.0,19.0,25.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,6.0,LC3-WIPI,dTMEM,NoTreat,40pos
+11,11,12.0,32.0,44.0,15.0,32.0,47.0,3.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,6.0,LC3-WIPI,dTMEM,NoTreat,40pos
+12,12,38.0,209.0,247.0,31.0,201.0,232.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,7.0,LC3-WIPI,dTMEM,NoTreat,40pos
+13,13,12.0,68.0,80.0,12.0,65.0,77.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,8.0,LC3-WIPI,dTMEM,NoTreat,40pos
+14,14,24.0,95.0,119.0,24.0,97.0,121.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,8.0,LC3-WIPI,dTMEM,NoTreat,40pos
+15,15,41.0,113.0,154.0,22.0,108.0,130.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,dTMEM,NoTreat,40pos
+16,16,44.0,133.0,177.0,20.0,132.0,152.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,9.0,LC3-WIPI,dTMEM,NoTreat,40pos
+17,17,39.0,62.0,101.0,49.0,62.0,111.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,10.0,LC3-WIPI,dTMEM,NoTreat,40pos
+18,18,52.0,75.0,127.0,57.0,78.0,135.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,10.0,LC3-WIPI,dTMEM,NoTreat,40pos
+19,19,21.0,123.0,144.0,59.0,122.0,181.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,3.0,11.0,LC3-WIPI,dTMEM,NoTreat,40pos
+20,20,7.0,68.0,75.0,31.0,67.0,98.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,3.0,11.0,LC3-WIPI,dTMEM,NoTreat,40pos
+21,21,19.0,100.0,119.0,83.0,94.0,177.0,3.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,3.0,3.0,11.0,LC3-WIPI,dTMEM,NoTreat,40pos
+22,22,39.0,9.0,48.0,105.0,8.0,113.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,dTMEM,NoTreat,40pos
+23,23,36.0,5.0,41.0,70.0,5.0,75.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,12.0,LC3-WIPI,dTMEM,NoTreat,40pos
+24,24,11.0,66.0,77.0,28.0,65.0,93.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,13.0,LC3-WIPI,dTMEM,NoTreat,40pos
+25,25,12.0,65.0,77.0,19.0,68.0,87.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,13.0,LC3-WIPI,dTMEM,NoTreat,40pos
+26,26,6.0,50.0,56.0,12.0,50.0,62.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,14.0,LC3-WIPI,dTMEM,NoTreat,40pos
+27,27,2.0,46.0,48.0,10.0,45.0,55.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,14.0,LC3-WIPI,dTMEM,NoTreat,40pos
+28,28,25.0,104.0,129.0,36.0,102.0,138.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,1.0,0.0,2.0,2.0,15.0,LC3-WIPI,dTMEM,NoTreat,40pos
+29,29,13.0,79.0,92.0,32.0,76.0,108.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,1.0,0.0,2.0,2.0,15.0,LC3-WIPI,dTMEM,NoTreat,40pos
+30,30,60.0,1.0,61.0,89.0,1.0,90.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,16.0,LC3-WIPI,dTMEM,NoTreat,40pos
+31,31,40.0,1.0,41.0,83.0,1.0,84.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,16.0,LC3-WIPI,dTMEM,NoTreat,40pos
+32,32,16.0,46.0,62.0,98.0,49.0,147.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,dTMEM,NoTreat,40pos
+33,33,10.0,50.0,60.0,44.0,52.0,96.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,17.0,LC3-WIPI,dTMEM,NoTreat,40pos
+34,34,69.0,3.0,72.0,96.0,3.0,99.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,18.0,LC3-WIPI,dTMEM,NoTreat,40pos
+35,35,32.0,1.0,33.0,44.0,1.0,45.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,18.0,LC3-WIPI,dTMEM,NoTreat,40pos
+36,36,19.0,0.0,19.0,28.0,0.0,28.0,3.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,18.0,LC3-WIPI,dTMEM,NoTreat,40pos
+37,37,23.0,42.0,65.0,53.0,44.0,97.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,19.0,LC3-WIPI,dTMEM,NoTreat,40pos
+38,38,11.0,43.0,54.0,21.0,41.0,62.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,19.0,LC3-WIPI,dTMEM,NoTreat,40pos
+39,39,13.0,61.0,74.0,72.0,58.0,130.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,20.0,LC3-WIPI,dTMEM,NoTreat,40pos
+40,40,171.0,7.0,178.0,88.0,6.0,94.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,1.0,0.0,1.0,1.0,21.0,LC3-WIPI,dTMEM,NoTreat,40pos
+41,41,13.0,58.0,71.0,28.0,63.0,91.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,22.0,LC3-WIPI,dTMEM,NoTreat,40pos
+42,42,17.0,63.0,80.0,30.0,64.0,94.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,22.0,LC3-WIPI,dTMEM,NoTreat,40pos
+43,43,47.0,79.0,126.0,29.0,77.0,106.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,23.0,LC3-WIPI,dTMEM,NoTreat,40pos
+44,44,43.0,98.0,141.0,34.0,97.0,131.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,23.0,LC3-WIPI,dTMEM,NoTreat,40pos
+45,45,24.0,115.0,139.0,67.0,115.0,182.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,24.0,LC3-WIPI,dTMEM,NoTreat,40pos
+46,46,13.0,99.0,112.0,13.0,100.0,113.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,24.0,LC3-WIPI,dTMEM,NoTreat,40pos
+47,47,4.0,49.0,53.0,23.0,49.0,72.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,25.0,LC3-WIPI,dTMEM,NoTreat,40pos
+48,48,1.0,33.0,34.0,28.0,32.0,60.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,25.0,LC3-WIPI,dTMEM,NoTreat,40pos
+49,49,6.0,42.0,48.0,14.0,41.0,55.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,26.0,LC3-WIPI,dTMEM,NoTreat,40pos
+50,50,3.0,57.0,60.0,20.0,56.0,76.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,26.0,LC3-WIPI,dTMEM,NoTreat,40pos
+51,51,4.0,25.0,29.0,15.0,24.0,39.0,3.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,3.0,3.0,26.0,LC3-WIPI,dTMEM,NoTreat,40pos
+52,52,21.0,22.0,43.0,26.0,22.0,48.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,27.0,LC3-WIPI,dTMEM,NoTreat,40pos
+53,53,23.0,19.0,42.0,33.0,19.0,52.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,27.0,LC3-WIPI,dTMEM,NoTreat,40pos
+54,54,48.0,4.0,52.0,92.0,4.0,96.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,28.0,LC3-WIPI,dTMEM,NoTreat,40pos
+55,55,102.0,6.0,108.0,139.0,8.0,147.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,28.0,LC3-WIPI,dTMEM,NoTreat,40pos
+56,56,38.0,44.0,82.0,48.0,42.0,90.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,4.0,4.0,29.0,LC3-WIPI,dTMEM,NoTreat,40pos
+57,57,32.0,72.0,104.0,50.0,74.0,124.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,4.0,4.0,29.0,LC3-WIPI,dTMEM,NoTreat,40pos
+58,58,28.0,50.0,78.0,43.0,51.0,94.0,3.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,4.0,4.0,29.0,LC3-WIPI,dTMEM,NoTreat,40pos
+59,59,31.0,60.0,91.0,48.0,60.0,108.0,4.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,4.0,4.0,29.0,LC3-WIPI,dTMEM,NoTreat,40pos
+60,60,13.0,73.0,86.0,29.0,74.0,103.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,30.0,LC3-WIPI,dTMEM,NoTreat,40pos
+61,61,19.0,68.0,87.0,33.0,68.0,101.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,30.0,LC3-WIPI,dTMEM,NoTreat,40pos
+62,62,6.0,54.0,60.0,33.0,49.0,82.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,31.0,LC3-WIPI,dTMEM,NoTreat,40pos
+63,63,3.0,64.0,67.0,30.0,61.0,91.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,31.0,LC3-WIPI,dTMEM,NoTreat,40pos
+64,64,15.0,68.0,83.0,26.0,67.0,93.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,32.0,LC3-WIPI,dTMEM,NoTreat,40pos
+65,65,23.0,65.0,88.0,31.0,62.0,93.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,1.0,2.0,2.0,32.0,LC3-WIPI,dTMEM,NoTreat,40pos
+66,66,32.0,47.0,79.0,58.0,46.0,104.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,33.0,LC3-WIPI,dTMEM,NoTreat,40pos
+67,67,39.0,50.0,89.0,69.0,52.0,121.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,33.0,LC3-WIPI,dTMEM,NoTreat,40pos
+68,68,12.0,64.0,76.0,42.0,63.0,105.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,34.0,LC3-WIPI,dTMEM,NoTreat,40pos
+69,69,15.0,62.0,77.0,38.0,58.0,96.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,34.0,LC3-WIPI,dTMEM,NoTreat,40pos
+70,70,13.0,130.0,143.0,38.0,132.0,170.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,35.0,LC3-WIPI,dTMEM,NoTreat,40pos
+71,71,13.0,43.0,56.0,29.0,45.0,74.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,36.0,LC3-WIPI,dTMEM,NoTreat,40pos
+72,72,12.0,29.0,41.0,13.0,29.0,42.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,36.0,LC3-WIPI,dTMEM,NoTreat,40pos
+73,73,14.0,51.0,65.0,35.0,53.0,88.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,37.0,LC3-WIPI,dTMEM,NoTreat,40pos
+74,74,27.0,84.0,111.0,76.0,83.0,159.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,37.0,LC3-WIPI,dTMEM,NoTreat,40pos
+75,75,13.0,91.0,104.0,18.0,86.0,104.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,38.0,LC3-WIPI,dTMEM,NoTreat,40pos
+76,76,18.0,79.0,97.0,11.0,80.0,91.0,2.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,2.0,2.0,38.0,LC3-WIPI,dTMEM,NoTreat,40pos
+77,77,49.0,115.0,164.0,52.0,108.0,160.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,39.0,LC3-WIPI,dTMEM,NoTreat,40pos
+78,78,48.0,124.0,172.0,64.0,123.0,187.0,1.0,LC3-WIPI_HEK_dTMEM_NoTreat_40pos_Airyscan Processing.czi,0.0,0.0,1.0,1.0,40.0,LC3-WIPI,dTMEM,NoTreat,40pos

@@ -38,9 +38,9 @@ for_plt <- for_plt %>% group_by(channel, treatment, cell_line) %>%
                   overlap_count < quantile(overlap_count, 0.25) - IQR(overlap_count)*1.5) %>% ungroup
 
 # plot treatment vs # of foci in each channel for each cell line
-ggplot(subset(for_plt, filename != "LC3-WIPI_HEK_dFIP200_3hrTor_9Pos_3_AiryscanProcessing.czi"), aes(x=factor(treatment), y=count)) +
+ggplot(subset(for_plt, cell_line != 'dVPS37A'), aes(x=factor(treatment), y=count)) +
   facet_grid(channel ~ cell_line) + 
-  geom_boxplot(outlier.shape=NA) + geom_jitter(data=subset(for_plt, count_outlier==TRUE), width=0.2, height=0, size=1) +
+  geom_boxplot(outlier.shape=NA) + geom_jitter(data=subset(for_plt, count_outlier==TRUE & cell_line != 'dVPS37A'), width=0.2, height=0, size=1) +
   theme(panel.background = element_rect(fill = NA, color = 'black'),
         panel.grid = element_blank(),
         axis.text = element_text(color = 'black'),
@@ -53,9 +53,9 @@ ggplot(subset(for_plt, filename != "LC3-WIPI_HEK_dFIP200_3hrTor_9Pos_3_AiryscanP
 ggsave('~/Dropbox/code/csth-imaging/r_scripts/wipi_timelapse_plots/lc3_wipi_timelapse_totals_boxplot.pdf',
        device=cairo_pdf(width=7.5, height=4), useDingbats=FALSE)
 
-ggplot(subset(for_plt, filename != "LC3-WIPI_HEK_dFIP200_3hrTor_9Pos_3_AiryscanProcessing.czi"), aes(x=treatment, y=overlap_count)) +
+ggplot(subset(for_plt, cell_line != 'dVPS37A'), aes(x=treatment, y=overlap_count)) +
   facet_grid(channel ~ cell_line) + geom_boxplot(outlier.shape = NA) +
-  geom_jitter(data=subset(for_plt, overlap_outlier==TRUE), width=0.2, height=0, size=1) +
+  geom_jitter(data=subset(for_plt, overlap_outlier==TRUE & cell_line != 'dVPS37A'), width=0.2, height=0, size=1) +
   theme(panel.background = element_rect(fill = NA, color = 'black'),
         panel.grid = element_blank(),
         axis.text = element_text(color = 'black'),
