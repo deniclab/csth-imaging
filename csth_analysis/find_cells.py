@@ -38,7 +38,7 @@ class MultiFinder:
     """Distinguish cells from background in multi-position czi files."""
 
     def __init__(self, filename, bg_index=-1, bg_filename='', log_path=None,
-                 oof_svm=None, optim=False):
+                 oof_svm=None, optim=False, foc_channel=561):
         """Create a MultiFinder object.
 
         Arguments:
@@ -118,6 +118,7 @@ class MultiFinder:
         if self.oof_svm is not None:
             self.flagged_oof_ims = np.zeros(self.cell_im.shape[0])
             self.flagged_z_ims = np.zeros(self.cell_im.shape[0])
+        self.foc_channel = foc_channel
 
     def add_czi(self, filename):
         """Add an additional czi file containing additional image(s).
@@ -190,7 +191,7 @@ class MultiFinder:
         if return_all:
             raw_labs_list = []
             labs_list = []
-        im_for_clf = self.get_channel_arrays(561, bg=False)
+        im_for_clf = self.get_channel_arrays(self.foc_channel, bg=False)
         if verbose:
             print('')
             print('generating cell masks...')
@@ -283,7 +284,7 @@ class MultiFinder:
             return tuple(return_vals)
 
     def get_blur_slices(self, im, clf, slc_no, verbose=True, log_path=None):
-        """Determine which slices are in and out of focus from 561 image."""
+        """Determine which slices are in and out of focus."""
         if verbose:
             print('generating gradient image...')
         grad_im = MultiFinder.get_gradient_im(im)
