@@ -1,5 +1,0 @@
-args:
-Namespace(array_no='6', output_dir='/n/denic_lab/Lab/csth-output/lc3_wipi', ref_csv='/n/denic_lab/Users/nweir/python_packages/csth-imaging/im_list_wipi.csv')
-czi path: /n/denic_lab/Lab/TH_Imaging/6.12.17 TH70_LC3-WIPI_LSM Airyscan 880/LC3-WIPI_HEK_wt_NoTreat_40pos_Airyscan Processing.czi
-MultiFinder created.
-background image added to MultiFinder.
