@@ -42,7 +42,8 @@ print('control czi path: ' + bg_czi_path)
 finder = find_cells.MultiFinder(
     czi_path, bg_filename=bg_czi_path,
     log_path=output_dir + '/log',
-    oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl')
+    oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl',
+    foc_channel=633)
 print('MultiFinder created.')
 # initialize a CellSplitter from finder
 splitter = segment_cells.CellSplitter(finder, cellfinder_mode='threshold')
@@ -54,12 +55,9 @@ print('Cells segmented.')
 # initialize a Foci instance from splitter
 foci_obj = foci.Foci(splitter, verbose=True)
 print('Foci instance created.')
-if 'dVPS' in czi_path:
-    foci_obj.segment(verbose=True, thresholds={488: (14000, 10000),
-                                               561: (7000, 5000)})
-else:
-    foci_obj.segment(verbose=True, thresholds={488: (14000, 10000),
-                                               561: (7000, 5000)})
+foci_obj.segment(verbose=True, thresholds={488: (14000, 10000),
+                                           633: (5333, 4000)},
+                 min_cutoff={488: 1.75, 633: 1.75})
 print('Foci segmented.')
 print('Measuring overlap...')
 foci_obj.measure_overlap(verbose=True)
