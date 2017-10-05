@@ -55,7 +55,7 @@ print('Cells segmented.')
 # initialize a Foci instance from splitter
 foci_obj = foci.Foci(splitter, verbose=True)
 print('Foci instance created.')
-foci_obj.segment(verbose=True, thresholds={488: (14000, 10000),
+foci_obj.segment(verbose=True, seg_channels=(488, 633), thresholds={488: (14000, 10000),
                                            633: (5333, 4000)},
                  min_cutoff={488: 1.75, 633: 1.75})
 print('Foci segmented.')
