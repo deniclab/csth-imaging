@@ -1,4 +1,5 @@
 *.czi
 .ipynb_checkpoints/
 .DS_Store
+.dropbox
 __pycache__/
