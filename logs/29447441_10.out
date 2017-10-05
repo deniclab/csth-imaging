@@ -1,0 +1,2927 @@
+args:
+Namespace(array_no='10', output_dir='/n/denic_lab/Lab/csth-output/lc3_lysoview_timelapse/', ref_csv='/n/denic_lab/Users/nweir/python_packages/csth-imaging/8-7_im_list.csv')
+czi path: /n/denic_lab/Lab/TH_Imaging/8.7.17_TH84_Lysoview-LC3_Timecourse_LSM880_Airyscan/Lysoview-LC3_HEK_dFIP200_0hrTor_20Pos_1_AiryscanProcessing.czi
+control czi path: /n/denic_lab/Lab/TH_Imaging/8.7.17_TH84_Lysoview-LC3_Timecourse_LSM880_Airyscan/Lysoview-LC3_HEK_dFIP200_0hrTor_Empty_AiryscanProcessing.czi
+MultiFinder created.
+generating cell masks...
+
+generating cell masks...
+
+generating mask #1
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #1 complete.
+
+generating mask #2
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 0 1]
+correcting slice labels...
+Warning: blur detection resulted in intercalation:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+Warning: cells cut off by top or bottom of stack:
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #2 complete.
+
+generating mask #3
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 0 0 0 0 0]
+correcting slice labels...
+One continuous stretch defined as in focus.
+appending outputs...
+mask #3 complete.
+
+generating mask #4
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #4 complete.
+
+generating mask #5
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #5 complete.
+
+generating mask #6
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 0 0 0 0 0 0 0]
+correcting slice labels...
+One continuous stretch defined as in focus.
+appending outputs...
+mask #6 complete.
+
+generating mask #7
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 0 0 0 0 0 0 0 0 0]
+correcting slice labels...
+One continuous stretch defined as in focus.
+appending outputs...
+mask #7 complete.
+
+generating mask #8
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #8 complete.
+
+generating mask #9
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+Warning: blur detection resulted in intercalation:
+[0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #9 complete.
+
+generating mask #10
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 0 0 0]
+correcting slice labels...
+One continuous stretch defined as in focus.
+appending outputs...
+mask #10 complete.
+
+generating mask #11
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #11 complete.
+
+generating mask #12
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #12 complete.
+
+generating mask #13
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #13 complete.
+
+generating mask #14
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 0 1]
+correcting slice labels...
+Warning: blur detection resulted in intercalation:
+[0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #14 complete.
+
+generating mask #15
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #15 complete.
+
+generating mask #16
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #16 complete.
+
+generating mask #17
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #17 complete.
+
+generating mask #18
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #18 complete.
+
+generating mask #19
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #19 complete.
+
+generating mask #20
+labeling contiguous objects...
+eliminating objects w/volume < 100,000 px...
+pruning labels...
+unlabeling out of focus slices...
+generating gradient image...
+generating gradient intensity histograms...
+predicting focus labels using SVM classifier...
+calculating decision function values for labels...
+raw focus labels:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+correcting slice labels...
+One continuous stretch defined as in focus.
+Warning: cells cut off by top or bottom of stack:
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+appending outputs...
+mask #20 complete.
+
+CellSplitter instance created.
+input image has 4 dimensions (multiple imgs)
+segmenting image #1 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2663
+slice-by-slice cutoffs:
+[  114.    104.    124.5   161.5   218.5   259.5   319.    402.5   465.
+   575.5   762.5  1130.   1747.   2643.5  3424.5  4118.   4752.   5240.5
+  5614.   6021.5  6346.   6570.   6659.5  6648.5  6616.5  6567.   6336.
+  6509.   6549.   6453.   6364.   6179.   5975.   5857.   5741.5  5715.5
+  5679.5  5548.5  5265.   4896.5  4554.   3990.   3338.   2697.   2137.5
+  1629.5  1217.5   952.5   933.    945.5   872. ]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #2 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2606
+slice-by-slice cutoffs:
+[  116.    113.5   136.5   159.    201.    207.5   203.5   228.    306.5
+   462.5   724.5  1148.5  1820.5  2763.   3826.5  4708.   5273.   5603.5
+  5730.5  5578.5  5267.5  5461.5  5910.5  6287.   6369.5  6467.   6516.5
+  6160.   5841.5  5481.5  5349.   5346.5  5238.   4944.5  4496.5  3868.5
+  3224.5  2743.5  2440.   2242.5  2109.   1940.   1802.   1648.   1493.
+  1396.   1275.5  1146.5   974.5   770.    596.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #3 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2985
+slice-by-slice cutoffs:
+[  104.     86.5   118.5   128.5   144.    169.5   198.5   230.5   247.
+   269.5   298.5   373.    618.5  1023.5  1529.   2235.   3025.5  3877.
+  4574.   5213.   6115.   6781.5  7109.5  7297.   7424.   7464.5  7404.5
+  7165.   6751.5  6800.   6867.5  6864.   6697.   6433.   6241.   6024.
+  5683.5  5271.   4742.5  3965.5  3069.   2308.5  1759.   1414.   1197.
+   970.5   747.    593.5   520.    473.    452. ]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #4 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2795
+slice-by-slice cutoffs:
+[  143.5   113.5   131.    160.5   209.    250.5   279.    296.5   330.
+   411.    533.5   867.   1463.5  2240.   3057.5  3848.   4672.5  5379.
+  5766.   6191.5  6311.5  6296.   6438.   6420.5  6561.5  6634.5  6645.
+  6658.   6692.   6810.   6985.   6987.5  6764.   6611.5  6611.5  6596.
+  6528.   6625.   6671.5  6455.5  6112.   5912.5  5809.5  5697.   5276.5
+  4581.5  3736.   2981.   2482.   2106.5  1719.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #5 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2990
+slice-by-slice cutoffs:
+[  226.5   182.    202.    276.    379.5   449.    528.5   594.5   739.
+  1026.   1612.5  2494.5  3534.   4597.   5525.   6219.   6711.   6998.5
+  7104.   7256.   7327.5  7361.   7475.5  7460.   7374.5  7341.   7288.
+  7247.   7327.5  7314.5  7224.5  7071.5  6926.5  7000.   7193.   7346.5
+  7265.   7032.   6821.5  6689.5  6591.   6409.5  6118.5  5763.5  5271.
+  4650.5  4012.5  3533.   3111.   2613.   2107. ]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #6 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2686
+slice-by-slice cutoffs:
+[   89.5    81.5    99.5   118.5   133.5   169.    189.    210.    216.5
+   244.5   270.    348.5   514.5   750.   1139.   1862.   2880.   3992.5
+  4881.   5323.5  5674.5  5758.5  5897.   5932.   6202.   6449.5  6640.
+  6717.   6585.   6556.5  6672.   6525.   6304.5  6326.5  6224.5  6187.
+  5965.   5380.   4552.   3696.   2941.5  2363.   1914.5  1494.   1105.
+   849.5   670.5   576.    573.5   523.    483.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #7 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 3214
+slice-by-slice cutoffs:
+[  104.     95.5   119.    140.5   161.5   162.5   180.    207.    278.5
+   312.5   369.5   462.    725.5  1218.5  2021.   3054.   4001.   4754.
+  5414.5  5881.5  6303.5  6676.   6875.   6993.5  7075.   7228.   7381.
+  7484.   7474.5  7347.5  7627.5  7758.   7912.   8036.   7868.5  7373.5
+  6602.   5636.5  4653.5  3753.   2903.   2128.   1570.5  1287.   1091.
+   984.5   885.    709.5   623.5   515.    445.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #8 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 3333
+slice-by-slice cutoffs:
+[   53.     45.5    68.5    80.     80.    105.5   115.5   134.5   158.
+   191.    207.5   224.5   232.    277.5   333.    456.5   725.5  1083.5
+  1596.5  2365.5  3421.5  4597.5  5609.   6233.   6422.5  6525.   6647.
+  6813.5  6886.   7142.5  7621.   7973.   8209.5  8333.5  8030.5  7201.5
+  6256.5  6038.   5974.5  5790.   5553.5  5022.5  4209.5  3361.5  2634.
+  2167.   1747.5  1350.   1013.5   844.    722. ]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #9 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2889
+slice-by-slice cutoffs:
+[   39.5    34.     46.5    63.     73.     71.     82.     88.    102.5
+   114.5   134.    150.    161.5   184.    218.5   275.    346.5   450.
+   526.5   575.5   695.5  1021.   1705.5  2693.   3728.   4699.5  5425.5
+  5985.   6447.5  6843.5  7199.5  7222.5  7102.   6917.5  6870.5  6798.5
+  6570.   6632.   6763.   6750.   6668.   6560.5  6171.5  5482.5  4679.5
+  3865.   3195.5  2670.   2169.5  1717.5  1351.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #10 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2736
+slice-by-slice cutoffs:
+[   71.5    45.     57.     70.5    94.5   103.    110.5   115.5   144.
+   158.    199.5   233.    242.    252.    270.    326.5   433.5   673.
+  1043.   1503.   2121.5  2790.   3448.5  4140.5  4704.   5053.5  5249.
+  5337.5  5400.   5801.5  6230.   6756.5  6840.5  6535.5  6310.5  6156.
+  5746.5  5578.5  5538.5  5522.5  5368.5  5016.5  4440.   3653.5  2833.5
+  2158.5  1704.5  1396.5  1144.5   929.    742.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #11 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2795
+slice-by-slice cutoffs:
+[   64.5    57.     59.     73.5    85.     91.    106.5   123.5   146.
+   152.    182.5   204.    249.    279.    308.    336.    394.5   506.5
+   746.5  1229.   1868.   2609.5  3300.   4089.   4773.5  5313.5  5802.5
+  6187.   6348.   6499.   6712.5  6787.   6653.   6592.   6617.   6846.5
+  6989.5  6813.   6769.5  6454.5  5949.5  5515.5  4993.5  4496.   3902.5
+  3099.5  2348.5  1804.5  1392.   1129.   1010.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #12 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2486
+slice-by-slice cutoffs:
+[   73.     55.5    83.5    87.    112.    115.5   117.5   136.    158.5
+   175.5   216.5   241.5   271.    336.    451.    624.5   854.5  1133.
+  1481.5  1919.   2586.5  3533.   4366.5  4924.5  5245.   5495.5  5773.
+  5929.5  5998.   6215.5  6212.   6143.5  5965.   5945.5  5954.   5766.
+  5499.5  5349.5  5216.   4897.   4270.5  3628.   2840.   2237.   2000.5
+  1798.   1588.5  1354.   1092.    862.    704. ]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #13 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2458
+slice-by-slice cutoffs:
+[   63.5    49.5    48.     62.     77.5    96.    119.5   135.    143.
+   169.    182.5   219.    268.    275.5   335.5   445.    564.    782.
+  1142.   1732.   2450.   3123.5  3668.   4021.   4341.   4631.5  4989.
+  5475.   5711.   5705.5  5588.   5796.   6066.5  6072.5  5855.   5674.5
+  5631.   5678.5  5949.   6146.5  5984.   5732.   5800.   5820.   5786.5
+  5834.   5766.5  5541.   5513.5  5459.5  5087.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #14 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 3440
+slice-by-slice cutoffs:
+[   72.5    62.5    74.5    95.    107.    129.    167.    220.    266.5
+   314.5   370.5   414.    481.5   688.5  1083.5  1750.5  2525.   3243.
+  3999.5  4792.   5491.5  5953.5  6245.   6541.5  6599.5  6582.   6808.5
+  7373.   7869.5  8269.5  8493.5  8602.   8592.5  8460.5  8414.5  8300.5
+  8089.5  8096.5  7982.   7769.5  7313.   6597.   7139.   7496.5  7706.
+  7926.5  8145.   8280.5  8409.5  8570.   8168.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #15 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2410
+slice-by-slice cutoffs:
+[   44.     34.5    35.5    45.5    52.5    67.5    82.5   102.    132.5
+   145.5   155.5   177.5   205.5   220.5   266.    302.    365.5   474.5
+   650.    988.5  1518.5  2105.   2700.   3265.5  3785.   4207.5  4641.
+  4951.5  5294.   5612.   5757.5  5761.5  5849.5  5967.5  5929.5  5959.5
+  5955.   6025.5  6027.   5997.5  6020.5  5941.   5800.5  5687.   5597.
+  5369.5  5137.5  4829.5  4495.   4046.5  3477. ]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #16 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2780
+slice-by-slice cutoffs:
+[   31.5    20.5    24.     34.     37.     38.5    46.5    60.5    80.
+    93.    103.5   101.5   110.    130.    150.    183.5   212.5   224.
+   261.5   289.    366.5   468.    587.    781.    994.5  1299.   1719.
+  2379.   3140.   3831.   4302.5  4634.   4933.5  5221.   5594.5  5880.5
+  6062.5  6212.   6358.   6416.5  6317.5  6103.   6166.5  6197.5  6227.5
+  6255.5  6446.   6455.5  6647.   6950.5  6763. ]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #17 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2440
+slice-by-slice cutoffs:
+[   31.5    22.     34.     31.5    38.     51.5    56.5    67.5    78.
+    98.     99.    122.5   124.    130.5   145.5   185.5   190.    208.5
+   228.5   294.    359.5   493.    722.   1110.5  1595.   2218.   3082.
+  4009.   4542.5  4403.5  4694.   5034.   5278.   5408.   5805.   6009.
+  6062.5  6102.   6099.5  6006.   5822.   5713.5  5686.5  5621.   5558.5
+  5495.   5287.5  5047.   4651.5  4109.5  3578. ]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #18 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2300
+slice-by-slice cutoffs:
+[   26.5    16.5    22.5    22.     26.     35.5    46.     47.     55.5
+    62.     69.     80.     90.    107.5   110.5   112.5   124.    138.
+   152.    169.    187.5   220.    277.    354.    468.5   800.5  1199.5
+  1585.5  2009.5  2546.5  3239.5  3987.   4623.   5068.   5391.   5584.5
+  5617.5  5548.5  5752.   5701.5  5626.5  5614.   5456.   5247.5  5167.5
+  4942.   4523.5  4391.   4137.   3736.   3249.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #19 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2673
+slice-by-slice cutoffs:
+[   43.5    33.     27.5    30.     47.5    46.     63.5    73.5    81.5
+    86.    100.    117.    123.5   162.    165.    172.5   179.5   197.
+   234.    260.    368.5   471.    614.5   914.   1461.   2320.5  3354.
+  4146.   4610.   5123.   5624.   6158.   6581.   6684.5  6403.   5770.
+  5739.   5674.   5475.   5332.   5389.5  5405.5  5325.5  5234.   5218.5
+  5276.5  5385.   5585.5  5721.   5755.   5446.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+segmenting image #20 of 20...
+Using thresholds set based on slice intensity
+thresholding floor set to 2501
+slice-by-slice cutoffs:
+[   28.     17.5    21.     21.     25.     32.     35.     33.5    40.5
+    52.5    59.     59.5    75.5    87.5    93.    110.5   110.    129.
+   145.    153.    183.    197.    246.5   301.    317.5   352.    405.5
+   501.    696.   1112.5  1822.   2631.   3302.   3840.5  4232.   4776.5
+  5176.5  5564.   5718.   5653.5  5554.5  5644.5  5705.5  5835.   5956.5
+  6025.   6028.5  5994.   6147.5  6254.   6018.5]
+generating threshold image...
+raw image imported.
+preprocessing complete.
+filling holes in objects.
+holes filled.
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+passing segmented objs and seeds to Nuclei instance...
+
+removing small perinuclear foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[424201 498882]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[372221 405274]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+4 raw segmented DAPI foci
+object volumes in pixels:
+[304175 410241 436783 307198]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[291993 285735]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[279882 275657]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[351666 374307]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[301302 292898]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[409173 411793]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[372884 365072]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[360980 344222]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[600209 651830]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[366642 343239]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[377322 352841]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[246733 211151]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[342317 334122]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+3 raw segmented DAPI foci
+object volumes in pixels:
+[311570 264601  25181]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+3 raw segmented DAPI foci
+object volumes in pixels:
+[  1153 538741 566262]
+removing objects volume < 10000 px, #s:
+[1]
+removing nuclei_centers corresponding to small DAPI foci...
+3 raw segmented DAPI foci
+object volumes in pixels:
+[469215 464312 457615]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[366671 377237]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+2 raw segmented DAPI foci
+object volumes in pixels:
+[315671 290489]
+removing objects volume < 10000 px, #s:
+[]
+removing nuclei_centers corresponding to small DAPI foci...
+Nuclei segmented.
+checking that nuclei have already been segmented...
+eroding cell edges...
+eroding mask 0...
+cell mask means:
+[994.68748344505798, 1009.6590330237881, 1024.8616178274503, 1040.2581965890793, 1055.7988658665781, 1071.4344695671689, 1087.121658632725, 1102.7797994298221, 1118.3551477859946, 1133.7602820357386]
+slopes:
+[15.087067191196184, 15.299581782645589, 15.46862401956389, 15.588136489044814, 15.661396383073452, 15.672664931326608, 15.616744576634801, 15.490241302958225]
+slope deltas:
+[ 0.21251459  0.16904224  0.11951247  0.07325989  0.01126855  0.05592035
+  0.12650327]
+desired erosions: 2
+erosion of mask #0 complete.
+eroding mask 1...
+cell mask means:
+[1024.1145833792441, 1042.9557717153816, 1062.2369240171922, 1081.9615537885331, 1102.0837633122339, 1122.4914836764467, 1143.0469238960252, 1163.654261848854, 1184.2505832914464, 1204.7374581314177]
+slopes:
+[19.061170318974064, 19.502891036575761, 19.923419647520859, 20.264964943956784, 20.481580291895625, 20.581389086203671, 20.601829697710627, 20.541598141281838]
+slope deltas:
+[ 0.44172072  0.42052861  0.3415453   0.21661535  0.09980879  0.02044061
+  0.06023156]
+desired erosions: 2
+erosion of mask #1 complete.
+eroding mask 2...
+cell mask means:
+[993.55617305117346, 1004.8103067637411, 1016.1216783509251, 1027.4347616033608, 1038.7070342294894, 1049.8834536193933, 1060.9096901477333, 1071.7374917589045, 1082.3234181201649, 1092.6308087601988]
+slopes:
+[11.282752649875817, 11.312227419809858, 11.292677939282157, 11.224346008016255, 11.101327959121932, 10.927019069755602, 10.706863986215808, 10.446658500647118]
+slope deltas:
+[ 0.02947477  0.01954948  0.06833193  0.12301805  0.17430889  0.22015508
+  0.26020549]
+desired erosions: 8
+erosion of mask #2 complete.
+eroding mask 3...
+cell mask means:
+[939.21537167247811, 952.95248386711955, 966.7810565927831, 980.67388341081733, 994.5442655428966, 1008.3229834690716, 1021.9830182632229, 1035.5131134623491, 1048.9013195910211, 1062.069424082697]
+slopes:
+[13.782842460152494, 13.860699771848886, 13.881604475056747, 13.824550029127124, 13.719376360163153, 13.595064996638769, 13.459150663899095, 13.278155310173929]
+slope deltas:
+[ 0.07785731  0.0209047   0.05705445  0.10517367  0.12431136  0.13591433
+  0.18099535]
+desired erosions: 8
+erosion of mask #3 complete.
+eroding mask 4...
+cell mask means:
+[1038.2003111283909, 1058.8485003069748, 1080.0297727239749, 1101.7039141057192, 1123.8389694803896, 1146.3617609928867, 1169.1992530932475, 1192.2528874699733, 1215.3526130599444, 1238.3231240607333]
+slopes:
+[20.914730797792004, 21.427706899372197, 21.904598378207311, 22.32892344358379, 22.680141806428992, 22.945563238543286, 23.076679983348413, 23.035118295380016]
+slope deltas:
+[ 0.5129761   0.47689148  0.42432507  0.35121836  0.26542143  0.13111674
+  0.04156169]
+desired erosions: 2
+erosion of mask #4 complete.
+eroding mask 5...
+cell mask means:
+[1098.4151459532995, 1113.2685914927649, 1128.2668579656006, 1143.3763765158837, 1158.5563658283029, 1173.7821697847378, 1188.9967073931125, 1204.1069424790271, 1219.0286474698787, 1233.6730944545588]
+slopes:
+[14.925856006150525, 15.053892511559411, 15.144753931351147, 15.20289663442702, 15.220170782404807, 15.162386347144661, 15.015970038383102, 14.783075987765869]
+slope deltas:
+[ 0.12803651  0.09086142  0.0581427   0.01727415  0.05778444  0.14641631
+  0.23289405]
+desired erosions: 8
+erosion of mask #5 complete.
+eroding mask 6...
+cell mask means:
+[917.72551678577247, 932.06769561775843, 946.59349724020808, 961.23682148433284, 975.93353842434556, 990.64256097336749, 1005.3295112011092, 1019.8995577266281, 1034.2444837174801, 1048.2411308689784]
+slopes:
+[14.433990227217805, 14.584562933287202, 14.670020592068738, 14.702869744517329, 14.697986388381821, 14.628498376630318, 14.45748625818544, 14.170786571175142]
+slope deltas:
+[ 0.15057271  0.08545766  0.03284915  0.00488336  0.06948801  0.17101212
+  0.28669969]
+desired erosions: 8
+erosion of mask #6 complete.
+eroding mask 7...
+cell mask means:
+[977.11797228888986, 989.92657318016518, 1002.8629606933675, 1015.8995485143164, 1029.011756261915, 1042.1452147359232, 1055.2325250147785, 1068.2322215059205, 1081.0732947687504, 1093.6393651850974]
+slopes:
+[12.87249420223884, 12.986487667075608, 13.074397784273742, 13.122833110803413, 13.110384376431739, 13.043503384998644, 12.920384876985963, 12.703571839588449]
+slope deltas:
+[ 0.11399346  0.08791012  0.04843533  0.01244873  0.06688099  0.12311851
+  0.21681304]
+desired erosions: 8
+erosion of mask #7 complete.
+eroding mask 8...
+cell mask means:
+[892.25787664931374, 906.77542924130432, 921.54250999754231, 936.53696504054631, 951.68186254188072, 966.87684590185438, 982.04759009847692, 997.11930956841093, 1011.9597571130028, 1026.4326384939066]
+slopes:
+[14.642316674114284, 14.880767899620992, 15.069676272169204, 15.169940430654037, 15.182863778298099, 15.121231833278273, 14.956083507262917, 14.656664462747813]
+slope deltas:
+[ 0.23845123  0.18890837  0.10026416  0.01292335  0.06163195  0.16514833
+  0.29941904]
+desired erosions: 8
+erosion of mask #8 complete.
+eroding mask 9...
+cell mask means:
+[1360.0796391714557, 1379.8017786673015, 1399.8501899825203, 1420.241737092495, 1440.943519686906, 1461.8815911886836, 1482.9881052818839, 1504.2074691684963, 1525.4805562334789, 1546.7343834971034]
+slopes:
+[19.885275405532298, 20.219979212596741, 20.546664852192862, 20.819927048094314, 21.022292797488944, 21.162938989906365, 21.246225475797473, 21.263457164303531]
+slope deltas:
+[ 0.33470381  0.32668564  0.2732622   0.20236575  0.14064619  0.08328649
+  0.01723169]
+desired erosions: 2
+erosion of mask #9 complete.
+eroding mask 10...
+cell mask means:
+[1224.4100508237948, 1239.7467029832196, 1255.249662768668, 1270.8941378598254, 1286.6166956297743, 1302.3362487828199, 1317.9995182584578, 1333.5343162054912, 1348.8386593180655, 1363.8274127505701]
+slopes:
+[15.41980597243662, 15.573717438302879, 15.683516430553141, 15.721055461497258, 15.691411314341735, 15.599033711335665, 15.419570529803877, 15.146548272539462]
+slope deltas:
+[ 0.15391147  0.10979899  0.03753903  0.02964415  0.0923776   0.17946318
+  0.27302226]
+desired erosions: 8
+erosion of mask #10 complete.
+eroding mask 11...
+cell mask means:
+[1194.8002100458989, 1216.494831895883, 1238.6664025597902, 1261.2567220912943, 1284.2176643175287, 1307.509187009731, 1331.0651821352667, 1354.7872547326269, 1378.5225297547108, 1402.0704566942547]
+slopes:
+[21.933096256945646, 22.380945097705649, 22.775630878869265, 23.126232459218386, 23.42375890886899, 23.639033861447956, 23.728673809722068, 23.641600980813905]
+slope deltas:
+[ 0.44784884  0.39468578  0.35060158  0.29752645  0.21527495  0.08963995
+  0.08707283]
+desired erosions: 2
+erosion of mask #11 complete.
+eroding mask 12...
+cell mask means:
+[1154.3927967526345, 1173.6262906243794, 1193.1786520112773, 1212.9783626385056, 1232.9313734721432, 1252.9623921440077, 1273.0166834482584, 1293.0108364695425, 1312.7589711838359, 1332.0237616023835]
+slopes:
+[19.392927629321434, 19.67603600706309, 19.876360730432907, 19.992014752751061, 20.04265498805762, 20.024222162767387, 19.87114386778876, 19.50646256642051]
+slope deltas:
+[ 0.28310838  0.20032472  0.11565402  0.05064024  0.01843283  0.15307829
+  0.3646813 ]
+desired erosions: 8
+erosion of mask #12 complete.
+eroding mask 13...
+cell mask means:
+[1091.8359434246613, 1112.3290734284783, 1133.2561471477723, 1154.5595899330729, 1176.1801832397359, 1198.0464143739159, 1220.0082249626455, 1241.8883062603227, 1263.4522517264932, 1284.3623406408042]
+slopes:
+[20.710101861555472, 21.115258252297281, 21.462018045981836, 21.743412220421533, 21.914020861454787, 21.920945943203378, 21.72201338192383, 21.237017190240749]
+slope deltas:
+[ 0.40515639  0.34675979  0.28139417  0.17060864  0.00692508  0.19893256
+  0.48499619]
+desired erosions: 8
+erosion of mask #13 complete.
+eroding mask 14...
+cell mask means:
+[1028.3956359815247, 1047.1505996795197, 1066.3021645870385, 1085.7759571454842, 1105.4665602736491, 1125.2858776552466, 1145.1720217767524, 1165.0178378159596, 1184.7135034028086, 1204.1033137281127]
+slopes:
+[18.953264302756907, 19.312678732982249, 19.582197843305266, 19.754960254881212, 19.85273075155169, 19.865980080356508, 19.770740813028056, 19.542737956076508]
+slope deltas:
+[ 0.35941443  0.26951911  0.17276241  0.0977705   0.01324933  0.09523927
+  0.22800286]
+desired erosions: 2
+erosion of mask #14 complete.
+eroding mask 15...
+cell mask means:
+[1329.5191047054464, 1353.4814514788081, 1378.0235116189983, 1403.1756699592995, 1428.9220201912699, 1455.1474583803144, 1481.7242083391823, 1508.5603306037326, 1535.5568148274297, 1562.5344314084339]
+slopes:
+[24.252203456775987, 24.847109240245686, 25.449254286135783, 25.985894210507468, 26.401094073956187, 26.706436111709081, 26.916303244123696, 26.987050402350633]
+slope deltas:
+[ 0.59490578  0.60214505  0.53663992  0.41519986  0.30534204  0.20986713
+  0.07074716]
+desired erosions: 3
+erosion of mask #15 complete.
+eroding mask 16...
+cell mask means:
+[1172.064012777935, 1187.932826394662, 1203.9441104093717, 1220.0510970109724, 1236.1833694055529, 1252.2770372530424, 1268.2892986390416, 1284.1705988358394, 1299.8598754796078, 1315.2529966068814]
+slopes:
+[15.940048815718342, 16.059135308155192, 16.119629498090603, 16.112970121035005, 16.052964616744362, 15.94678079139851, 15.785288420283109, 15.541198885520998]
+slope deltas:
+[ 0.11908649  0.06049419  0.00665938  0.0600055   0.10618383  0.16149237
+  0.24408953]
+desired erosions: 8
+erosion of mask #16 complete.
+eroding mask 17...
+cell mask means:
+[1127.0919214356763, 1143.4480083629767, 1160.0628343694555, 1176.8898721626476, 1193.8691687335736, 1210.9116969557533, 1227.9540028031431, 1244.9576386775839, 1261.8258932587016, 1278.3951414067965]
+slopes:
+[16.485456466889559, 16.720931899835477, 16.903167182059065, 17.01091239655284, 17.042417034784762, 17.022970860915279, 16.935945227779257, 16.718751364606305]
+slope deltas:
+[ 0.23547543  0.18223528  0.10774521  0.03150464  0.01944617  0.08702563
+  0.21719386]
+desired erosions: 2
+erosion of mask #17 complete.
+eroding mask 18...
+cell mask means:
+[1446.4880619107162, 1471.9636300783914, 1498.0554955326879, 1524.705244550785, 1551.8585207210556, 1579.4853311579514, 1607.5496116576217, 1636.0338781962655, 1664.846018148522, 1693.8953494589045]
+slopes:
+[25.783716810985879, 26.370807236196811, 26.901512594183828, 27.390043303583184, 27.845545468283035, 28.274273519157077, 28.64820324545019, 28.930735631319521]
+slope deltas:
+[ 0.58709043  0.53070536  0.48853071  0.45550216  0.42872805  0.37392973
+  0.28253239]
+desired erosions: 2
+erosion of mask #18 complete.
+eroding mask 19...
+cell mask means:
+[1233.3002915148065, 1256.7226515950119, 1280.775692660103, 1305.4210021088122, 1330.601613587186, 1356.2683636958043, 1382.3400718638902, 1408.7236698426771, 1435.3120269920905, 1461.9507812829142]
+slopes:
+[23.737700572648237, 24.349175256900139, 24.912960463541481, 25.423680793496032, 25.869229138352125, 26.227653073436386, 26.485977564100153, 26.613555720118597]
+slope deltas:
+[ 0.61147468  0.56378521  0.51072033  0.44554834  0.35842394  0.25832449
+  0.12757816]
+desired erosions: 2
+erosion of mask #19 complete.
+converting nuclei to binary masks for distance xform...
+segmenting cells in image #1 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #1.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #2 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #2.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #3 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #3.
+removing cells that contact the edge of the image.
+removing small foci...
+4 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #4 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #4.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #5 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #5.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #6 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #6.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #7 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #7.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #8 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #8.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #9 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #9.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #10 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #10.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #11 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #11.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #12 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #12.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #13 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #13.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #14 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #14.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #15 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #15.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #16 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #16.
+removing cells that contact the edge of the image.
+removing small foci...
+3 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #17 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #17.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #18 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #18.
+removing cells that contact the edge of the image.
+removing small foci...
+3 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #19 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #19.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+segmenting cells in image #20 out of 20...
+performing Euclidean distance xform...
+smoothing the distance map...
+generating segmentation seeds from nuclei_centers...
+watershed segmenting cells from nuclei centers...
+segmentation complete for image #20.
+removing cells that contact the edge of the image.
+removing small foci...
+2 raw segmented cells
+0 foci volume < 1000 px, removing...
+
+Cells segmented.
+initializing attributes...
+loading images...
+Foci instance created.
+beginning segmentation.
+------------------------------------------------------
+segmenting foci from channel 488
+------------------------------------------------------
+canny threshold for channel 488: (14000, 10000)
+segmenting foci for position 1 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1021.7499677
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 6 foci in image
+cell mean: 1025.72525344
+cell standard deviation: 852.63604766
+intensity cutoff for removal: 2517.83833685
+-----filtering foci-----
+focus intensity: 113.161328211
+removing focus
+focus intensity: 7219.22580645
+focus intensity: 8765.45454545
+focus intensity: 7818.40909091
+focus intensity: 9322.0
+focus intensity: 6477.8
+focus intensity: 9535.20382166
+after eliminating dim foci: 6 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+6 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 2
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[31]
+matched to one parent cell.
+current ID: 4
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[66]
+matched to one parent cell.
+current ID: 5
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[157]
+matched to one parent cell.
+current ID: 6
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[176]
+matched to one parent cell.
+foci segmented from position 1
+
+segmenting foci for position 2 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1058.37296769
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 3 foci in image
+cell mean: 1041.40537058
+cell standard deviation: 842.780941931
+intensity cutoff for removal: 2516.27201896
+-----filtering foci-----
+focus intensity: 5592.61904762
+focus intensity: 9164.27777778
+focus intensity: 85.4724416587
+removing focus
+focus intensity: 5591.27272727
+after eliminating dim foci: 3 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+2 final foci
+--matching foci to parent cells--
+current ID: 2
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[22]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[18]
+matched to one parent cell.
+foci segmented from position 2
+
+segmenting foci for position 3 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1078.92260938
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 12 foci in image
+cell mean: 1021.3867259
+cell standard deviation: 814.527932788
+intensity cutoff for removal: 2446.81060828
+-----filtering foci-----
+focus intensity: 6567.30434783
+focus intensity: 8933.2
+focus intensity: 6534.76190476
+focus intensity: 6823.33333333
+focus intensity: 7819.2
+focus intensity: 173.30303513
+removing focus
+focus intensity: 9646.27884615
+focus intensity: 9423.75
+focus intensity: 5878.22857143
+focus intensity: 7986.48
+focus intensity: 11189.4585987
+focus intensity: 11990.875
+focus intensity: 8535.97810219
+after eliminating dim foci: 12 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+12 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[19]
+matched to one parent cell.
+current ID: 2
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[12]
+matched to one parent cell.
+current ID: 4
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[157]
+matched to one parent cell.
+current ID: 5
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[8]
+matched to one parent cell.
+current ID: 6
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[137]
+matched to one parent cell.
+current ID: 7
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 8
+  overlapping parent cell(s): 
+[ 3.]
+  # of pixels overlapping with parent(s):
+[24]
+matched to one parent cell.
+current ID: 9
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[104]
+matched to one parent cell.
+current ID: 10
+  overlapping parent cell(s): 
+[ 4.]
+  # of pixels overlapping with parent(s):
+[25]
+matched to one parent cell.
+current ID: 11
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[23]
+matched to one parent cell.
+current ID: 12
+  overlapping parent cell(s): 
+[ 3.]
+  # of pixels overlapping with parent(s):
+[35]
+matched to one parent cell.
+foci segmented from position 3
+
+segmenting foci for position 4 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1044.10263296
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 9 foci in image
+cell mean: 1029.47551939
+cell standard deviation: 857.627650172
+intensity cutoff for removal: 2530.32390719
+-----filtering foci-----
+focus intensity: 5168.875
+focus intensity: 82.3781247264
+removing focus
+focus intensity: 6603.36363636
+focus intensity: 8692.70588235
+focus intensity: 7915.84615385
+focus intensity: 8107.86792453
+focus intensity: 15482.0874317
+focus intensity: 7691.59876543
+focus intensity: 6172.0
+focus intensity: 10226.4063745
+after eliminating dim foci: 9 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+9 final foci
+--matching foci to parent cells--
+current ID: 2
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[17]
+matched to one parent cell.
+current ID: 4
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[22]
+matched to one parent cell.
+current ID: 5
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[162]
+matched to one parent cell.
+current ID: 6
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[26]
+matched to one parent cell.
+current ID: 7
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[251]
+matched to one parent cell.
+current ID: 8
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[53]
+matched to one parent cell.
+current ID: 9
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[183]
+matched to one parent cell.
+current ID: 10
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[9]
+matched to one parent cell.
+foci segmented from position 4
+
+segmenting foci for position 5 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1074.84031574
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 4 foci in image
+cell mean: 1030.27504229
+cell standard deviation: 865.406795376
+intensity cutoff for removal: 2544.7369342
+-----filtering foci-----
+focus intensity: 6609.15789474
+focus intensity: 7354.94736842
+focus intensity: 5983.57142857
+focus intensity: 6148.92857143
+focus intensity: 79.3686327493
+removing focus
+after eliminating dim foci: 4 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+3 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[19]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[14]
+matched to one parent cell.
+current ID: 4
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[14]
+matched to one parent cell.
+foci segmented from position 5
+
+segmenting foci for position 6 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1214.33530646
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 10 foci in image
+cell mean: 1020.32059765
+cell standard deviation: 1715.03359738
+intensity cutoff for removal: 4021.62939307
+-----filtering foci-----
+focus intensity: 19488.3822222
+focus intensity: 7809.69491525
+focus intensity: 9986.32352941
+focus intensity: 19795.7643979
+focus intensity: 24711.2445337
+focus intensity: 88.2860437134
+removing focus
+focus intensity: 19241.5696721
+focus intensity: 10099.1333333
+focus intensity: 6067.38461538
+focus intensity: 13902.375
+focus intensity: 13213.592
+after eliminating dim foci: 10 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+10 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 1.  2.]
+  # of pixels overlapping with parent(s):
+[  1 224]
+  more than one overlapping cell.
+  determining which cell overlaps more.
+  parent cell: 2.0
+current ID: 2
+  overlapping parent cell(s): 
+[ 1.  2.]
+  # of pixels overlapping with parent(s):
+[167 406]
+  more than one overlapping cell.
+  determining which cell overlaps more.
+  parent cell: 2.0
+current ID: 3
+  overlapping parent cell(s): 
+[ 1.  2.]
+  # of pixels overlapping with parent(s):
+[ 43 201]
+  more than one overlapping cell.
+  determining which cell overlaps more.
+  parent cell: 2.0
+current ID: 4
+  overlapping parent cell(s): 
+[ 1.  2.]
+  # of pixels overlapping with parent(s):
+[ 11 199]
+  more than one overlapping cell.
+  determining which cell overlaps more.
+  parent cell: 2.0
+current ID: 5
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[59]
+matched to one parent cell.
+current ID: 6
+  overlapping parent cell(s): 
+[ 1.  2.]
+  # of pixels overlapping with parent(s):
+[ 469 1772]
+  more than one overlapping cell.
+  determining which cell overlaps more.
+  parent cell: 2.0
+current ID: 7
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[34]
+matched to one parent cell.
+current ID: 8
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[13]
+matched to one parent cell.
+current ID: 9
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[125]
+matched to one parent cell.
+current ID: 12
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[8]
+matched to one parent cell.
+foci segmented from position 6
+
+segmenting foci for position 7 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1028.92449801
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 3 foci in image
+cell mean: 1030.77839779
+cell standard deviation: 800.909164513
+intensity cutoff for removal: 2432.36943569
+-----filtering foci-----
+focus intensity: 6072.9375
+focus intensity: 6305.77272727
+focus intensity: 11246.3184524
+focus intensity: 86.1222941925
+removing focus
+after eliminating dim foci: 3 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+3 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[22]
+matched to one parent cell.
+current ID: 2
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[336]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[48]
+matched to one parent cell.
+foci segmented from position 7
+
+segmenting foci for position 8 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1076.99508449
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 6 foci in image
+cell mean: 1015.2810708
+cell standard deviation: 819.119468697
+intensity cutoff for removal: 2448.74014102
+-----filtering foci-----
+focus intensity: 7664.25
+focus intensity: 6536.0
+focus intensity: 6133.80952381
+focus intensity: 6630.31428571
+focus intensity: 8871.80821918
+focus intensity: 104.008815626
+removing focus
+focus intensity: 8876.60952381
+after eliminating dim foci: 6 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+6 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[32]
+matched to one parent cell.
+current ID: 2
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[21]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 4
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[105]
+matched to one parent cell.
+current ID: 5
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[35]
+matched to one parent cell.
+current ID: 6
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[73]
+matched to one parent cell.
+foci segmented from position 8
+
+segmenting foci for position 9 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1005.65133597
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 8 foci in image
+cell mean: 1018.75324242
+cell standard deviation: 890.579467795
+intensity cutoff for removal: 2577.26731106
+-----filtering foci-----
+focus intensity: 6641.1147541
+focus intensity: 6708.4
+focus intensity: 8821.92105263
+focus intensity: 10349.0935961
+focus intensity: 9169.53488372
+focus intensity: 11785.8730159
+focus intensity: 6141.3
+focus intensity: 6014.8
+focus intensity: 79.764354559
+removing focus
+after eliminating dim foci: 8 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+8 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[61]
+matched to one parent cell.
+current ID: 2
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[10]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[43]
+matched to one parent cell.
+current ID: 4
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 5
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[203]
+matched to one parent cell.
+current ID: 6
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 7
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[63]
+matched to one parent cell.
+current ID: 8
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[114]
+matched to one parent cell.
+foci segmented from position 9
+
+segmenting foci for position 10 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1395.15485716
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 6 foci in image
+cell mean: 1028.46748699
+cell standard deviation: 949.030054597
+intensity cutoff for removal: 2689.27008253
+-----filtering foci-----
+focus intensity: 9057.2
+focus intensity: 6852.8
+focus intensity: 12869.5153846
+focus intensity: 7031.28888889
+focus intensity: 7848.43333333
+focus intensity: 5316.2
+focus intensity: 87.1098899104
+removing focus
+after eliminating dim foci: 6 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+6 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[45]
+matched to one parent cell.
+current ID: 2
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[130]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 4
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 5
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[30]
+matched to one parent cell.
+current ID: 6
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+foci segmented from position 10
+
+segmenting foci for position 11 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1343.50327116
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 1 foci in image
+cell mean: 1007.36312611
+cell standard deviation: 781.112865041
+intensity cutoff for removal: 2374.31063994
+-----filtering foci-----
+focus intensity: 112.480354011
+removing focus
+focus intensity: 6715.4
+after eliminating dim foci: 1 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+1 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+foci segmented from position 11
+
+segmenting foci for position 12 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1233.6593524
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 7 foci in image
+cell mean: 1020.76772193
+cell standard deviation: 983.91915947
+intensity cutoff for removal: 2742.62625101
+-----filtering foci-----
+focus intensity: 11489.7160494
+focus intensity: 11140.8719212
+focus intensity: 8085.21311475
+focus intensity: 16182.3333333
+focus intensity: 10088.125
+focus intensity: 14916.869898
+focus intensity: 74.7253989339
+removing focus
+focus intensity: 16597.1348601
+after eliminating dim foci: 7 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+7 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[122]
+matched to one parent cell.
+current ID: 2
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[52]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[32]
+matched to one parent cell.
+current ID: 4
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[312]
+matched to one parent cell.
+current ID: 5
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[203]
+matched to one parent cell.
+current ID: 6
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[392]
+matched to one parent cell.
+current ID: 7
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[393]
+matched to one parent cell.
+foci segmented from position 12
+
+segmenting foci for position 13 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1305.91545581
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 0 foci in image
+cell mean: 1027.25179695
+cell standard deviation: 731.229782703
+intensity cutoff for removal: 2306.90391668
+-----filtering foci-----
+focus intensity: 74.9235741221
+removing focus
+after eliminating dim foci: 0 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+0 final foci
+--matching foci to parent cells--
+foci segmented from position 13
+
+segmenting foci for position 14 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1254.55776499
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 0 foci in image
+cell mean: 927.413119389
+cell standard deviation: 629.182309427
+intensity cutoff for removal: 2028.48216089
+-----filtering foci-----
+focus intensity: 78.164333789
+removing focus
+after eliminating dim foci: 0 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+0 final foci
+--matching foci to parent cells--
+foci segmented from position 14
+
+segmenting foci for position 15 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1062.75839997
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 2 foci in image
+cell mean: 1030.25954139
+cell standard deviation: 881.21542275
+intensity cutoff for removal: 2572.38653121
+-----filtering foci-----
+focus intensity: 81.7468227133
+removing focus
+focus intensity: 14004.8888889
+focus intensity: 7375.92727273
+after eliminating dim foci: 2 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+2 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[55]
+matched to one parent cell.
+current ID: 2
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[54]
+matched to one parent cell.
+foci segmented from position 15
+
+segmenting foci for position 16 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1399.55330203
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 0 foci in image
+cell mean: 1033.82609044
+cell standard deviation: 880.932792702
+intensity cutoff for removal: 2575.45847767
+-----filtering foci-----
+focus intensity: 61.0729318735
+removing focus
+after eliminating dim foci: 0 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+0 final foci
+--matching foci to parent cells--
+foci segmented from position 16
+
+segmenting foci for position 17 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1294.81029736
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 18 foci in image
+cell mean: 1010.55216247
+cell standard deviation: 906.829988532
+intensity cutoff for removal: 2597.5046424
+-----filtering foci-----
+focus intensity: 6368.0
+focus intensity: 8833.45454545
+focus intensity: 123.123931894
+removing focus
+focus intensity: 6276.14814815
+focus intensity: 8230.8
+focus intensity: 5863.63636364
+focus intensity: 8367.2
+focus intensity: 8263.296875
+focus intensity: 7437.36
+focus intensity: 7727.48120301
+focus intensity: 6723.15789474
+focus intensity: 12052.25
+focus intensity: 6315.0
+focus intensity: 5974.27272727
+focus intensity: 8411.10169492
+focus intensity: 5752.95833333
+focus intensity: 7629.66666667
+focus intensity: 8059.4
+focus intensity: 9738.0990566
+after eliminating dim foci: 18 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+18 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[11]
+matched to one parent cell.
+current ID: 2
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[11]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[24]
+matched to one parent cell.
+current ID: 4
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[32]
+matched to one parent cell.
+current ID: 5
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[64]
+matched to one parent cell.
+current ID: 6
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[27]
+matched to one parent cell.
+current ID: 7
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[133]
+matched to one parent cell.
+current ID: 8
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[25]
+matched to one parent cell.
+current ID: 9
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[76]
+matched to one parent cell.
+current ID: 10
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 11
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 12
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 13
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[33]
+matched to one parent cell.
+current ID: 14
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 15
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[212]
+matched to one parent cell.
+current ID: 16
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[19]
+matched to one parent cell.
+current ID: 17
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[63]
+matched to one parent cell.
+current ID: 18
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[59]
+matched to one parent cell.
+foci segmented from position 17
+
+segmenting foci for position 18 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1156.96677734
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 13 foci in image
+cell mean: 1016.6571386
+cell standard deviation: 899.011773412
+intensity cutoff for removal: 2589.92774207
+-----filtering foci-----
+focus intensity: 8385.5
+focus intensity: 7492.13043478
+focus intensity: 6151.0
+focus intensity: 10344.289916
+focus intensity: 7329.33333333
+focus intensity: 8651.6
+focus intensity: 8076.4
+focus intensity: 7982.6
+focus intensity: 5904.875
+focus intensity: 8402.62068966
+focus intensity: 120.064839545
+removing focus
+focus intensity: 5178.8
+focus intensity: 6364.72972973
+focus intensity: 8287.0
+after eliminating dim foci: 13 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+13 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[48]
+matched to one parent cell.
+current ID: 3
+  overlapping parent cell(s): 
+[ 3.]
+  # of pixels overlapping with parent(s):
+[37]
+matched to one parent cell.
+current ID: 4
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[26]
+matched to one parent cell.
+current ID: 5
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 6
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 7
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[3]
+matched to one parent cell.
+current ID: 8
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[10]
+matched to one parent cell.
+current ID: 9
+  overlapping parent cell(s): 
+[ 3.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 12
+  overlapping parent cell(s): 
+[ 3.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 13
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[29]
+matched to one parent cell.
+current ID: 14
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[5]
+matched to one parent cell.
+current ID: 15
+  overlapping parent cell(s): 
+[ 3.]
+  # of pixels overlapping with parent(s):
+[238]
+matched to one parent cell.
+current ID: 16
+  overlapping parent cell(s): 
+[ 2.]
+  # of pixels overlapping with parent(s):
+[69]
+matched to one parent cell.
+foci segmented from position 18
+
+segmenting foci for position 19 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1493.11035117
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 1 foci in image
+cell mean: 1029.13990484
+cell standard deviation: 931.384771756
+intensity cutoff for removal: 2659.06325541
+-----filtering foci-----
+focus intensity: 9605.62807018
+focus intensity: 71.5400154311
+removing focus
+after eliminating dim foci: 1 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+1 final foci
+--matching foci to parent cells--
+current ID: 1
+  overlapping parent cell(s): 
+[ 1.]
+  # of pixels overlapping with parent(s):
+[285]
+matched to one parent cell.
+foci segmented from position 19
+
+segmenting foci for position 20 out of 20
+generating normalized image for segmentation...
+blurring image...
+calculating image mean...
+original cell mean: 1277.72505975
+normalizing image...
+performing segmentation...
+raw image imported.
+performing gaussian filtering...
+Image smoothed.
+preprocessing complete.
+generating distance map...
+distance map complete.
+smoothing distance map...
+distance map smoothed.
+identifying maxima...
+maxima identified.
+watershedding...
+watershedding complete.
+creating PexSegmentObj...
+eliminating dim foci...
+before eliminating dim foci: 0 foci in image
+cell mean: 1017.23594365
+cell standard deviation: 867.045257687
+intensity cutoff for removal: 2534.5651446
+-----filtering foci-----
+focus intensity: 65.1208071313
+removing focus
+after eliminating dim foci: 0 foci in image
+eliminating foci that reside outside of cells...
+eliminating intranuclear foci...
+0 final foci
+--matching foci to parent cells--
+foci segmented from position 20
+
+------------------------------------------------------
+segmentation complete for channel 488
+------------------------------------------------------
+Foci segmented.
+Measuring overlap...
+checking for overlap...
+finding overlap in image #1 out of 20
