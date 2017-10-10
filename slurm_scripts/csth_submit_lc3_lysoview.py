@@ -42,7 +42,7 @@ print('control czi path: ' + bg_czi_path)
 finder = find_cells.MultiFinder(
     czi_path, bg_filename=bg_czi_path,
     log_path=output_dir + '/log',
-    oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl',
+    oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_633_svm.pkl',
     foc_channel=633)
 print('MultiFinder created.')
 # initialize a CellSplitter from finder
