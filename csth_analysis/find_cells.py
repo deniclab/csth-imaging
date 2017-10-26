@@ -144,8 +144,8 @@ class MultiFinder:
                    pval_threshold=0, mode='pval', threshold=300):
         """Find cells within all images in the indicated channel."""
         # get channel images first
-        im_arrs = self.get_channel_arrays(channel)
         if mode == 'pval':
+            im_arrs = self.get_channel_arrays(channel)
             # transform into log space, as bg is roughly log-normal
             # this requires adding 1 to each value to avoid NaN log-xform
             if verbose:
@@ -181,6 +181,7 @@ class MultiFinder:
             raw_mask[f_pvals > pval_threshold] = 0
             raw_mask[f_pvals <= pval_threshold] = 1
         elif mode == 'threshold':  # use an abs threshold for finding masks
+            im_arrs = self.get_channel_arrays(channel, bg=False)
             gaussian_im = filters.gaussian_filter(im_arrs[0],
                                                   sigma=[0, 0, 10, 10])
             raw_mask = np.empty_like(gaussian_im)
