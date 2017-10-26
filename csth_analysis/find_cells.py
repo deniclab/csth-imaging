@@ -182,7 +182,7 @@ class MultiFinder:
             raw_mask[f_pvals <= pval_threshold] = 1
         elif mode == 'threshold':  # use an abs threshold for finding masks
             im_arrs = self.get_channel_arrays(channel, bg=False)
-            gaussian_im = filters.gaussian_filter(im_arrs[0],
+            gaussian_im = filters.gaussian_filter(im_arrs,
                                                   sigma=[0, 0, 10, 10])
             raw_mask = np.empty_like(gaussian_im)
             raw_mask[gaussian_im >= threshold] = 1
