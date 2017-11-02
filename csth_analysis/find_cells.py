@@ -109,11 +109,9 @@ class MultiFinder:
                 self.bg_im = np.expand_dims(bg_czi[0], axis=0)
                 self.bg_channels = bg_czi[1]
         elif bg_index != -1:
-            self.bg_im = self.cell_im[bg_index, :, :, :, :]
+            self.bg_im = np.copy(self.cell_im[bg_index, :, :, :, :])
             # remove parts of cell_im that correspond to bg
-            bg_mask = np.ones(shape=self.cell_im.shape, dtype=bool)
-            bg_mask[bg_index, :, :, :, :] = False
-            self.cell_im = self.cell_im[bg_mask]
+            self.cell_im = np.delete(self.cell_im, bg_index, 0)
             self.bg_channels = self.cell_channels
         if self.oof_svm is not None:
             self.flagged_oof_ims = np.zeros(self.cell_im.shape[0])
