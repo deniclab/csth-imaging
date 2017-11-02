@@ -67,11 +67,11 @@ class MultiFinder:
                 file); if True, will only pull out the first three images.
         """
         self.filenames = [filename]
+        self.bg_filename = bg_filename
         if bg_index == -1:
             if bg_filename == '':
                 warn('No background image provided during initialization.')
             self.bg_origin = 'separate'  # separate czi or tiff file
-            self.bg_filename = bg_filename
             self.log_path = log_path
             if self.log_path is not None:
                 if not os.path.isdir(self.log_path):
