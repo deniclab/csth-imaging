@@ -68,10 +68,6 @@ class MultiFinder:
         """
         self.filenames = [filename]
         self.bg_filename = bg_filename
-        if bg_index == -1:
-            if bg_filename == '':
-                warn('No background image provided during initialization.')
-            self.bg_origin = 'separate'  # separate czi or tiff file
         self.log_path = log_path
         if self.log_path is not None:
             if not os.path.isdir(self.log_path):
@@ -80,6 +76,10 @@ class MultiFinder:
                 except FileExistsError:
                     pass
         self.oof_svm = oof_svm
+        if bg_index == -1:
+            if bg_filename == '':
+                warn('No background image provided during initialization.')
+            self.bg_origin = 'separate'  # separate czi or tiff file
         else:
             self.bg_origin = 'slice'  # slice of a multi-czi
         if '.tif' in self.filenames[0]:
