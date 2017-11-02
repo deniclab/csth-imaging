@@ -37,7 +37,7 @@ class Foci:
 
     def segment(self, verbose=True, thresholds='auto',
                 seg_channels=(488, 561), min_cutoff='auto',
-                cutoff_type='sd'):
+                cutoff_type='sd', rm_nuclear=True):
         """Identify foci in image."""
         self.foci = {}
         self.foci_df = pd.DataFrame(
@@ -207,9 +207,10 @@ class Foci:
                 if verbose:
                     print('eliminating foci that reside outside of cells...')
                 c_foci[self.segmented_cells[i] == 0] = 0
-                if verbose:
-                    print('eliminating intranuclear foci...')
-                c_foci[eroded_nuclei != 0] = 0
+                if rm_nuclear:
+                    if verbose:
+                        print('eliminating intranuclear foci...')
+                    c_foci[eroded_nuclei != 0] = 0
                 if verbose:
                     print(str(np.unique(c_foci).size-1) + ' final foci')
                 ids, vols = np.unique(c_foci, return_counts=True)
