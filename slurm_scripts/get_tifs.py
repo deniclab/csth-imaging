@@ -23,6 +23,8 @@ output_dir = args.out_dir
 os.chdir(czi_dir)
 if not output_dir.endswith('/'):
     output_dir = output_dir + '/'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
 czi_list = [f for f in os.listdir() if '.czi' in f]
 for f in czi_list:
     if 'Empty' in f:
