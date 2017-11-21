@@ -376,15 +376,30 @@ class CziFile(object):
                 image = numpy.memmap(fh, dtype=self.dtype, shape=self.shape)
         else:
             image = numpy.zeros(self.shape, self.dtype)
+        # make sure dimensions of data and czi shape are the same
+        arr_shape = prod(self.shape[0:5])
+        n_subblocks = len(self.filtered_subblock_directory)
+        if arr_shape != n_subblocks:
+            warnings.warn('WARNING: MISSING DATA. czi shape: ' + str(arr_shape) + ', number of slices: ' + str(n_subblocks))
 
         for directory_entry in self.filtered_subblock_directory:
             subblock = directory_entry.data_segment()
-            tile = subblock.data(bgr2rgb=bgr2rgb, resize=resize, order=order)
-            index = [slice(i-j, i-j+k) for i, j, k in
-                     zip(directory_entry.start, self.start, tile.shape)]
             try:
-                image[index] = tile
+                tile = subblock.data(bgr2rgb=bgr2rgb, resize=resize,
+                                     order=order)
+                index = [slice(i-j, i-j+k) for i, j, k in
+                         zip(directory_entry.start, self.start, tile.shape)]
+                try:
+                    image[index] = tile
+                except ValueError as e:
+                    warnings.warn(str(e))
             except ValueError as e:
+                index = [slice(i-j, i-j+k) for i, j, k in
+                         zip(directory_entry.start, self.start, tile.shape)]
+                warnings.warn('Warning: subblock at')
+                warnings.warn(str(index))
+                warnings.warn('is not the correct shape.')
+                warnings.warn('could not add slice.')
                 warnings.warn(str(e))
         return image
 
@@ -560,14 +575,16 @@ class SubBlockSegment(object):
         else:
             dtype = numpy.dtype(self.dtype)
             data = self._fh.read_array(dtype, self.data_size // dtype.itemsize)
-
-        data = data.reshape(self.stored_shape)
-        if self.stored_shape == self.shape or not resize:
-            if bgr2rgb and self.stored_shape[-1] in (3, 4):
-                tmp = data[..., 0].copy()
-                data[..., 0] = data[..., 2]
-                data[..., 2] = tmp
-            return data
+        if prod(self.stored_shape) != prod(data.shape):
+            raise ValueError('stored_shape does not match data shape.')
+        else:
+            data = data.reshape(self.stored_shape)
+            if self.stored_shape == self.shape or not resize:
+                if bgr2rgb and self.stored_shape[-1] in (3, 4):
+                    tmp = data[..., 0].copy()
+                    data[..., 0] = data[..., 2]
+                    data[..., 2] = tmp
+                return data
 
         # sub / supersampling
         factors = [j / i for i, j in zip(self.stored_shape, self.shape)]
@@ -1102,6 +1119,14 @@ def decode_jxr(data):
 def decode_jpeg(data):
     """Decode JPEG data stream into ndarray."""
     return _czifile.decode_jpeg(data)
+
+
+def prod(x):
+    """Calculate the product of all values within a tuple."""
+    prod = 1
+    for v in x:
+        prod = prod*v
+    return prod
 
 
 # map Segment.sid to data reader

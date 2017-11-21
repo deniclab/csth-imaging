@@ -19,7 +19,7 @@ sys.path.append(
     '/n/denic_lab/Users/nweir/python_packages/csth-imaging/dependencies/')
 from csth_analysis import czi_io, find_cells, segment_cells, foci
 
-parser = argparse.ArgumentParser(description='Process LC3/WIPI stain imgs.')
+parser = argparse.ArgumentParser(description='Process LC3/p62 stain imgs.')
 parser.add_argument('-r', '--ref_csv', required=True,
                     help='path to reference csv file')
 parser.add_argument('-a', '--array_no', required=True,
@@ -35,18 +35,21 @@ output_dir = args.output_dir
 # read .czi file path from csv reference table
 ref_df = pd.read_csv(ref_csv)
 czi_path = ref_df['files'].iloc[array_no]
+bg_czi_path = ref_df['controls'].iloc[array_no]
 print('czi path: ' + czi_path)
+print('control czi path: ' + bg_czi_path)
 # load .czi file into MultiFinder instance
-finder = find_cells.MultiFinder(czi_path,                            
-                                oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl')
+finder = find_cells.MultiFinder(
+    czi_path, bg_filename=bg_czi_path,
+    log_path=output_dir + '/log',
+    oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl')
 print('MultiFinder created.')
-# load bg file from multi-image .czi and add to finder
-bg_tif_im = io.imread('/n/denic_lab/Lab/TH_Imaging/WIPI_empty_control.tif')
-bg_tif_im = np.moveaxis(bg_tif_im, -1, 0)  # move C axis to 1st position
-bg_tif_im = np.expand_dims(bg_tif_im, axis=0)
-finder.bg_im = bg_tif_im
-finder.bg_channels = [488, 561, 405]
-print('background image added to MultiFinder.')
+# the final stage position in each dTMEM czi was messed up - missing half of the
+# data. Therefore, I'm eliminating the final image from dTMEM files.
+if 'dTMEM' in czi_path:
+    finder.cell_im = finder.cell_im[0:9, :, :, :, :]
+    finder.flagged_oof_ims = np.zeros(finder.cell_im.shape[0])
+    finder.flagged_z_ims = np.zeros(finder.cell_im.shape[0])
 # initialize a CellSplitter from finder
 splitter = segment_cells.CellSplitter(finder)
 print('CellSplitter instance created.')
@@ -57,9 +60,8 @@ print('Cells segmented.')
 # initialize a Foci instance from splitter
 foci_obj = foci.Foci(splitter, verbose=True)
 print('Foci instance created.')
-# segment foci using PexSegmenter
-foci_obj.segment(verbose=True, thresholds={488: (10000, 8000),
-                                           561: (8000, 6000)})
+foci_obj.segment(verbose=True, thresholds={488: (13000, 9250),
+                                           561: (15000, 11750)})
 print('Foci segmented.')
 print('Measuring overlap...')
 foci_obj.measure_overlap(verbose=True)

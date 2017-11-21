@@ -7,7 +7,7 @@ require(reshape2)
 require(tidyverse)
 
 # load data
-input_df <- read_csv('~/Dropbox/code/csth-imaging/output_files/lc3_wipi_timelapse_summary_analysis_output.csv')
+input_df <- read_csv('~/Dropbox/code/csth-imaging/output_files/wipi_atg16_summary_analysis_output.csv')
 
 # remove cells that border on the edge of the image and defective parent cell assignment
 for_plt <- subset(input_df, parent_cell != 65535 & flagged_z != 1)
@@ -18,7 +18,6 @@ for_plt$overlap_count[for_plt$count == 0] <- 0
 # add a column that indicates whether data is an outlier or not, for use in jittering data later
 
 # renaming and reordering variables for plotting
-for_plt$treatment[for_plt$treatment %in% c('3hrTort', '3hrTor')] <- 3
 for_plt$treatment[for_plt$treatment %in% c('1hrTort', '1hrTor')] <- 1
 for_plt$treatment[for_plt$treatment == '0hrTor'] <- 0
 for_plt$treatment <- factor(for_plt$treatment)
@@ -50,7 +49,7 @@ ggplot(subset(for_plt, cell_line != 'dVPS37A'), aes(x=factor(treatment), y=count
   labs(x='Torin treatment time (hr)',
        y='Number of foci per cell',
        title='Cell line')
-ggsave('~/Dropbox/code/csth-imaging/r_scripts/wipi_timelapse_plots/lc3_wipi_timelapse_totals_boxplot.pdf',
+ggsave('~/Dropbox/code/csth-imaging/r_scripts/atg16_timelapse_plots/wipi_atg16_timelapse_totals_boxplot.pdf',
        device=cairo_pdf(width=7.5, height=4), useDingbats=FALSE)
 
 ggplot(subset(for_plt, cell_line != 'dVPS37A'), aes(x=treatment, y=overlap_count)) +
@@ -65,7 +64,7 @@ ggplot(subset(for_plt, cell_line != 'dVPS37A'), aes(x=treatment, y=overlap_count
   labs(x='Torin treatment time (hr)',
        y='Number of foci per cell that overlap\nwith foci in the other channel',
        title='Cell line')
-ggsave('~/Dropbox/code/csth-imaging/r_scripts/wipi_timelapse_plots/lc3_wipi_timelapse_overlap_boxplot.pdf',
+ggsave('~/Dropbox/code/csth-imaging/r_scripts/atg16_timelapse_plots/wipi_atg16_timelapse_overlap_boxplot.pdf',
   device=cairo_pdf(width=7.5, height=4), useDingbats=FALSE)
 
 # add a column for non-overlapping foci

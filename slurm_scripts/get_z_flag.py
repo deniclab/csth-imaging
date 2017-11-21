@@ -45,6 +45,9 @@ for czi in czi_paths:
                 im=im_for_clf[im, :, :, :], clf=clf, slc_no=im)
         if focus_slices[0] == 1 or focus_slices[-1] == 1:
             finder.flagged_z_ims[im] = 1
+    print(finder.flagged_z_ims)
+    print(list(range(0, finder.cell_im.shape[0])))
+    print(finder.cell_im.shape)
     curr_df = pd.DataFrame({'filename': finder.filenames,
                             'image': list(range(0, finder.cell_im.shape[0])),
                             'flagged_z': finder.flagged_z_ims

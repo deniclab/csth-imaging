@@ -9,6 +9,18 @@ require(tidyverse)
 # load data
 input_df <- read_csv('~/Dropbox/code/csth-imaging/output_files/lc3_p62_timelapse_summary_analysis_output.csv')
 
+# load in the corrected "z overlap" flags
+z_flags <- read_csv('~/Dropbox/code/csth-imaging/output_files/lc3_p62_z_flags.csv')
+split_fnames <- strsplit(z_flags$filename, '/')
+split_fnames <- data.frame(matrix(unlist(split_fnames), nrow = length(split_fnames), byrow = TRUE))
+z_flags$filename <- split_fnames$X7
+z_flags$im_number <- NULL
+names(z_flags)[names(z_flags) == 'image'] <- 'im_number'
+names(input_df)[names(input_df) == 'flagged_z'] <- 'old_z_flags'
+input_df <- left_join(input_df, z_flags)
+# visual inspection shows that "LC3-p62_HEK_dTMEM_NoTreat_10Pos_1_AiryscanProcessing.czi" ims #2,4,6 all OK for Z, inaccurately IDed as edge-contacting - therefore including ims
+input_df$flagged_z[input_df$filename == "LC3-p62_HEK_dTMEM_NoTreat_10Pos_1_AiryscanProcessing.czi" & input_df$im_number != 7] <- 0
+
 # remove cells that border on the edge of the image and defective parent cell assignment
 for_plt <- subset(input_df, parent_cell != 65535 & flagged_z != 1)
 
@@ -28,6 +40,9 @@ for_plt$cell_line[for_plt$cell_line == 'dAtg7'] <- 'dATG7'
 for_plt$cell_line <- factor(for_plt$cell_line,
                             levels=c('WT','dVPS37A','dTMEM41B', 'dFIP200','dATG7'))
 
+# count the # of cells in each sample
+n_cells <- for_plt %>% tbl_df %>% group_by(channel, cell_line, treatment) %>% dplyr::summarise(n_cells = n())
+View(n_cells)
 
 # Add a separate column indicating which cells are boxplot outliers for jittering
 for_plt <- for_plt %>% group_by(channel, treatment, cell_line) %>%

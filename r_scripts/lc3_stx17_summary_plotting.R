@@ -12,6 +12,22 @@ require(Cairo)
 # load data
 input_df <- read_csv('~/Dropbox/code/csth-imaging/output_files/lc3_stx17_summary_analysis_output.csv')
 
+# load in the corrected "z overlap" flags
+z_flags <- read_csv('~/Dropbox/code/csth-imaging/output_files/lc3_stx17_z_flags.csv')
+split_fnames <- strsplit(z_flags$filename, '/')
+split_fnames <- data.frame(matrix(unlist(split_fnames), nrow = length(split_fnames), byrow = TRUE))
+z_flags$filename <- split_fnames$X7
+z_flags$im_number <- NULL
+names(z_flags)[names(z_flags) == 'image'] <- 'im_number'
+names(input_df)[names(input_df) == 'flagged_z'] <- 'old_z_flags'
+input_df <- left_join(input_df, z_flags)
+# manually fixing z-flag for the TMEM samples - a bunch had edge of field cells that were cut off by stack, but would be eliminated.
+# not relevant to our analysis.
+input_df$flagged_z[input_df$filename == "Stx17-GFP_dTMEM_Tor_10Pos_2_finalconditions_reducedGFP_488.568_AiryscanProcessing.czi"] <- 0
+input_df$flagged_z[input_df$filename == "Stx17-GFP_dTMEM_NoTreat_10Pos_finalconditions_reducedGFP_488.568_AiryscanProcessing.czi" & input_df$im_number %in% c(0,2,3,4,5,6,7,8,9)] <- 0
+input_df$flagged_z[input_df$filename == "Stx17-GFP_dTMEM_NoTreat_10Pos_3_finalconditions_reducedGFP_488.568_AiryscanProcessing.czi" & input_df$im_number %in% c(0,1,2,3,5,6,7,8,9)] <- 0
+input_df$flagged_z[input_df$filename == "Stx17-GFP_dTMEM_Tor_10Pos_finalconditions_reducedGFP_488.568_AiryscanProcessing.czi" & input_df$im_number %in% c(1,2,3,4,5,6,9)] <- 0
+
 # remove cells that border on the edge of the image and defective parent cell assignment
 for_plt <- subset(input_df, parent_cell != 65535 & flagged_z != 1)
 
@@ -27,6 +43,10 @@ for_plt$cell_line[for_plt$cell_line == 'dTMEM'] <- 'dTMEM41B'
 for_plt$cell_line[for_plt$cell_line == 'dAtg7'] <- 'dATG7'
 for_plt$cell_line <- factor(for_plt$cell_line,
                             levels=c('WT','dVPS37A','dTMEM41B', 'dFIP200','dATG7'))
+
+# count the # of cells in each sample
+n_cells <- for_plt %>% tbl_df %>% group_by(channel, cell_line, treatment) %>% dplyr::summarise(n_cells = n())
+View(n_cells)
 
 # add a column that indicates whether data is an outlier or not, for use in jittering data later
 

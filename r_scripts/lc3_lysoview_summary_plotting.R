@@ -36,7 +36,7 @@ for_plt <- for_plt %>% group_by(channel, treatment, cell_line) %>%
 
 # plot treatment vs # of foci in each channel for each cell line
 ggplot(subset(for_plt, cell_line != 'dVPS37A'), aes(x=factor(treatment), y=count)) +
-  facet_grid(channel ~ cell_line) + 
+  facet_grid(channel ~ cell_line, scales='free_y') + 
   geom_boxplot(outlier.shape=NA) + geom_jitter(data=subset(for_plt, count_outlier==TRUE & cell_line != 'dVPS37A'), width=0.2, height=0, size=1) +
   theme(panel.background = element_rect(fill = NA, color = 'black'),
         panel.grid = element_blank(),

@@ -1,7 +1,13 @@
 #!/usr/bin/env
 # -*- coding: utf-8 -*-
-"""Classes and methods for watershed segmentation of cells using nuclei."""
+"""Classes and methods for watershed segmentation of cells and nuclei.
 
+Classes:
+    CellSplitter: A container for MultiFinder image objects.
+        Static methods:
+        -rm_edge_objs: eliminate segmented objects that touch the array border.
+"""
+# Import analysis packages
 import numpy as np
 from csth_analysis import czi_io
 from csth_analysis import find_cells
@@ -13,12 +19,39 @@ from skimage.morphology import watershed
 
 
 class CellSplitter:
-    """Class and methods for segmenting cells using watershedding from DAPI."""
+    """
+    Class and methods for segmenting cells using watershedding from DAPI.
+
+    Methods:
+        __init__: Create a CellSplitter instance from a MultiFinder instance.
+        segment_nuclei: Segment nuclei using a 405 channel image.
+        segment_cells: Segment cells using nuclei and masks from a MultiFinder.
+    Static methods:
+        rm_edge_objs: eliminate segmented objects that contact an array border.
+
+    """
 
     def __init__(self, multi_finder, channel=488, threshold='auto',
                  pval_threshold=0, cellfinder_mode='pval',
                  cellfinder_threshold=300):
-        """Create a Nuclei object for segmentation."""
+        """
+        Create a CellSplitter instance for segmenting cells and nuclei.
+
+        Arguments:
+        - multi_finder (MultiFinder object): A MultiFinder created from image
+            files. Contains the images to be used for segmentation as well as
+            the methods for generating cell masks. Masks don't necessarily need
+            to be generated before creating an instance of this class - it will
+            check for them and generate them if necessary. See find_cells.py
+            and segment_cells for details.
+        - channel (int, optional): which fluorescence channel to use for
+            segmenting cells. Only used if the MultiFinder instance does
+            not already have cell masks made. Defaults to 488.
+        - threshold (string, optional): How threshold is determined for
+            nuclei segmentation. If 'auto' (default), intensity threshold for
+            generating cell masks is created automatically
+
+        """
         self.filenames = multi_finder.filenames
         self.multi_finder = multi_finder
         self.threshold = threshold
