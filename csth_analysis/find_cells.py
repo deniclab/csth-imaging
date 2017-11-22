@@ -222,10 +222,10 @@ class MultiFinder:
                 print('pruning labels...')
             trim_labs = np.copy(r_labs)
             trim_labs[np.invert(cell_mask)] = 0  # eliminate small obj labels
-            if self.pre_masked is not None or self.oof_svm is not None:
+            if self.pre_z is not None or self.oof_svm is not None:
                 if verbose:
                     print('unlabeling out of focus slices...')
-                if self.pre_masked is None:
+                if self.pre_z is None:
                     with open(self.oof_svm, 'rb') as r:
                         clf = pickle.load(r)
                     shrt_fname = self.filenames[0].split('/')[-1][:-4]
