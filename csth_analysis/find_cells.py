@@ -12,6 +12,7 @@ from scipy.ndimage import filters
 import scipy.ndimage as nd
 from sklearn import svm
 import pickle
+import pandas as pd
 import os
 
 
@@ -38,7 +39,7 @@ class MultiFinder:
     """Distinguish cells from background in multi-position czi files."""
 
     def __init__(self, filename, bg_index=-1, bg_filename='', log_path=None,
-                 oof_svm=None, optim=False, foc_channel=561):
+                 oof_svm=None, optim=False, foc_channel=561, pre_z=None):
         """Create a MultiFinder object.
 
         Arguments:
@@ -65,6 +66,9 @@ class MultiFinder:
                 performed on a subset of the data for threshold optimization
                 purposes. Default is False (extract all images from the chosen
                 file); if True, will only pull out the first three images.
+            pre_z (pd DataFrame, optional): Indicates whether or not a table
+                exists indicating which planes of each position are in focus vs
+                out of focus. If so, this argument should be that table.
         """
         self.filenames = [filename]
         self.bg_filename = bg_filename
@@ -76,6 +80,7 @@ class MultiFinder:
                 except FileExistsError:
                     pass
         self.oof_svm = oof_svm
+        self.pre_z = pre_z
         if bg_index == -1:
             if bg_filename == '':
                 warn('No background image provided during initialization.')
@@ -217,19 +222,26 @@ class MultiFinder:
                 print('pruning labels...')
             trim_labs = np.copy(r_labs)
             trim_labs[np.invert(cell_mask)] = 0  # eliminate small obj labels
-            if self.oof_svm is not None:
+            if self.pre_masked is not None or self.oof_svm is not None:
                 if verbose:
                     print('unlabeling out of focus slices...')
-                with open(self.oof_svm, 'rb') as r:
-                    clf = pickle.load(r)
-                shrt_fname = self.filenames[0].split('/')[-1][:-4]
-                if self.log_path is not None:
-                    focus_slices = self.get_blur_slices(
-                        im=im_for_clf[im, :, :, :], clf=clf, slc_no=im,
-                        log_path=self.log_path+'/'+shrt_fname)
+                if self.pre_masked is None:
+                    with open(self.oof_svm, 'rb') as r:
+                        clf = pickle.load(r)
+                    shrt_fname = self.filenames[0].split('/')[-1][:-4]
+                    if self.log_path is not None:
+                        focus_slices = self.get_blur_slices(
+                            im=im_for_clf[im, :, :, :], clf=clf, slc_no=im,
+                            log_path=self.log_path+'/'+shrt_fname)
+                    else:
+                        focus_slices = self.get_blur_slices(
+                            im=im_for_clf[im, :, :, :], clf=clf, slc_no=im)
                 else:
-                    focus_slices = self.get_blur_slices(
-                        im=im_for_clf[im, :, :, :], clf=clf, slc_no=im)
+                    c_im_row = self.pre_z.loc[
+                        self.pre_z['file'] == self.filenames &
+                        self.pre_z['image'] == str(im)]
+                    focus_slices = np.zeros(shape=curr_im.shape[0])
+                    focus_slices[int(c_im_row['start_slice'].iloc[0]):int(c_im_row['end_slice'].iloc[0])] = 1
                 if focus_slices[0] == 1 or focus_slices[-1] == 1:
                     self.flagged_z_ims[im] = 1
                     if verbose:

@@ -38,11 +38,13 @@ czi_path = ref_df['files'].iloc[array_no]
 bg_czi_path = ref_df['controls'].iloc[array_no]
 print('czi path: ' + czi_path)
 print('control czi path: ' + bg_czi_path)
+focus_tbl = pd.read_csv(
+    '/n/denic_lab/Users/nweir/python_packages/csth-imaging/lc3_p62_2_z.csv')
 # load .czi file into MultiFinder instance
 finder = find_cells.MultiFinder(
     czi_path, bg_filename=bg_czi_path,
     log_path=output_dir + '/log',
-    oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl')
+    oof_svm='/n/denic_lab/Users/nweir/python_packages/csth-imaging/trained_svm.pkl', pre_z=focus_tbl)
 print('MultiFinder created.')
 # the final stage position in each dTMEM czi was messed up - missing half of the
 # data. Therefore, I'm eliminating the final image from dTMEM files.
