@@ -238,7 +238,7 @@ class MultiFinder:
                             im=im_for_clf[im, :, :, :], clf=clf, slc_no=im)
                 else:
                     c_im_row = self.pre_z.loc[
-                        np.asarray(self.pre_z['file'] == self.filenames) &
+                        np.asarray(self.pre_z['file'] == self.filenames[0]) &
                         np.asarray(self.pre_z['image'] == im)]
                     focus_slices = np.zeros(shape=curr_im.shape[0])
                     focus_slices[int(c_im_row['start_slice'].iloc[0]):int(c_im_row['end_slice'].iloc[0])] = 1
