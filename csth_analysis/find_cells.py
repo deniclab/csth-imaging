@@ -16,25 +16,6 @@ import pandas as pd
 import os
 
 
-class CellMask:
-    """Container for cell mask and intermediates."""
-
-    # NOTE: I DON'T USE THIS FOR ANYTHING RIGHT NOW!
-    def __init__(self, raw_im, raw_bg, gaussian_im,
-                 pvals_im, cell_labs, cell_mask):
-        """Create an instance of a cell mask.
-
-        NOTE: This class is not intended to be called directly, but should
-        instead be initialized by the CellFinder.find_cells() method.
-        """
-        self.raw_im = raw_im
-        self.raw_bg = raw_bg
-        self.gaussian_im = gaussian_im
-        self.pvals_im = pvals_im
-        self.cell_labs = cell_labs
-        self.cell_mask = cell_mask
-
-
 class MultiFinder:
     """Distinguish cells from background in multi-position czi files."""
 
@@ -42,7 +23,8 @@ class MultiFinder:
                  oof_svm=None, optim=False, foc_channel=561, pre_z=None):
         """Create a MultiFinder object.
 
-        Arguments:
+        Arguments
+        ---------
             filename (str): The path to an image file to initialize the object.
             bg_index (int, optional): If the initializing file is .czi format,
                 this indicates the index within the czi file array that
@@ -70,10 +52,12 @@ class MultiFinder:
                 exists indicating which planes of each position are in focus vs
                 out of focus. If so, this argument should be that table.
         """
+
+        # initialize attributes based on input data
         self.filenames = [filename]
         self.bg_filename = bg_filename
         self.log_path = log_path
-        if self.log_path is not None:
+        if self.log_path is not None:  # set up log path
             if not os.path.isdir(self.log_path):
                 try:
                     os.makedirs(self.log_path)
@@ -81,16 +65,23 @@ class MultiFinder:
                     pass
         self.oof_svm = oof_svm
         self.pre_z = pre_z
+
+        # determine if the background image was included in a larger .czi or
+        # if it was its own czi
         if bg_index == -1:
             if bg_filename == '':
                 warn('No background image provided during initialization.')
             self.bg_origin = 'separate'  # separate czi or tiff file
         else:
             self.bg_origin = 'slice'  # slice of a multi-czi
+
+        # handle tif source data. currently never used.
         if '.tif' in self.filenames[0]:
             self.cell_im = io.imread(self.filenames[0])
             # TODO: implement adding dimensions for multi-img/channels both
             # here and a method to add them later
+
+        # read in .czi data
         elif '.czi' in self.filenames[0]:
             cell_czi = czi_io.load_multi_czi(self.filenames[0])
             self.cell_im = cell_czi[0]
@@ -104,6 +95,8 @@ class MultiFinder:
             # add filename:slice #s dict to indicate which imgs came from where
             self.f_to_s = {self.filenames[0]: range(0, self.cell_im.shape[0])}
             self.cell_channels = cell_czi[1]
+
+        # read in background data
         if self.bg_filename != '':
             if '.tif' in self.bg_filename:
                 self.bg_im = io.imread(self.bg_filename)
@@ -127,9 +120,12 @@ class MultiFinder:
     def add_czi(self, filename):
         """Add an additional czi file containing additional image(s).
 
-        Arguments:
+        Arguments
+        ---------
             filename (str): Path to the czi file to be added to the existing
                 MultiFinder object.
+
+        NOTE: THIS METHOD IS NOT USED FOR THE PUBLICATION.
         """
         new_czi = czi_io.load_multi_czi(filename)
         stripped_fname = filename.split('/')[1]
@@ -146,7 +142,33 @@ class MultiFinder:
 
     def find_cells(self, channel, return_all=False, verbose=True,
                    pval_threshold=0, mode='pval', threshold=300):
-        """Find cells within all images in the indicated channel."""
+        """Find cells within all images in the indicated channel.
+
+        Arguments
+        ---------
+        channel : int
+            The channel to use for generating cell masks by background
+            fluorescence.
+        return_all : bool, optional
+            Flag to indicate whether method should output all intermediates
+            generated en route to identifying cells. Defaults to False.
+        verbose : bool, optional
+            Verbose text output. Defaults to True.
+        pval_threshold : uint16, optional
+            Allows user to adjust the background image-based p-value
+            transformation threshold for calling a pixel foreground (cell).
+            Defaults to 0 (pval < 0.5/65535).
+            Only relevant if `mode` == 'pval'.
+        mode : {'pval', 'threshold'}, optional
+            Sets mode for calling px as components of foreground vs. bgrd.
+            Defaults to 'pval' (pval xformation based on background intensity
+            distribution). Alternative is 'threshold', where a specific pixel
+            intensity threshold (post-Gaussian smoothing) cutoff is used to
+            separate foreground from background.
+        threshold : int, optional
+            Post-Gaussian smoothing pixel intensity threshold for separating
+            bgrd and foreground if `mode` == 'threshold'. Defaults to 300.
+        """
         # get channel images first
         if mode == 'pval':
             im_arrs = self.get_channel_arrays(channel)
@@ -158,6 +180,7 @@ class MultiFinder:
             log_bg_im = np.log10(im_arrs[1] + 1)
             if verbose:
                 print('applying gaussian filter...')
+            # smooth images
             log_gaussian_f = filters.gaussian_filter(log_f_im,
                                                      sigma=[0, 0, 10, 10])
             log_gaussian_bg = filters.gaussian_filter(log_bg_im,
@@ -222,13 +245,15 @@ class MultiFinder:
                 print('pruning labels...')
             trim_labs = np.copy(r_labs)
             trim_labs[np.invert(cell_mask)] = 0  # eliminate small obj labels
+            # unlabel out of focus slices using the svm or pre-set cutoffs
             if self.pre_z is not None or self.oof_svm is not None:
                 if verbose:
                     print('unlabeling out of focus slices...')
-                if self.pre_z is None:
+                if self.pre_z is None:  # use svm in this case
                     with open(self.oof_svm, 'rb') as r:
-                        clf = pickle.load(r)
+                        clf = pickle.load(r)  # load classifier
                     shrt_fname = self.filenames[0].split('/')[-1][:-4]
+                    # get slices that are in focus using the svm classifier
                     if self.log_path is not None:
                         focus_slices = self.get_blur_slices(
                             im=im_for_clf[im, :, :, :], clf=clf, slc_no=im,
@@ -236,12 +261,16 @@ class MultiFinder:
                     else:
                         focus_slices = self.get_blur_slices(
                             im=im_for_clf[im, :, :, :], clf=clf, slc_no=im)
-                else:
+                else:  # if using pre_z
+                    # get im ID and pull out pre-set cutoffs
                     c_im_row = self.pre_z.loc[
                         np.asarray(self.pre_z['file'] == self.filenames[0]) &
                         np.asarray(self.pre_z['image'] == im)]
+                    # assign in-focus vs out of focus slices
                     focus_slices = np.zeros(shape=curr_im.shape[0])
                     focus_slices[int(c_im_row['start_slice'].iloc[0]):int(c_im_row['end_slice'].iloc[0])] = 1
+                # flag images that appear to have cells contacting the top or
+                # bottom of the stack
                 if focus_slices[0] == 1 or focus_slices[-1] == 1:
                     self.flagged_z_ims[im] = 1
                     if verbose:
@@ -249,9 +278,7 @@ class MultiFinder:
                             'Warning: cells cut off by top or bottom of stack:'
                             )
                         print(focus_slices)
-                    #if self.log_path is not None:
-                    #    io.imsave(self.log_path + '/' + shrt_fname + '_' +
-                    #              str(im) + '.tif', im_for_clf[im, :, :, :])
+                # set the cell mask to be 0 everywhere in slices that are oof
                 cell_mask[np.where(focus_slices == 0)[0], :, :] = 0
             if verbose:
                 print('appending outputs...')
@@ -262,6 +289,7 @@ class MultiFinder:
             if verbose:
                 print('mask #' + str(im + 1) + ' complete.')
                 print()
+        # return output
         if return_all:
             return({'input_ims': im_arrs[0],
                     'input_bg': im_arrs[1],
@@ -276,7 +304,34 @@ class MultiFinder:
 
     def get_channel_arrays(self, channel, fluorescence=True, bg=True,
                            mode='multi', ind=0):
-        """Extract im arrays for specific channels."""
+        """Extract im arrays for specific channels.
+
+        Arguments:
+        ----------
+        channel : int
+            Fluorescence channel of desired images.
+        fluorescence : bool, optional
+            Should the method return foreground fluorescence images? Defaults
+            to True.
+        bg : bool, optional
+            Should the method return background fluorescence images? Defaults
+            to True.
+        mode : {'multi', 'single'}, optional
+            Should the method return one specific fluorescence image (at index
+            defined by `ind`) or should it return all fluorescence images in
+            the MultiFinder for `channel`? Defaults to 'multi' (all).
+        ind : int, optional
+            Index of fluorescence image to be returned if `mode` == 'single'.
+            Defaults to 0.
+
+        Returns:
+        --------
+        If `bg` == False or `fluorescence` == False, returns a NumPy array
+        consisting of intensity values. If both `bg` and `fluorescence` are
+        true, returns a 2-element tuple of (fluorescence, bg) NumPy intensity
+        arrays.
+
+        """
         channel = int(channel)  # Implicitly checks that channel is an int
         return_vals = []
         # return tuple of (fluorescence_array, bg_array) for the channel
@@ -296,7 +351,29 @@ class MultiFinder:
             return tuple(return_vals)
 
     def get_blur_slices(self, im, clf, slc_no, verbose=True, log_path=None):
-        """Determine which slices are in and out of focus."""
+        """Determine which slices are in and out of focus.
+
+        Arguments:
+        ----------
+        im : 3D NumPy array
+            Image to be tested for in vs out of focus planes.
+        clf : scikit-learn svm.SVC() trained classifier
+            Classifier to be used for testing if slices are in or out of focus.
+        slc_no : int
+            Index of image within the 4D NumPy array containing all images for
+            the fluorescence channel in question.
+        verbose : bool, optional
+            Verbose text output. Defaults to True.
+        log_path : string, optional
+            Path to save relevant images to if desired. See `log_path` in
+            MultiFinder.__init__.
+
+        Returns:
+        --------
+        a 1D NumPy array indicating if a slice is out of focus (0) or in focus
+        (1).
+
+        """
         if verbose:
             print('generating gradient image...')
         grad_im = MultiFinder.get_gradient_im(im)
@@ -426,7 +503,10 @@ class MultiFinder:
 
 
 class CellFinder:
-    """Distinguish cells from background in fluorescence images."""
+    """Distinguish cells from background in fluorescence images.
+
+    !!!NOTE: THIS CLASS IS NOT USED IN PUBLICATION!!!
+    """
 
     def __init__(self, im_filename, bg_im_filename):
         """Create a CellFinder object."""

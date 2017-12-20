@@ -19,6 +19,7 @@ class Foci:
         self.filenames = CellSplitter.filenames
         if len(self.filenames) == 1:
             self.filenames = self.filenames[0].split('/')[-1]
+        # extract relevant attributes from CellSplitter
         self.segmented_nuclei = CellSplitter.segmented_nuclei
         self.segmented_cells = CellSplitter.segmented_cells
         self.n_raw_nuclei = CellSplitter.n_raw_nuclei
@@ -35,10 +36,49 @@ class Foci:
         self.flagged_oof_ims = CellSplitter.multi_finder.flagged_oof_ims
         self.flagged_z_ims = CellSplitter.multi_finder.flagged_z_ims
 
-    def segment(self, verbose=True, thresholds='auto',
-                seg_channels=(488, 561), min_cutoff='auto',
-                cutoff_type='sd', rm_nuclear=True):
-        """Identify foci in image."""
+    def segment(self, verbose=True, thresholds='auto', seg_channels=(488, 561),
+                min_cutoff='auto', cutoff_type='sd', rm_nuclear=True):
+        """Identify foci in image.
+
+        Arguments:
+        ----------
+        verbose : bool, optional
+            Verbose text output. defaults to True.
+        thresholds : {'auto', dict of tuples of ints}, optional
+            Thresholds to use for segmenting foci using PexSegmenter. Defaults
+            to auto, where 488 is segmented using 15000, 7500 as cutoffs and
+            561 is segmented using 8000 and 4000. Otherwise, values can
+            be passed in the format {wavelength: (high_threshold,
+            low_threshold)}. These values are generally empirically calculated.
+        seg_channels : tuple of ints, optional
+            Wavelengths to be segmented. Defaults to (488, 561).
+        min_cutoff : {'auto', dict of wl: cutoff pairs}, optional
+            Minimum intensity cutoffs for segmented foci after edge-intensity
+            based segmentation. Defaults to {488: 4.5, 561: 3} for sd-based
+            thresholding and {488: 5000, 561: 4000} for absolute
+            intensity-based. May need to be empirically determined. NOTE that
+            the intensity cutoffs are applied AFTER re-scaling images so the
+            cell's intensity mean is 1000.
+        cutoff_type : {'sd', 'absolute'}, optional
+            Should post-segmentation foci be filtered based on the # of sds
+            above the cell background intensity, or based on an absolute px
+            intensity cutoff? Defaults to 'sd'.
+        rm_nuclear : bool, optional
+            Should foci that fall inside of segmented nuclei be eliminated?
+            Defaults to True.
+
+        Returns:
+        --------
+        2 attributes applied to the parent Foci instance.
+        foci : dict of wavelength: list of np.ndarray pairs.
+            A dictionary with keys for each wavelength segmented. The values
+            correspond to np.ndarrays with segmented object locations in the
+            array indicated by integers, where each object has its own value.
+        foci_df : pandas DataFrame
+            A pandas DataFrame with statistics for segmentation and foci to
+            for later csv-formatted output.
+        """
+        # initialize output variables
         self.foci = {}
         self.foci_df = pd.DataFrame(
                     {'id': [],
@@ -58,19 +98,22 @@ class Foci:
             self.thresholds = {488: (15000, 7500),
                                561: (8000, 4000)}  # default 488/561 thresh
         else:
-            self.thresholds = thresholds
+            self.thresholds = thresholds  # use values passed in method call
         self.cutoff_type = cutoff_type
-        if min_cutoff == 'auto':
-            if self.cutoff_type == 'sd':
-                self.min_cutoff = {488: 4.5, 561: 3}  # use sd ratios
-            elif self.cutoff_type == 'absolute':
+        if min_cutoff == 'auto':  # if using default cutoff values
+            if self.cutoff_type == 'sd':  # use sd ratios
+                self.min_cutoff = {488: 4.5, 561: 3}
+            elif self.cutoff_type == 'absolute':  # use absolute px intensities
                 self.min_cutoff = {488: 5000, 561: 4000}  # use absolute cutoff
             elif isinstance(self.cutoff_type, dict):
                 raise TypeError(
                     "can't use auto min_cutoff with mixed cutoff_type.")
         else:
-            self.min_cutoff = min_cutoff
-        self.erosion_struct = np.array(  # the strel for erosion of nuclei
+            self.min_cutoff = min_cutoff  # use values passed in method call
+        self.erosion_struct = np.array(
+            # the strel for erosion of nuclei:
+            # a 2D diamond with single pixels going 2 slices in each z
+            # direction from the central pixel in the diamond
             [[[False, False, False, False, False, False, False],
               [False, False, False, False, False, False, False],
               [False, False, False, False, False, False, False],
@@ -108,10 +151,10 @@ class Foci:
               [False, False, False, False, False, False, False]]])
         for c in self.channels:
             if c not in seg_channels:
-                # don't segment foci from DAPI channel, also used
-                # to set specific channels for optimization runs
+                # don't segment foci
                 continue
             channel_foci = []
+            # begin segmentation
             if verbose:
                 print('------------------------------------------------------')
                 print('segmenting foci from channel ' + str(c))
@@ -125,18 +168,25 @@ class Foci:
                           ' out of ' + str(self.n_pos))
                     print('generating normalized image for' +
                           ' segmentation...')
+                # normalize images to have a cell mean px value of 1000.
+                # important for highly variable IF imaging.
+                # use a mask indicating where cells are, sans nuclei.
                 norm_im, scaling_factor = self.normalize_im(
                     self.imgs[c][i, :, :, :],
                     mask=np.logical_and(self.cell_masks[i] != 0,
                                         self.segmented_nuclei[i] == 0))
                 if verbose:
                     print('performing segmentation...')
+                # use pyto_segmenter for segmentation
                 curr_segmenter = PexSegmenter(
                     src_data=norm_im, seg_method='canny',
                     high_threshold=self.thresholds[c][0],
                     low_threshold=self.thresholds[c][1], g_z=0)
                 curr_seg = curr_segmenter.segment()
+                # extract segmentation output from the curr_seg object
+                # (the `peroxisomes` attribute)
                 c_foci = curr_seg.peroxisomes
+                # extract raw image also
                 raw_img = curr_seg.raw_img
                 # get #s and volumes for foci and make dict
                 if verbose:
@@ -151,10 +201,15 @@ class Foci:
                 for obj in objs:
                     mean_intensity[obj] = np.sum(
                         raw_img[c_foci == obj]).astype('float')/vols[obj]
+                # make a reverse version of the dict to ref mean intensities
+                # and eliminate corresponding foci if mean intensity is too low
                 rev_dict = {v: k for k, v in mean_intensity.items()}
                 eroded_nuclei = np.copy(self.segmented_nuclei[i])
+                # erode nuclei so that juxtanuclear foci don't get eliminated
+                # when removing nuclear foci if `rm_nuclear`
                 eroded_nuclei = binary_erosion(eroded_nuclei,
                                                structure=self.erosion_struct)
+                # get mean and sd for calculating thresholds
                 cell_mean = np.nanmean(
                     raw_img[np.logical_and(self.segmented_cells[i] != 0,
                                            eroded_nuclei == 0)])
@@ -182,6 +237,7 @@ class Foci:
                             print('cell mean: ' + str(cell_mean))
                             print('cell standard deviation: ' + str(cell_sd))
                             print('using absolute cutoff threshold. threshold: ' + str(self.min_cutoff[c]))
+                # get cutoff values for filtering
                 if self.cutoff_type == 'sd':
                     cutoff = cell_mean + self.min_cutoff[c]*cell_sd
                 elif self.cutoff_type == 'absolute':
@@ -206,18 +262,22 @@ class Foci:
                           str(len(np.unique(c_foci))-1) + ' foci in image')
                 if verbose:
                     print('eliminating foci that reside outside of cells...')
+                # eliminate foci that resie outside of a cell mask
                 c_foci[self.segmented_cells[i] == 0] = 0
-                if rm_nuclear:
+                if rm_nuclear:  # if removing intranuclear dots
                     if verbose:
                         print('eliminating intranuclear foci...')
+                    # rm intranuclear foci region
                     c_foci[eroded_nuclei != 0] = 0
                 if verbose:
                     print(str(np.unique(c_foci).size-1) + ' final foci')
+                # calculate relevant statistics and assign to parent cells
                 ids, vols = np.unique(c_foci, return_counts=True)
                 vols = vols[ids != 0]
                 ids = ids[ids != 0]
                 intensities = np.empty_like(ids)
                 parent_cells = np.empty_like(ids)
+                # add segmentation output to channel_foci output list
                 channel_foci.append(c_foci)
                 if verbose:
                     print('--matching foci to parent cells--')
@@ -230,6 +290,8 @@ class Foci:
                             self.segmented_cells[i][c_foci == x],
                             return_counts=True
                             )
+                        # following lines are for determining which cells
+                        # foci correspond to
                         cell_cts = cell_cts[parent_cell != 0]  # rm bgrd
                         parent_cell = parent_cell[parent_cell != 0]  # rm bgrd
                         if verbose:
@@ -254,11 +316,12 @@ class Foci:
                                 print('warning: matched to no parent cells?')
                                 print(parent_cell)
                                 print(cell_cts)
-                            parent_cell = -1
+                            parent_cell = -1  # -1 (or 65535) is # for non-cell
                         parent_cells[ids == x] = parent_cell
                         intensities[ids == x] = np.sum(
                             raw_img[c_foci == x])/vols[ids == x][0]
                     # create a temp pd df containing data
+                    # and then add it to the Foci instance's foci_df
                     temp_df = pd.DataFrame(
                         {'id': pd.Series(ids, index=ids),
                          'intensity': pd.Series(intensities, index=ids),
@@ -284,20 +347,21 @@ class Foci:
     def count_foci(self, verbose=True):
         """Count the # of foci present in each segmented cell.
 
-        Yields:
-            a dict of dicts.
-            Inner dict: a dict of image # (key): ndarray of #s of foci per cell
-                (val) pairs.
-            Outer dict: a dict of channel (key): Inner dict (val) pairs.
-                channel is represented as a string to allow later addition of
-                'overlap' as a key through self.measure_overlap().
+        Returns:
+        --------
+        a dict of dicts.
+        Inner dict: a dict of image # (key): ndarray of #s of foci per cell
+            (val) pairs.
+        Outer dict: a dict of channel (key): Inner dict (val) pairs.
+            channel is represented as a string to allow later addition of
+            'overlap' as a key through self.measure_overlap().
 
         """
         if not hasattr(self, 'foci'):
             if verbose:
                 print('foci not yet segmented. calling segment().')
             self.segment()
-        self.foci_cts = {}
+        self.foci_cts = {}  # dictionary to contain counts for each parent cell
         for k in self.foci.keys():  # for each channel
             if verbose:
                 print('------------------------------------------------------')
@@ -334,10 +398,12 @@ class Foci:
             if verbose:
                 print('finding overlap in image #' + str(i + 1) + ' out of ' +
                       str(n_ims))
+            # find overlapping foci
             overlap = np.logical_and(self.foci[channels[0]][i] > 0,
                                      self.foci[channels[1]][i] > 0)
             if verbose:
                 print('getting IDs of overlapping foci...')
+            # get focus ID for overlapping foci
             overlap_IDs_ch0 = np.unique(self.foci[channels[0]][i][overlap])
             overlap_IDs_ch1 = np.unique(self.foci[channels[1]][i][overlap])
             if verbose:
