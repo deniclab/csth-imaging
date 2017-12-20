@@ -1,4 +1,0 @@
-discarding /n/home15/nweir/envs/PYTO_SEG_ENV/bin from PATH
-prepending /n/home15/nweir/envs/PYTO_SEG_ENV/bin to PATH
-slurmstepd: error: *** JOB 29447471 ON holy2a18108 CANCELLED AT 2017-10-04T20:55:03 ***
-slurmstepd: error: Exceeded step memory limit at some point.
