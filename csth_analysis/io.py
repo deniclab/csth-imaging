@@ -10,6 +10,7 @@ images.
 import czifile  # czi file import classes and methods
 import numpy as np
 import xml.etree.ElementTree as ET  # for parsing czi file metadata
+from nd2reader import ND2Reader
 
 
 def load_single_czi(path):
@@ -79,3 +80,35 @@ def load_multi_czi(path):
         return (im_array, channels)
     else:
         raise ValueError('Received an unexpected czi file shape.')
+
+
+def load_nd2(path):
+    """Read in an .nd2-formatted file.
+
+    **NOTE**: This function is optimized to work with Bassik lab Nikon scope
+              data, and therefore may not work as desired with data from other
+              sources.
+
+    Arguments:
+        path (str): Path to the .nd2-formatted file.
+
+    Returns a tuple consisting of two components:
+    - a 5D NumPy array with shape [IMG,C,Z,Y,X]
+    - a tuple with integers representing the excitation wavelengths for each
+      channel
+
+    """
+    im = ND2Reader(path)
+    n_fields = len(im.metadata['fields_of_view'])
+    z_slices = len(im.metadata['z_levels'])
+    height = im.metadata['height']
+    width = im.metadata['width']
+    channels = tuple(int(c[0:3]) for c in im.metadata['channels'])
+    n_channels = len(channels)
+    im_arr = np.empty((n_fields, n_channels, z_slices, height, width))
+    for f in range(0, n_fields):
+        for c in range(0, n_channels):
+            for z in range(0, z_slices):
+                im_arr[f, c, z, :, :] = im.get_frame_2D(v=f, c=c, z=z)
+
+    return(im_arr, channels)
