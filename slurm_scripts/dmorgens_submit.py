@@ -53,7 +53,7 @@ print('Cells segmented.')
 foci_obj = foci.Foci(splitter, verbose=True)
 print('Foci instance created.')
 foci_obj.segment(seg_channels=(640,), min_cutoff={640: 5}, rm_nuclear=False,
-                 thresholds={640: (6000, 3000)})
+                 thresholds={640: (4000, 2000)})
 print('Foci segmented.')
 cell_im = foci_obj.segmented_cells[0]
 all_foci_mask = foci_obj.foci[640][0] > 0
