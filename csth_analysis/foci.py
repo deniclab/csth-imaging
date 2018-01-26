@@ -33,8 +33,10 @@ class Foci:
                 c, bg=False)
         self.channels = CellSplitter.multi_finder.cell_channels
         self.n_pos = self.imgs[self.channels[0]].shape[0]  # num of stage posns
-        self.flagged_oof_ims = CellSplitter.multi_finder.flagged_oof_ims
-        self.flagged_z_ims = CellSplitter.multi_finder.flagged_z_ims
+        if hasattr(CellSplitter.multi_finder, 'flagged_oof_ims'):
+            self.flagged_oof_ims = CellSplitter.multi_finder.flagged_oof_ims
+        if hasattr(CellSplitter.multi_finder, 'flagged_z_ims'):
+            self.flagged_z_ims = CellSplitter.multi_finder.flagged_z_ims
 
     def segment(self, verbose=True, thresholds='auto', seg_channels=(488, 561),
                 min_cutoff='auto', cutoff_type='sd', rm_nuclear=True):
@@ -445,12 +447,14 @@ class Foci:
         raw_cells_for_mapping = dict(
             zip(list(range(0, len(self.segmented_cells))), self.n_raw_nuclei))
         final_cells_for_mapping = {}
-        flagged_oof_map = dict(zip(list(range(0,
-                                              len(self.segmented_cells))),
-                                   self.flagged_oof_ims.tolist()))
-        flagged_z_map = dict(zip(list(range(0,
-                                      len(self.segmented_cells))),
-                                 self.flagged_z_ims.tolist()))
+        if hasattr(self, 'flagged_oof_ims'):
+            flagged_oof_map = dict(zip(list(range(0,
+                                                  len(self.segmented_cells))),
+                                       self.flagged_oof_ims.tolist()))
+        if hasattr(self, 'flagged_z_ims'):
+            flagged_z_map = dict(zip(list(range(0,
+                                          len(self.segmented_cells))),
+                                     self.flagged_z_ims.tolist()))
         empty_cells = pd.DataFrame(columns=['filename', 'im_number', 'channel',
                                             'parent_cell', 'count'])
         for i in range(0, len(self.segmented_cells)):
@@ -468,12 +472,14 @@ class Foci:
                 self.segmented_cells[i]).shape[0]-1  # num diff vals minus bg
         self.summary_df = pd.concat([self.summary_df, empty_cells],
                                     ignore_index=True)
-        self.summary_df['flagged_oof'] = self.summary_df['im_number'].map(
-            flagged_oof_map
-        )
-        self.summary_df['flagged_z'] = self.summary_df['im_number'].map(
-            flagged_z_map
-        )
+        if hasattr(self, 'flagged_oof_ims'):
+            self.summary_df['flagged_oof'] = self.summary_df['im_number'].map(
+                flagged_oof_map
+            )
+        if hasattr(self, 'flagged_z_ims'):
+            self.summary_df['flagged_z'] = self.summary_df['im_number'].map(
+                flagged_z_map
+                )
         self.summary_df['n_cells'] = self.summary_df['im_number'].map(
             final_cells_for_mapping
         )
@@ -535,10 +541,12 @@ class Foci:
                 (im_nums, np.repeat(i+1, n_cells)))
             raw_cells = np.concatenate(
                 (raw_cells, np.repeat(self.n_raw_nuclei[i], n_cells)))
-            flagged_oof = np.concatenate(
-                (flagged_oof, np.repeat(self.flagged_oof_ims[i], n_cells)))
-            flagged_z = np.concatenate(
-                (flagged_z, np.repeat(self.flagged_z_ims[i], n_cells)))
+            if hasattr(self, 'flagged_oof_ims'):
+                flagged_oof = np.concatenate(
+                    (flagged_oof, np.repeat(self.flagged_oof_ims[i], n_cells)))
+            if hasattr(self, 'flagged_z_ims'):
+                flagged_z = np.concatenate(
+                    (flagged_z, np.repeat(self.flagged_z_ims[i], n_cells)))
             total_cells = np.concatenate(
                 (total_cells, np.repeat(n_cells, n_cells)))
         non_olap_1 = tot_foci_1 - overlap_foci_1

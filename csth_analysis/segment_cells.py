@@ -9,8 +9,6 @@ Classes:
 """
 # Import analysis packages
 import numpy as np
-from csth_analysis import czi_io
-from csth_analysis import find_cells
 from pyto_segmenter.PexSegment import PexSegmenter
 import scipy.ndimage.morphology as morph
 from scipy.ndimage.morphology import distance_transform_edt
@@ -18,7 +16,7 @@ from scipy.ndimage.filters import gaussian_filter
 from skimage.morphology import watershed
 
 
-class CellSplitter:
+class CellSplitter(object):
     """
     Class and methods for segmenting cells using watershedding from DAPI.
 
@@ -32,7 +30,7 @@ class CellSplitter:
     """
 
     def __init__(self, multi_finder, channel=488, threshold='auto',
-                 pval_threshold=0, cellfinder_mode='pval',
+                 pval_threshold=0, lo_p=False, cellfinder_mode='pval',
                  cellfinder_threshold=300):
         """
         Create a CellSplitter instance for segmenting cells and nuclei.
@@ -66,7 +64,7 @@ class CellSplitter:
         print('generating cell masks...')
         # generates cell masks using MultiFinder methods from find_cells
         self.cell_masks = self.multi_finder.find_cells(
-            channel, verbose=True, pval_threshold=pval_threshold,
+            channel, verbose=True, pval_threshold=pval_threshold, lo_p=lo_p,
             mode=cellfinder_mode, threshold=cellfinder_threshold)
         if 405 not in multi_finder.cell_channels:  # only takes 405 wl nuclei
             raise ValueError(

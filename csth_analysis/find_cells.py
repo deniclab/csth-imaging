@@ -5,8 +5,9 @@
 import czifile
 import numpy as np
 from warnings import warn
-from skimage import io, measure
-from csth_analysis import czi_io
+import skimage
+from skimage import measure
+from csth_analysis import io
 from scipy import stats
 from scipy.ndimage import filters
 import scipy.ndimage as nd
@@ -17,7 +18,7 @@ import os
 
 
 class MultiFinder:
-    """Distinguish cells from background in multi-position czi files."""
+    """Distinguish cells from background in image (.tif, .czi, .nd2) files."""
 
     def __init__(self, filename, bg_index=-1, bg_filename='', log_path=None,
                  oof_svm=None, optim=False, foc_channel=561, pre_z=None):
@@ -77,13 +78,13 @@ class MultiFinder:
 
         # handle tif source data. currently never used.
         if '.tif' in self.filenames[0]:
-            self.cell_im = io.imread(self.filenames[0])
+            self.cell_im = skimage.io.imread(self.filenames[0])
             # TODO: implement adding dimensions for multi-img/channels both
             # here and a method to add them later
 
         # read in .czi data
         elif '.czi' in self.filenames[0]:
-            cell_czi = czi_io.load_multi_czi(self.filenames[0])
+            cell_czi = io.load_multi_czi(self.filenames[0])
             self.cell_im = cell_czi[0]
             # if cell_im has shape C-Z-X-Y, not IMG-C-Z-X-Y, add axis for img
             if len(self.cell_im.shape) == 4:
@@ -96,16 +97,30 @@ class MultiFinder:
             self.f_to_s = {self.filenames[0]: range(0, self.cell_im.shape[0])}
             self.cell_channels = cell_czi[1]
 
+        # read in .nd2 data
+        elif '.nd2' in self.filenames[0]:
+            im_arr, channels = io.load_nd2(self.filenames[0])
+            self.cell_im = im_arr
+            if optim:
+                print('Optimization mode: only using first three images.')
+                if self.cell_im.shape[0] > 2:
+                    self.cell_im = self.cell_im[0:3, :, :, :, :]
+            self.f_to_s = {self.filenames[0]: range(0, self.cell_im.shape[0])}
+            self.cell_channels = channels
+
         # read in background data
         if self.bg_filename != '':
             if '.tif' in self.bg_filename:
-                self.bg_im = io.imread(self.bg_filename)
+                self.bg_im = skimage.io.imread(self.bg_filename)
                 # TODO: implement adding dimensions for multi-img/channels both
                 # here and a method to add them later
             elif '.czi' in self.bg_filename:
-                bg_czi = czi_io.load_single_czi(self.bg_filename)
+                bg_czi = io.load_single_czi(self.bg_filename)
                 self.bg_im = np.expand_dims(bg_czi[0], axis=0)
                 self.bg_channels = bg_czi[1]
+            elif '.nd2' in self.bg_filename:
+                self.bg_im, self.bg_channels = io.load_nd2(self.bg_filename)
+
         elif bg_index != -1:
             self.bg_im = np.expand_dims(np.copy(
                 self.cell_im[bg_index, :, :, :, :]), axis=0)
@@ -127,7 +142,7 @@ class MultiFinder:
 
         NOTE: THIS METHOD IS NOT USED FOR THE PUBLICATION.
         """
-        new_czi = czi_io.load_multi_czi(filename)
+        new_czi = io.load_multi_czi(filename)
         stripped_fname = filename.split('/')[1]
         if len(new_czi[0].shape) == 4:  # if it's a single img czi, not multi
             new_czi[0] = np.expand_dims(new_czi[0], axis=0)
@@ -141,7 +156,7 @@ class MultiFinder:
         self.cell_im = np.concatenate(self.cell_im, new_czi)
 
     def find_cells(self, channel, return_all=False, verbose=True,
-                   pval_threshold=0, mode='pval', threshold=300):
+                   pval_threshold=0, mode='pval', lo_p=False, threshold=300):
         """Find cells within all images in the indicated channel.
 
         Arguments
@@ -165,6 +180,13 @@ class MultiFinder:
             distribution). Alternative is 'threshold', where a specific pixel
             intensity threshold (post-Gaussian smoothing) cutoff is used to
             separate foreground from background.
+        lo_p : bool, optional
+            Argument allowing for identification of objects with a pval cutoff
+            more stringent than 7.6e-6, the limit during default behavior
+            where images are converted to a 16-bit-depth integer array and
+            then thresholded such that any pixel with value 0 is included in
+            the mask (meaning the p val was < 0.5/65535 = 7.6e-6). This setting
+            permits a 64-bit threshold, which can be as low as 2.7e-20.
         threshold : int, optional
             Post-Gaussian smoothing pixel intensity threshold for separating
             bgrd and foreground if `mode` == 'threshold'. Defaults to 300.
@@ -201,7 +223,8 @@ class MultiFinder:
             # convert to binary using empirically tested cutoffs (p<0.5/65535)
             # OR using a different set cutoff (defined in arguments)
             f_pvals = f_pvals*65535
-            f_pvals = f_pvals.astype('uint16')
+            if not lo_p:  # see arguments for explanation
+                f_pvals = f_pvals.astype('uint16')
             raw_mask = np.copy(f_pvals)
             if verbose:
                 print('converting to binary...')
@@ -395,7 +418,7 @@ class MultiFinder:
                 print('Warning: no in-focus slices detected.')
             self.flagged_oof_ims[slc_no] = 1
 #            if log_path is not None:
-#                io.imsave(log_path + '_' + str(slc_no) + '.tif', im)
+#                skimage.io.imsave(log_path + '_' + str(slc_no) + '.tif', im)
             return labels
         print('correcting slice labels...')
         corrected_labels = self.fix_interc_blur(labels, dec_func)
@@ -405,7 +428,7 @@ class MultiFinder:
                 print('Warning: blur detection resulted in intercalation:')
                 print(corrected_labels)
 #            if log_path is not None:
-#                io.imsave(log_path + '_' + str(slc_no) + '.tif', im)
+#                skimage.io.imsave(log_path + '_' + str(slc_no) + '.tif', im)
         else:
             if verbose:
                 print('One continuous stretch defined as in focus.')
@@ -514,15 +537,15 @@ class CellFinder:
         self.filename = im_filename
         self.bg_filename = bg_im_filename
         if '.tif' in self.filename:
-            self.cell_im = io.imread(self.filename)
+            self.cell_im = skimage.io.imread(self.filename)
         elif '.czi' in self.filename:
-            cell_czi = czi_io.load_single_czi(self.filename)
+            cell_czi = io.load_single_czi(self.filename)
             self.cell_im = cell_czi[0]
             self.cell_channels = cell_czi[1]
         if '.tif' in self.bg_filename:
-            self.bg_im = io.imread(self.bg_filename)
+            self.bg_im = skimage.io.imread(self.bg_filename)
         elif '.czi' in self.bg_filename:
-            bg_czi = czi_io.load_single_czi(self.bg_filename)
+            bg_czi = io.load_single_czi(self.bg_filename)
             self.bg_im = bg_czi[0]
             self.bg_channels = bg_czi[0]
         # check inputs
