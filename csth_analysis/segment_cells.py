@@ -31,7 +31,7 @@ class CellSplitter(object):
 
     def __init__(self, multi_finder, channel=488, threshold='auto',
                  pval_threshold=0, lo_p=False, cellfinder_mode='pval',
-                 cellfinder_threshold=300):
+                 cellfinder_threshold=300, mask_fill_holes=False):
         """
         Create a CellSplitter instance for segmenting cells and nuclei.
 
@@ -65,7 +65,8 @@ class CellSplitter(object):
         # generates cell masks using MultiFinder methods from find_cells
         self.cell_masks = self.multi_finder.find_cells(
             channel, verbose=True, pval_threshold=pval_threshold, lo_p=lo_p,
-            mode=cellfinder_mode, threshold=cellfinder_threshold)
+            mode=cellfinder_mode, threshold=cellfinder_threshold,
+            fill_2d_holes=mask_fill_holes)
         if 405 not in multi_finder.cell_channels:  # only takes 405 wl nuclei
             raise ValueError(
                 'The MultiFinder object lacks nuclei fluorescence.'

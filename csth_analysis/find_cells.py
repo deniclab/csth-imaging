@@ -156,7 +156,8 @@ class MultiFinder:
         self.cell_im = np.concatenate(self.cell_im, new_czi)
 
     def find_cells(self, channel, return_all=False, verbose=True,
-                   pval_threshold=0, mode='pval', lo_p=False, threshold=300):
+                   pval_threshold=0, mode='pval', lo_p=False, threshold=300,
+                   fill_2d_holes=False):
         """Find cells within all images in the indicated channel.
 
         Arguments
@@ -190,6 +191,10 @@ class MultiFinder:
         threshold : int, optional
             Post-Gaussian smoothing pixel intensity threshold for separating
             bgrd and foreground if `mode` == 'threshold'. Defaults to 300.
+        fill_2d_holes : bool, optional
+            Should 2D holes be filled? Defaults to False. If true, after the
+            mask is generated, holes completely surrounded by mask will be
+            filled within each slice.
         """
         # get channel images first
         if mode == 'pval':
@@ -303,6 +308,13 @@ class MultiFinder:
                         print(focus_slices)
                 # set the cell mask to be 0 everywhere in slices that are oof
                 cell_mask[np.where(focus_slices == 0)[0], :, :] = 0
+            if verbose:
+                if fill_2d_holes:
+                    print('Filling 2d holes in the mask...')
+                    for s in range(0, cell_mask.shape[0]):
+                        cell_mask[s, :, :] = nd.morphology.binary_fill_holes(
+                            cell_mask[s, :, :]
+                        )
             if verbose:
                 print('appending outputs...')
             cell_masks.append(cell_mask)
