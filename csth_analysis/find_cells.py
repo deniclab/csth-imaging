@@ -27,31 +27,44 @@ class MultiFinder:
         Arguments
         ---------
             filename (str): The path to an image file to initialize the object.
-            bg_index (int, optional): If the initializing file is .czi format,
-                this indicates the index within the czi file array that
+            bg_index (int, optional): If the image file is .czi format,
+                this indicates the IMG index within the czi file array that
                 corresponds to the background image with no cells. Defaults to
                 -1, which means the background image isn't contained within
-                the initializing image file.
-            bg_filename (str, optional): The path to an image file
-                corresponding to the background image. This argument must be
-                provided if the background stage position is not contained
-                in the multi-image file provided by filename or an
-                exception will occur. It should not be provided if the
+                the file.
+            bg_filename (str, optional): The path to the background image file
+                if it's separate from the other cell-containing .czi image.
+                This argument must be provided if the background stage position
+                is not contained in the multi-image file provided by `filename`
+                or an exception will occur. Do not use `bg_filename` if the
                 background image is contained within a multi-image file
-                provided by filename.
+                provided by `filename`.
             log_path (str, optional): The path to a log directory for saving
                 images with defects in blur elimination. Images from blur
                 elimination aren't saved unless this is provided.
             oof_svm (str, optional): Path to a trained scikit-learn svm.SVC()
                 pickle to be used for eliminating out-of-focus planes of the
-                stack.
+                stack. Defaults to not using out-of-focus plane elimination.
+                trained_svm.pkl in the csth-imaging directory can be used for
+                standard focus detection using 561 excitation under Tina's
+                imaging conditions.
             optim (bool, optional): Indicates whether or not this run is being
                 performed on a subset of the data for threshold optimization
                 purposes. Default is False (extract all images from the chosen
-                file); if True, will only pull out the first three images.
+                file); if True, will only analyze the first three stage
+                positions in the .czi.
+            foc_channel (int, optional): Which channel should be used to
+                find in-focus planes? Defaults to 561. Focus detection
+                also requires that an SVM pickle is provided by the `oof_svm`
+                argument.
             pre_z (pd DataFrame, optional): Indicates whether or not a table
                 exists indicating which planes of each position are in focus vs
-                out of focus. If so, this argument should be that table.
+                out of focus. If so, pass that table here. The table must be a
+                pandas DataFrame with columns 'file' (the filename), 'image'
+                (which number image within the file), 'start_slice'
+                (the first in-focus slice in the stack, counted from the
+                bottom) and 'end_slice' (the last in-focus slice in the stack,
+                counted from the bottom.)
         """
 
         # initialize attributes based on input data
@@ -140,7 +153,8 @@ class MultiFinder:
             filename (str): Path to the czi file to be added to the existing
                 MultiFinder object.
 
-        NOTE: THIS METHOD IS NOT USED FOR THE PUBLICATION.
+        NOTE: THIS METHOD IS NOT USED FOR THE PUBLICATION. I haven't touched
+        this in a while and it might not be fully functional.
         """
         new_czi = io.load_multi_czi(filename)
         stripped_fname = filename.split('/')[1]
@@ -163,11 +177,12 @@ class MultiFinder:
         Arguments
         ---------
         channel : int
-            The channel to use for generating cell masks by background
-            fluorescence.
+            The channel to use for generating cell masks based on background
+            fluorescence. Usually works best with immunofluorescence channels.
         return_all : bool, optional
             Flag to indicate whether method should output all intermediates
-            generated en route to identifying cells. Defaults to False.
+            generated en route to identifying cells. Useful for
+            troubleshooting. Defaults to False.
         verbose : bool, optional
             Verbose text output. Defaults to True.
         pval_threshold : uint16, optional
@@ -194,7 +209,8 @@ class MultiFinder:
         fill_2d_holes : bool, optional
             Should 2D holes be filled? Defaults to False. If true, after the
             mask is generated, holes completely surrounded by mask will be
-            filled within each slice.
+            filled within each slice. This is useful when you can't find values
+            for the other parameters that fill all of the holes.
         """
         # get channel images first
         if mode == 'pval':

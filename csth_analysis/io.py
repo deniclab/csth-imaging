@@ -4,7 +4,8 @@
 
 IMPORTANT NOTE: launching this script will yield importerrors for tifffile.c
 and for czifile.pyx. You can ignore these unless you're using JPG-formatted
-images.
+images, in which case you should read the tifffile.py script for where to get
+these two scripts.
 """
 
 import czifile  # czi file import classes and methods
@@ -22,8 +23,9 @@ def load_single_czi(path):
 
     Returns a tuple with 2 components:
     - a 4D numpy of shape [C,Z,Y,X]
-    - a tuple with integers representing the excitation wavelengths for each
-      channel
+    - a tuple of length C with integers representing the excitation wavelengths
+      for each channel, in the same order as in the numpy array C axis. For
+      example, (405, 488, 561)
     """
     czi_file = czifile.CziFile(path)
     im_array = czi_file.asarray()  # extract image array from test_czi
@@ -54,8 +56,9 @@ def load_multi_czi(path):
 
     Returns a tuple consisting of two components:
     - a 5D NumPy array with shape [IMG,C,Z,Y,X]
-    - a tuple with integers representing the excitation wavelengths for each
-      channel
+    - a tuple of length C with integers representing the excitation wavelengths
+      for each channel, in the same order as in the numpy array C axis. For
+      example, (405, 488, 561)
     """
     czi_file = czifile.CziFile(path)
     im_array = czi_file.asarray()  # extract image array from test_czi
@@ -87,15 +90,18 @@ def load_nd2(path):
 
     **NOTE**: This function is optimized to work with Bassik lab Nikon scope
               data, and therefore may not work as desired with data from other
-              sources.
+              sources. It requires the metadata attribute of the file to
+              contain 'fields_of_view', 'z_levels', 'width', 'height', and
+              'channels' variables.
 
     Arguments:
         path (str): Path to the .nd2-formatted file.
 
     Returns a tuple consisting of two components:
     - a 5D NumPy array with shape [IMG,C,Z,Y,X]
-    - a tuple with integers representing the excitation wavelengths for each
-      channel
+    - a tuple of length C with integers representing the excitation wavelengths
+      for each channel, in the same order as in the numpy array C axis. For
+      example, (405, 488, 561)
 
     """
     im = ND2Reader(path)
